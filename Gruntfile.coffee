@@ -17,9 +17,11 @@ module.exports = (grunt) ->
         options:
           join: true
           sourceMap: true
-
         files:
-          "dist/Siorb.js" : ["src/**/*.coffee"]
+          "dist/Siorb.js" : [
+            "src/settings.coffee",
+            "src/entities/*.coffee"
+          ]
     coffeelint:
       options:
         max_line_length:

@@ -1,7 +1,7 @@
 window.Siorb = {}
-window.Siorb.Model = {}
+window.Siorb.Models = {}
 
-window.Siorb.Model.Game = Backbone.Model.extend
+window.Siorb.Models.Game = Backbone.Model.extend
   defaults:
     width : 800
     height : 450
@@ -10,5 +10,6 @@ window.Siorb.Model.Game = Backbone.Model.extend
     Crafty.load ["assets/background.jpg"], ->
       Crafty.background("url('assets/background.jpg')")
     console.log 'game initialized'
+    window.Runner = new Siorb.Models.Runner()
 
 
