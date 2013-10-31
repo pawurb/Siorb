@@ -4,7 +4,7 @@ window.Siorb.Models.Runner = Backbone.Model.extend
     height: 50
     speed: 5
   initialize: ->
-    entity = Crafty.e "Base, Fourway, Mouse"
+    entity = Crafty.e "Base, Fourway, Mouse, Gravity"
 
     entity
     .attr
@@ -15,6 +15,5 @@ window.Siorb.Models.Runner = Backbone.Model.extend
       z: 300
     .fourway(@get 'speed')
     .color('rgb(0,0,0)')
-    .bind "Click", ->
-      console.log 'runner clicked'
+    .gravity()
     @set 'entity', entity

@@ -4,5 +4,5 @@ Crafty.c 'Base',
     @
   at: (x, y) ->
     @attr
-      x: x * 10
-      y: y * 10
+      x: x
+      y: y

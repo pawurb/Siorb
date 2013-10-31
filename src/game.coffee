@@ -11,8 +11,10 @@ window.Siorb.Models.Game = Backbone.Model.extend
       Crafty.background("url('assets/background.jpg')")
     console.log 'game initialized'
     window.Runner = new Siorb.Models.Runner()
-    new Siorb.Models.Platform(20, 30)
-    new Siorb.Models.Platform(40, 30)
-    new Siorb.Models.Platform(60, 30)
+    window.Pool = new Siorb.Models.PlatformsPool()
+    for i in [0..5]
+      yInterval = @get('height') - @get('height')/5 * i - 20
+      xPos = @get('width')/5 * i
+      Pool.add(new Siorb.Models.Platform(xPos, yInterval))
 
 

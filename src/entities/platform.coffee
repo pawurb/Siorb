@@ -3,7 +3,7 @@ window.Siorb.Models.Platform = Backbone.Model.extend
     width:  50
     height: 10
   initialize: (x, y) ->
-    entity = Crafty.e "Base"
+    entity = Crafty.e "Base, Solid"
     console.log 'działa'
     entity
     .attr
