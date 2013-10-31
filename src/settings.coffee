@@ -11,5 +11,8 @@ window.Siorb.Models.Game = Backbone.Model.extend
       Crafty.background("url('assets/background.jpg')")
     console.log 'game initialized'
     window.Runner = new Siorb.Models.Runner()
+    new Siorb.Models.Platform(20, 30)
+    new Siorb.Models.Platform(40, 30)
+    new Siorb.Models.Platform(60, 30)
 
 
