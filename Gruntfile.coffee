@@ -4,7 +4,7 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ["src/*.coffee"]
+        files: ["src/**/*.coffee"]
         tasks: [
           "coffeelint:src"
           "coffee:src"
@@ -19,14 +19,14 @@ module.exports = (grunt) ->
           sourceMap: true
 
         files:
-          "dist/Siorb.js" : ["src/*.coffee"]
+          "dist/Siorb.js" : ["src/**/*.coffee"]
     coffeelint:
       options:
         max_line_length:
           value: 120
           level: "warn"
       gruntfile: "Gruntfile.coffee"
-      src: ["src/*.coffee"]
+      src: ["src/**/*.coffee"]
 
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
