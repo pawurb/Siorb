@@ -4,7 +4,7 @@ window.Siorb.Models = {}
 window.Siorb.Models.Game = Backbone.Model.extend
   defaults:
     width : 800
-    height : 450
+    height : 250
   initialize: ->
     Crafty.init @get('width'), @get('height')
     Crafty.load ["assets/background.jpg"], ->
