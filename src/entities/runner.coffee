@@ -3,8 +3,9 @@ window.Siorb.Models.Runner = Backbone.Model.extend
     width: 50
     height: 50
     speed: 5
+    jumpSpeed: 8
   initialize: ->
-    entity = Crafty.e "Base, Fourway, Mouse, Gravity"
+    entity = Crafty.e "Base, Twoway, Mouse, Gravity"
 
     entity
     .attr
@@ -13,7 +14,7 @@ window.Siorb.Models.Runner = Backbone.Model.extend
       w: @get 'width'
       h: @get 'height'
       z: 300
-    .fourway(@get 'speed')
+    .twoway(@get('speed'), @get('jumpSpeed'))
     .color('rgb(0,0,0)')
-    .gravity()
+    .gravity('Solid')
     @set 'entity', entity
