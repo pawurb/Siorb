@@ -9,6 +9,8 @@ module.exports = (grunt) ->
           "coffeelint:src"
           "coffee:src"
         ]
+        options:
+          livereload: true
 
     coffee:
       src:

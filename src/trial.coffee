@@ -1,1 +1,1 @@
-console.log 'el dupa zbitaaa'
+console.log 'reloada?'
