@@ -19,10 +19,10 @@ module.exports = (grunt) ->
           sourceMap: true
         files:
           "dist/Siorb.js" : [
-            "src/utils/*.coffee",
-            "src/game.coffee",
-            "src/modules/*",
-            "src/entities/*.coffee",
+            "src/utils/*.coffee"
+            "src/game.coffee"
+            "src/modules/*"
+            "src/entities/*.coffee"
             "src/pools/*.coffee"
           ]
     coffeelint:

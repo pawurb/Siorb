@@ -1,15 +1,19 @@
 {
   "name": "Siorb",
   "version": "0.0.1",
+  "repository" :
+  { "type" : "git"
+    , "url" : "http://github.com/pawurb/termit.git"
+  },
   "description": "Brew your mate",
   "main": "Gruntfile.coffee",
   "devDependencies": {
-    "grunt-contrib-concat": "~0.1.2",
-    "grunt-contrib-uglify": "~0.1.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-coffee": "~0.7.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-coffeelint": "0.0.6"
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-coffeelint": "*"
   }
 }

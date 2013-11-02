@@ -1,9 +1,9 @@
 window.Siorb.Models.Runner = Backbone.Model.extend
   defaults:
-    width: 40
+    width: 20
     height: 40
     speed: 5
-    jumpSpeed: 8
+    jumpSpeed: 12
   initialize: ->
     entity = Crafty.e "Base, Twoway, Mouse, Gravity"
     entity
@@ -15,6 +15,7 @@ window.Siorb.Models.Runner = Backbone.Model.extend
       z: 300
     .twoway(@get('speed'), @get('jumpSpeed'))
     .gravity('Solid')
-    .gravityConst(0.3)
+    .gravityConst(0.7)
     .color('rgb(0,0,0)')
+    window.dupa = -> entity
     @set 'entity', entity
