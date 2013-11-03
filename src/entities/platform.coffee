@@ -1,6 +1,6 @@
 window.Siorb.Models.Platform = Backbone.Model.extend
   defaults: ->
-    height: 15
+    height: 10
     width: Utils.rand(20, 30) * 5
     speed: 3
     floatLeft: true
@@ -15,10 +15,11 @@ window.Siorb.Models.Platform = Backbone.Model.extend
     .color('rgb(0,255,255)')
     .at(x, y)
     .bind('EnterFrame', =>
-      @set('floatLeft', false) if entity.x < -20
+      @set('floatLeft', false) if entity.x < -10
       @set('floatLeft', true) if entity.x > Game.get('width') - entity._w
       if @get 'floatLeft'
         entity.move('w', @get('speed'))
       else
-        entity.move('e', @get('speed')))
+        entity.y = Utils.rand 100, Game.get('height')
+        entity.move('e', Game.get('width')))
     @set 'entity', entity
