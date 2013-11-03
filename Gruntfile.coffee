@@ -22,7 +22,7 @@ module.exports = (grunt) ->
             "src/utils/*.coffee"
             "src/game.coffee"
             "src/core/*.coffee"
-            "src/modules/*.coffee"
+            "src/components/*.coffee"
             "src/entities/*.coffee"
             "src/pools/*.coffee"
           ]
