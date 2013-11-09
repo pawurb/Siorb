@@ -13,7 +13,7 @@ window.Siorb.Models.Runner = Backbone.Model.extend
       w: @get 'width'
       h: @get 'height'
       z: 300
-    .attach(Crafty.e('RunnerImage'))
+    .attach(Crafty.e 'RunnerImage' )
     .twoway(@get('speed'), @get('jumpSpeed'))
     .gravity('Solid')
     .gravityConst(0.7)
