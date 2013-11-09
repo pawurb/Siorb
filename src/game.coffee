@@ -15,5 +15,6 @@ window.Siorb.Models.Game = Backbone.Model.extend
         yInterval = @get('height') - @get('height')/5 * i - 20
         xPos = @get('width')/5 * i
         Pool.add(new Siorb.Models.Platform(xPos, yInterval))
+      window.Leaf = new Siorb.Models.Leaf(10,10)
 
 
