@@ -9,7 +9,7 @@ window.Siorb.Models.Game = Backbone.Model.extend
     Crafty.init @get('width'), @get('height')
     Crafty.load Siorb.Assets.list(), =>
       Siorb.Assets.load()
-      window.Runner = new Siorb.Models.Runner()
+      window.Runner = Crafty.e 'Runner'
       window.Pool = new Siorb.Models.PlatformsPool()
       for i in [0..7]
         yInterval = @get('height') - @get('height')/5 * i - 20
