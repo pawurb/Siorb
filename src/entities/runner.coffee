@@ -17,4 +17,8 @@ Crafty.c 'Runner',
     @gravity('Solid')
     @gravityConst(0.7)
     @color('black')
+  at: (x, y) ->
+    @attr
+      x: x
+      y: y
 
