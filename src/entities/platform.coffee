@@ -16,7 +16,7 @@ Crafty.c 'Platform',
     if @floatLeft
       @move('w', @speedValue)
     else
-      @move('e', (Game.get('width') + @w))
+      @move('e', (window.Game.width + @w))
   at: (x, y) ->
     @attr
       x: x
