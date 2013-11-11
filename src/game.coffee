@@ -8,7 +8,8 @@ window.Game =
     Crafty.init @width, @height
     Crafty.load Siorb.Assets.list(), =>
       Siorb.Assets.load()
-      window.Runner = Crafty.e 'Runner'
+      window.runner = Crafty.e 'Runner'
+      window.view = Crafty.viewport
       for i in [0..7]
         yInterval = @height - @height/5 * i - 20
         xPos = @width/5 * i

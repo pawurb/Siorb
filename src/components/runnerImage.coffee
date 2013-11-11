@@ -5,4 +5,5 @@ Crafty.c 'RunnerImage',
       z: 299
     @color 'red'
     @move 'e', 50
-    @move 'n', 20
+    @move 's', 140
+

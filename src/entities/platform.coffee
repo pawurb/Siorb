@@ -1,6 +1,6 @@
 Crafty.c 'Platform',
   floatLeft: true
-  speedValue: 2
+  speedValue: 3
   init: ->
     @requires('Base, Solid')
     @attr
