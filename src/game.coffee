@@ -14,5 +14,6 @@ window.Game =
         yInterval = @height - @height/5 * i - 20
         xPos = @width/5 * i
         Crafty.e('Platform').at(xPos, yInterval)
+    window.main = document.getElementById 'cr-stage'
 
 
