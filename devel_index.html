@@ -9,15 +9,6 @@
   background-image: url('assets/images/background.jpg')
 }
 
-#cr-stage {
-  -webkit-animation: movebackgroundX 10s linear infinite;
-}
-
-@-webkit-keyframes movebackgroundX {
-  0% {background-position:0;}
-  100% {background-position:-800px;}
-}
-
   </style>
 
 
@@ -30,6 +21,7 @@
     <script src="dist/Siorb.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
     <script>
+
       var Game = window.Game
       Game.start();
     </script>
