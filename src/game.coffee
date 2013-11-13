@@ -6,6 +6,7 @@ window.Game =
   start: ->
     Crafty.init @width, @height
     @window = document.getElementById('cr-stage')
+    @window.style.backgroundPositionY = '600px'
     Crafty.load Siorb.Assets.list(), =>
       Siorb.Assets.load()
       window.runner = Crafty.e 'Runner'

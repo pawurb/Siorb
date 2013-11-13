@@ -20,6 +20,7 @@ Crafty.c 'Runner',
     @color('black')
     @bind("Move", ->
       if @_gy != 0 #if the runner changed his vertical position
+        window.location.reload() if view.y < -1700 #game over if is too low
         Crafty.trigger "Runner:jump", #send data to backgroundAnimator
           gy: @_gy
           up: @_up
