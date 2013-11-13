@@ -2,6 +2,7 @@ Crafty.c 'Runner',
   speedValue: 1
   jumpValue: 12
   backgroundX: 0
+  doubleJump: false
   init: ->
     @requires 'Base, Twoway, Gravity'
     @attr
@@ -27,6 +28,14 @@ Crafty.c 'Runner',
           jumpSpeed: @_jumpSpeed
           x: @x
           y: @y)
+    @bind("KeyDown", (e) ->
+      if (e.key == Crafty.keys.UP_ARROW || e.key == Crafty.keys.W || e.key == Crafty.keys.Z) && @doubleJump
+        console.log 'tuta'
+        @doubleJump = false
+        @_gy -= @jumpValue
+      else
+        @doubleJump = true
+      )
   at: (x, y) ->
     @attr
       x: x
