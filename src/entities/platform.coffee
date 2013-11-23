@@ -5,7 +5,7 @@ Crafty.c 'Platform',
     @requires('Base, Solid')
     @attr
       h: 10
-      w: Utils.rand(20,40) * 5
+      w: Utils.rand(80,240) * 5
       z: 200
     @attach(Crafty.e 'Leaf')
     @color('rgb(0,255,255)')
