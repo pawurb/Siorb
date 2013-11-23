@@ -6,7 +6,6 @@ Crafty.c 'Runner',
     @requires 'Base, Twoway, Gravity'
     @attr
       z: 299
-    @color 'red'
     @attr
       x: 50
       y: Game.height/2
@@ -17,7 +16,7 @@ Crafty.c 'Runner',
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
     @gravityConst(0.7)
-    @color('black')
+    # @color('black')
     @bind("Move", ->
       if @_gy != 0 #if the runner changed his vertical position
         window.location.reload() if view.y < -1700 #game over if is too low
