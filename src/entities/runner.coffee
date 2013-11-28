@@ -35,13 +35,11 @@ Crafty.c 'Runner',
       y: y
   handleCollected: (data) ->
     if data.name == 'guarana'
-      Crafty.trigger('Platform:speedUp')
+      Crafty.trigger('Runner:collectedGuarana')
       @gravityConst(@gravityValue - 0.2)
       setTimeout =>
         @gravityConst(@gravityValue)
       , 2000
     else if data.name =='leaf'
-      Game.score += 1
-      Crafty.trigger('ScoreBoard:scorePoint')
-      return
+      Crafty.trigger('Runner:collectedLeaf')
 

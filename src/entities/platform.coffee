@@ -9,11 +9,6 @@ Crafty.c 'Platform',
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
     @at(window.Game.width, @y) if @x < -200
-  speedUp: ->
-    @speedValue += 2 if @speedValue == @defaultSpeed
-    setTimeout =>
-      @speedValue = @defaultSpeed
-    , 4000
 
 
 
