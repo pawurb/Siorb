@@ -1,5 +1,6 @@
 window.Siorb = {}
 window.Game =
+  score: 0
   width : 800
   height : 420
   window: null
@@ -12,6 +13,7 @@ window.Game =
       window.runner = Crafty.e 'Runner'
       window.view = Crafty.viewport
       Crafty.e 'BackgroundManager'
+      Crafty.e 'ScoreBoard'
       for i in [0..7]
         yInterval = @height - @height/5 * i - 20
         xPos = @width/5 * i

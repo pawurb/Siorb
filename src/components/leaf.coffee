@@ -6,4 +6,6 @@ Crafty.c 'Leaf',
     @move 'e', 50
     @move 'n', 60
     @onHit('spr_runner', ->
+      Crafty.trigger('Collected'
+        name: 'leaf')
       @destroy())

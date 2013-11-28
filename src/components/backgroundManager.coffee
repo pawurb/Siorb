@@ -6,7 +6,7 @@ Crafty.c 'BackgroundManager',
     @bind('EnterFrame', ->
       #scroll background
       Game.window.style.backgroundPositionX = @backgroundX.toString() + "px"
-      if @backgroundX == Game.width
+      if @backgroundX == Game.width * 2
         @backgroundX = 0
       else
         @backgroundX -= @scrollingSpeed)
