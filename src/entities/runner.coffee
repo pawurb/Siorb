@@ -1,5 +1,5 @@
 Crafty.c 'Runner',
-  speedValue: 0
+  speedValue: 3
   jumpValue: 8
   backgroundX: 0
   gravityValue: 0.6
@@ -20,7 +20,7 @@ Crafty.c 'Runner',
     # @color('black')
     @bind("Move", ->
       if @_gy != 0 #if the runner changed his vertical position
-        window.location.reload() if view.y < -1700 #game over if is too low
+        window.location.reload() if Game.view.y < -1700 #game over if is too low
         Crafty.trigger "Runner:jump", #send data to backgroundAnimator
           gy: @_gy
           up: @_up

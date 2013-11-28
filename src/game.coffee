@@ -10,13 +10,18 @@ window.Game =
     @window.style.backgroundPositionY = '600px'
     Crafty.load Siorb.Assets.list(), =>
       Siorb.Assets.load()
-      window.runner = Crafty.e 'Runner'
-      window.view = Crafty.viewport
+      Game.runner = Crafty.e 'Runner'
+      Game.view = Crafty.viewport
+      window.platforms = []
       Crafty.e 'BackgroundManager'
       Crafty.e 'ScoreBoard'
       for i in [0..7]
         yInterval = @height - @height/5 * i - 20
         xPos = @width/5 * i
-        Crafty.e('Platform').at(xPos, yInterval)
+        platforms.push Crafty.e('Platform').at(xPos, yInterval)
+      setInterval =>
+        Crafty.e('Leaf').at(500,0)
+      , 1000
+
 
 

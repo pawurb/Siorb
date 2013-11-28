@@ -9,21 +9,17 @@ Crafty.c 'Platform',
       h: 12
       w: @sizes[Utils.rand(0, @sizes.length)]
       z: 200
-    @attachCollectable()
+    # @attachCollectable()
     # @color('rgb(0,255,255)')
     @bind('EnterFrame', @float)
     @bind('Platform:speedUp', @speedUp)
   float: ->
-    @floatLeft = false if @x < -@w
+    @floatLeft = false if @x < -200
     @floatLeft = true if @x > 500
     if @floatLeft
       @move('w', @speedValue)
     else
-      @move('e', (window.Game.width + @w))
-  at: (x, y) ->
-    @attr
-      x: x
-      y: y
+      @at(window.Game.width, @y)
   attachCollectable: ->
     if Math.random() > 0.8
       @attach(Crafty.e 'Leaf')

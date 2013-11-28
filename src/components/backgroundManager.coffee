@@ -13,8 +13,8 @@ Crafty.c 'BackgroundManager',
 
     @bind("Runner:jump", (data) ->
       #center viewport on the runner
-      view.y -= (data.y + view.y) - Game.height/2 + 75
-      view.x -= (data.x + view.x) - 50
+      Game.view.y -= (data.y + Game.view.y) - Game.height/2 + 75
+      Game.view.x -= (data.x + Game.view.x) - 50
 
       #move the background position
       arr = Game.window.style.backgroundPositionY.split('')

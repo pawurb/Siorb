@@ -3,7 +3,7 @@ Crafty.c 'ScoreBoard',
     @requires '2D, DOM, Text'
     @attr
       x: Game.width - 100
-      y: view.y + runner.y
+      y: Game.view.y + Game.runner.y
       w: 400
     @textFont
       type: 'italic'
@@ -13,7 +13,7 @@ Crafty.c 'ScoreBoard',
     @bind('ScoreBoard:scorePoint', @updateScoreBoard)
     @bind("Runner:jump", (data) ->
       #center viewport on the runner
-      @y = runner.y + view.y + data.y - 250)
+      @y = Game.runner.y + Game.view.y + data.y - 250)
 
   updateScoreBoard: ->
     @text("Score: #{Game.score}")

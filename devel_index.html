@@ -23,6 +23,12 @@
     <script src="dist/Siorb.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
     <script>
+      jQuery(document).bind("keyup", function(e){
+        console.log(e.keyCode);
+          if(e.keyCode == 80){
+            Crafty.pause();
+          }
+      });
       var Game = window.Game
       Game.start();
     </script>

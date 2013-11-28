@@ -1,6 +1,6 @@
 Crafty.c 'Guarana',
   init: ->
-    @requires '2D, DOM, Color, Collision'
+    @requires 'Base, Collision'
     @attr
       w: 30
       h: 50
