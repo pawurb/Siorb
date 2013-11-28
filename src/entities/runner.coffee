@@ -1,7 +1,8 @@
 Crafty.c 'Runner',
-  speedValue: 1
-  jumpValue: 12
+  speedValue: 0
+  jumpValue: 8
   backgroundX: 0
+  gravityValue: 0.6
   init: ->
     @requires 'Base, Twoway, Gravity'
     @attr
@@ -15,7 +16,7 @@ Crafty.c 'Runner',
     @attach(Crafty.e 'RunnerImage' )
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
-    @gravityConst(0.7)
+    @gravityConst(@gravityValue)
     # @color('black')
     @bind("Move", ->
       if @_gy != 0 #if the runner changed his vertical position
@@ -27,8 +28,14 @@ Crafty.c 'Runner',
           x: @x
           y: @y)
     @multijumps(2, @jumpValue, true)
+    @bind('Collected', @handleCollected)
   at: (x, y) ->
     @attr
       x: x
       y: y
+  handleCollected: (data) ->
+    if data.name == 'guarana'
+      Crafty.trigger('Platform:speedUp')
+    else if data.name =='leaf'
+      return
 

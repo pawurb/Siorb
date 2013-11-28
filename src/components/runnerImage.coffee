@@ -14,7 +14,7 @@ Crafty.c 'RunnerImage',
       @bind("Runner:jump", @jumpPose))
   jumpPose: ->
     @pauseAnimation()
-    @sprite(3,2)
+    @sprite(0,1)
     @unbind("Runner:jump")
 
 

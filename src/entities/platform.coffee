@@ -1,15 +1,18 @@
 Crafty.c 'Platform',
   floatLeft: true
-  speedValue: 4
+  defaultSpeed: 3
+  speedValue: 3
+  sizes: [100, 100, 200]
   init: ->
     @requires('Base, Solid')
     @attr
-      h: 10
-      w: Utils.rand(80,240) * 5
+      h: 12
+      w: @sizes[Utils.rand(0, @sizes.length)]
       z: 200
-    @attach(Crafty.e 'Leaf')
-    @color('rgb(0,255,255)')
+    @attachCollectable()
+    # @color('rgb(0,255,255)')
     @bind('EnterFrame', @float)
+    @bind('Platform:speedUp', @speedUp)
   float: ->
     @floatLeft = false if @x < -@w
     @floatLeft = true if @x > 500
@@ -21,5 +24,18 @@ Crafty.c 'Platform',
     @attr
       x: x
       y: y
+  attachCollectable: ->
+    if Math.random() > 0.8
+      @attach(Crafty.e 'Leaf')
+    else
+      @attach(Crafty.e 'Guarana')
+  speedUp: ->
+    @speedValue += 2 if @speedValue == @defaultSpeed
+    setTimeout =>
+      @speedValue = @defaultSpeed
+    , 4000
+
+
+
 
 

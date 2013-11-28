@@ -8,7 +8,7 @@ Siorb.Assets =
   load: ->
     Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
       spr_runner: [0, 0]
-    Crafty.sprite 30, 30, "#{@spritesPath}leaf1.png",
+    Crafty.sprite 47, 56, "#{@spritesPath}leaf1.png",
       spr_leaf: [0, 0]
     # Crafty.background("url('assets/images/background.jpg')")
   list: ->
