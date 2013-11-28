@@ -5,11 +5,14 @@ Crafty.c 'GameObserver',
   speedUpFloating: ->
     Game.floatSpeed += 3 if Game.floatSpeed == Game.defaultFloatSpeed
 
-    setTimeout =>
+    clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
+    clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
+
+    Game.timeouts.slowDown1 = setTimeout =>
       Game.floatSpeed = Game.defaultFloatSpeed + 1.5
     , 3000
 
-    setTimeout =>
+    Game.timeouts.slowDown2 = setTimeout =>
       Game.floatSpeed = Game.defaultFloatSpeed
     , 4000
   scorePoint: ->

@@ -1,8 +1,8 @@
 Crafty.c 'Runner',
   speedValue: 3
-  jumpValue: 8
+  jumpValue: 10
   backgroundX: 0
-  gravityValue: 0.6
+  gravityValue: 0.60
   init: ->
     @requires 'Base, Twoway, Gravity'
     @attr
@@ -11,7 +11,7 @@ Crafty.c 'Runner',
       x: 50
       y: Game.height/2
       w: 82
-      h: 20
+      h: 10
       z: 300
     @attach(Crafty.e 'RunnerImage' )
     @twoway(@speedValue, @jumpValue)
@@ -27,7 +27,7 @@ Crafty.c 'Runner',
           jumpSpeed: @_jumpSpeed
           x: @x
           y: @y)
-    @multijumps(2, @jumpValue, true)
+    @multijumps(2, @jumpValue/2, true)
     @bind('Collected', @handleCollected)
   at: (x, y) ->
     @attr
