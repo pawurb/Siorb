@@ -1,5 +1,7 @@
 window.Siorb = {}
 window.Game =
+  floatSpeed: 3
+  defaultFloatSpeed: 3
   score: 0
   width : 800
   height : 420
@@ -20,7 +22,10 @@ window.Game =
         xPos = @width/5 * i
         platforms.push Crafty.e('Platform').at(xPos, yInterval)
       setInterval =>
-        Crafty.e('Leaf').at(500,0)
+        if Math.random() > 0.6
+          Crafty.e('Leaf').at(500,0)
+        else
+          Crafty.e('Guarana').at(500,0)
       , 1000
 
 
