@@ -11,9 +11,9 @@ Crafty.c 'RunnerFace',
     @bind('Face:faster', @faceFaster)
     @bind('Face:normal', @faceNormal)
   faceNormal: ->
-    @animate('Face:normal', -1))
+    @animate('Face:normal', -1)
   faceFaster: ->
-    @animate('Face:faster', -1))
+    @animate('Face:faster', -1)
 
 
 

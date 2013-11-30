@@ -14,15 +14,18 @@ window.Game =
       @generatePlatforms()
       @generateCollectables()
   generatePlatforms: ->
-    for i in [0..7]
-      yInterval = @height - @height/5 * i - 20
+    levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
+
+    for i in [0..6]
+      level = levels[Utils.rand(0, levels.length)]
+      yInterval = @height - @height/5 * level - 20
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yInterval)
   generateCollectables: ->
-    x = Utils.rand( @width * 0.75, @width + 400)
+    x = Utils.rand( @width * 0.9, @width + 800)
     y = -500
 
-    if Math.random() > 0.6
+    if Math.random() > 0.3
       Crafty.e('Leaf').at(x,y)
     else
       Crafty.e('Guarana').at(x,y)

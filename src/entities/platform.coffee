@@ -1,5 +1,5 @@
 Crafty.c 'Platform',
-  sizes: [100, 100, 200]
+  sizes: [100, 100, 150]
   init: ->
     @requires('Base, Solid, Floatable')
     @attr
@@ -8,7 +8,16 @@ Crafty.c 'Platform',
       z: 200
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
-    @at(window.Game.width, @y) if @x < -200
+    higher = -84
+    lower = 84
+    yOffset = if @y > 0
+      lower
+    else if @y < 1000
+      higher
+    else
+      [higher, lower][Utils.rand(0,1)]
+
+    @at(Game.width, @y + yOffset) if @x < -200
 
 
 
