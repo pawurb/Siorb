@@ -14,6 +14,7 @@ Crafty.c 'Runner',
       h: 10
       z: 300
     @attach(Crafty.e 'RunnerImage' )
+    @attach(Crafty.e 'RunnerFace' )
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
     @gravityConst(@gravityValue)
