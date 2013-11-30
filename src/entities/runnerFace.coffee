@@ -14,6 +14,7 @@ Crafty.c 'RunnerFace',
     @bind('Face:normal', @faceNormal)
     @bind('Face:crazy', @faceCrazy)
     @bind('Face:stopCrazy', @faceStopCrazy)
+    @bind('Face:falling', @faceFalling)
   faceNormal: ->
     @animate('Face:normal', -1) unless @mode == 'crazy'
   faceFaster: ->
@@ -24,6 +25,7 @@ Crafty.c 'RunnerFace',
   faceStopCrazy: ->
     @mode = 'normal'
     @animate('Face:normal', -1)
-
+  faceFalling: ->
+    return #missing graphics
 
 

@@ -20,7 +20,7 @@ Crafty.c 'RunnerImage',
       @animate('Runner:Runs', -1)
   fallingPose: ->
     @unbind('Runner:falling')
-    Crafty.trigger('Face:faster')
+    Crafty.trigger('Face:falling')
     @animate('Runner:RunsFaster', -1)
   jumpPose: ->
     if @mode == 'normal'

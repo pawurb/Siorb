@@ -1,5 +1,5 @@
 Crafty.c 'Platform',
-  sizes: [100, 100, 150]
+  sizes: [100, 100, 100, 150]
   init: ->
     @requires('Base, Solid, Floatable')
     @attr

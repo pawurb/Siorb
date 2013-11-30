@@ -16,22 +16,22 @@ window.Game =
   generatePlatforms: ->
     levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
 
-    for i in [0..6]
+    for i in [0..10]
       level = levels[Utils.rand(0, levels.length)]
       yInterval = @height - @height/5 * level - 20
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yInterval)
   generateCollectables: ->
-    x = Utils.rand( @width, @width + 800)
+    x = Utils.rand( @width + 200, @width + 400)
     y = -500
 
     random = Math.random()
 
-    if random < 0.3
+    if random < 0.6
       Crafty.e('Leaf').at(x,y)
-    # else if random < 0.6
-      # Crafty.e('Guarana').at(x,y)
-    else if random > 0.3
+    else if random < 0.9
+      Crafty.e('Guarana').at(x,y)
+    else
       Crafty.e('Mushroom').at(x,y)
     setTimeout =>
       @generateCollectables()
