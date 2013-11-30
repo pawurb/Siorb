@@ -5,8 +5,15 @@ Crafty.c 'RunnerFace',
       z: 299
     @move('e', 48)
     @move('s', 150)
-    @reel('Runner:Runs', 400, 0, 0, 3)
-    @animate('Runner:Runs', -1)
+    @reel('Face:normal', 400, 0, 0, 3)
+    @animate('Face:normal', -1)
+    @reel('Face:faster', 200, 0, 1, 3)
+    @bind('Face:faster', @faceFaster)
+    @bind('Face:normal', @faceNormal)
+  faceNormal: ->
+    @animate('Face:normal', -1))
+  faceFaster: ->
+    @animate('Face:faster', -1))
 
 
 

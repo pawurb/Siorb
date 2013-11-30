@@ -4,29 +4,38 @@ Crafty.c 'RunnerImage',
     @requires '2D, DOM, Color, SpriteAnimation, spr_runner'
     @attr
       z: 299
-    # @color 'red'
     @move('e', 50)
     @move('s', 148)
     @reel('Runner:Runs', 400, 0, 0, 3)
     @reel('Runner:RunsFaster', 150, 0, 0, 3)
     @animate('Runner:Runs', -1)
-    @bind("Runner:jump", @jumpPose)
-    @bind('hitGround', ->
-      @resumeAnimation()
-      @bind("Runner:jump", @jumpPose) if @mode == 'normal')
+    @bind('hitGround', @groundHitPose)
     @bind('Runner:collectedGuarana', @runFaster)
+  groundHitPose: ->
+    @resumeAnimation()
+    @bind('Runner:falling', @fallingPose)
+    if @mode == 'normal'
+      @bind("Runner:jump", @jumpPose)
+      Crafty.trigger('Face:normal')
+      @animate('Runner:Runs', -1)
+  fallingPose: ->
+    @unbind('Runner:falling')
+    Crafty.trigger('Face:faster')
+    @animate('Runner:RunsFaster', -1)
   jumpPose: ->
     if @mode == 'normal'
       @pauseAnimation()
-      @sprite(0,1)
+      @sprite(0, 1)
       @unbind("Runner:jump")
   runFaster: ->
     @animate('Runner:RunsFaster', -1)
+    Crafty.trigger('Face:faster')
     @mode = 'fast'
 
     clearTimeout(Game.timeouts.speedAnimation) if Game.timeouts.speedAnimation
     Game.timeouts.speedAnimation = setTimeout =>
       @mode = 'normal'
+      Crafty.trigger('Face:normal')
       @animate('Runner:Runs', -1)
     , 3000
 
