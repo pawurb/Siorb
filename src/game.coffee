@@ -22,13 +22,17 @@ window.Game =
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yInterval)
   generateCollectables: ->
-    x = Utils.rand( @width * 0.9, @width + 800)
+    x = Utils.rand( @width, @width + 800)
     y = -500
 
-    if Math.random() > 0.3
+    random = Math.random()
+
+    if random < 0.3
       Crafty.e('Leaf').at(x,y)
-    else
-      Crafty.e('Guarana').at(x,y)
+    # else if random < 0.6
+      # Crafty.e('Guarana').at(x,y)
+    else if random > 0.3
+      Crafty.e('Mushroom').at(x,y)
     setTimeout =>
       @generateCollectables()
     , 1000

@@ -2,10 +2,19 @@ Siorb.Assets =
   spritesPath: "assets/sprites/"
   imagesPath: "assets/images/"
   spriteFiles:
-    ["runner.png", "face.png", "leaf1.png"]
+    [
+      "runner.png"
+      "face.png"
+      "leaf1.png"
+      "psycho_vision.jpg"
+    ]
   imagesFiles:
-    ["background.jpg"]
+    [
+      "background.jpg"
+    ]
   load: ->
+    Crafty.sprite 800, 420, "#{@spritesPath}psycho_vision.jpg",
+      spr_psycho: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
       spr_runner: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}face.png",

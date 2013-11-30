@@ -15,6 +15,7 @@ Crafty.c 'Runner',
       z: 300
     @attach(Crafty.e 'RunnerImage' )
     @attach(Crafty.e 'RunnerFace' )
+    @attach(Crafty.e 'PsychoVision' )
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
     @gravityConst(@gravityValue)
@@ -42,6 +43,7 @@ Crafty.c 'Runner',
       setTimeout =>
         @gravityConst(@gravityValue)
       , 2000
-    else if data.name =='leaf'
+    else if data.name == 'leaf'
       Crafty.trigger('Runner:collectedLeaf')
-
+    else if data.name == 'mushroom'
+      Crafty.trigger('Runner:psychoVision')
