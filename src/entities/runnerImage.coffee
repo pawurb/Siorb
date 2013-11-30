@@ -6,7 +6,7 @@ Crafty.c 'RunnerImage',
       z: 299
     @move('e', 50)
     @move('s', 148)
-    @reel('Runner:Runs', 400, 0, 0, 3)
+    @reel('Runner:Runs', 300, 0, 0, 3)
     @reel('Runner:RunsFaster', 150, 0, 0, 3)
     @animate('Runner:Runs', -1)
     @bind('hitGround', @groundHitPose)
