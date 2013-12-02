@@ -6,7 +6,7 @@ Crafty.c 'PsychoVision',
     @bind('Runner:psychoVision', @showVision)
     @attr
       x: 0
-      y: 80
+      y: 76
       z: 200
     $(@_element).hide()
   showVision: ->
