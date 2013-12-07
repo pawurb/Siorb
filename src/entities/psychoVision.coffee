@@ -11,7 +11,13 @@ Crafty.c 'PsychoVision',
     $(@_element).hide()
   showVision: ->
     unless @isAnimating
-      $(@_element).stop().fadeTo(@duration/3, 0.2).delay(@duration/3).fadeTo(@duration/3, 0)
+      $(@_element).stop().fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0)
+
       @isAnimating = true
       Crafty.trigger('Face:crazy')
       setTimeout =>
