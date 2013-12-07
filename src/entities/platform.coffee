@@ -9,14 +9,14 @@ Crafty.c 'Platform',
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
     if @x < -200
-      higher = -84
-      lower = 84
+      higher = [-168, -84]
+      lower = [84, 168]
       yOffset = if @y > 0
-        lower
+        lower[Utils.rand(0,1)]
       else if @y < 1000
-        higher
+        higher[Utils.rand(0,1)]
       else
-        [higher, lower][Utils.rand(0,1)]
+        [higher, lower][Utils.rand(0,1)][Utils.rand(0,1)]
 
       x = Utils.rand( @width + 200, @width + 400)
       y = -500
@@ -29,9 +29,9 @@ Crafty.c 'Platform',
     if random < 0.6
       Crafty.e('Leaf').at(x + xOffset, y)
     else if random < 0.9
-      Crafty.e('Guarana').at(x + xOffset, y + 30)
+      Crafty.e('Guarana').at(x + xOffset, y + 20)
     else
-      Crafty.e('Mushroom').at(x + xOffset, y + 30)
+      Crafty.e('Mushroom').at(x + xOffset, y + 15)
 
 
 

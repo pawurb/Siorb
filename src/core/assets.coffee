@@ -5,6 +5,8 @@ Siorb.Assets =
     [
       "runner.png"
       "face.png"
+      "guarana.png"
+      "mushroom.png"
       "leaf1.png"
       "psycho_vision.jpg"
     ]
@@ -21,6 +23,11 @@ Siorb.Assets =
       spr_face: [0, 0]
     Crafty.sprite 47, 56, "#{@spritesPath}leaf1.png",
       spr_leaf: [0, 0]
+    Crafty.sprite 36, 42, "#{@spritesPath}mushroom.png",
+      spr_mushroom: [0, 0]
+    Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
+      spr_guarana: [0, 0]
+
     # Crafty.background("url('assets/images/background.jpg')")
   list: ->
     list = []
