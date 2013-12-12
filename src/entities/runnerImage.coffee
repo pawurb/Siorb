@@ -1,7 +1,7 @@
 Crafty.c 'RunnerImage',
   mode: 'normal'
   init: ->
-    @requires '2D, DOM, Color, SpriteAnimation, spr_runner'
+    @requires 'Base, SpriteAnimation, spr_runner'
     @attr
       z: 299
     @move('e', 35)

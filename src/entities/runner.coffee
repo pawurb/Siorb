@@ -15,8 +15,8 @@ Crafty.c 'Runner',
       w: 60
       h: 10
       z: 300
-    @attach(Crafty.e 'RunnerImage' )
-    @attach(Crafty.e 'RunnerFace' )
+    @attach(Crafty.e 'RunnerImage')
+    @attach(Crafty.e 'RunnerFace')
     @attach(Crafty.e 'PsychoVision' )
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')

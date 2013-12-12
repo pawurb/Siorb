@@ -24,6 +24,7 @@ module.exports = (grunt) ->
             "src/scenes/*.coffee"
             "src/core/*.coffee"
             "src/components/*.coffee"
+            "src/interfaces/*.coffee"
             "src/entities/*.coffee"
             "src/pools/*.coffee"
           ]

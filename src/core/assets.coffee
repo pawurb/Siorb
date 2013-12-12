@@ -16,6 +16,8 @@ Siorb.Assets =
     ]
   mainMenuImagesFiles:
     [
+     "runner.png"
+     "face.png"
      "mainMenuBg.png"
      "mainMenuLeaves.png"
      "instrukcja.png"
@@ -36,7 +38,18 @@ Siorb.Assets =
     Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
       spr_guarana: [0, 0]
   loadMainMenu: ->
-    return
+    Crafty.sprite 94, 29, "#{@imagesPath}start.png",
+      start_button: [0, 0]
+    Crafty.sprite 200, 34, "#{@imagesPath}instrukcja.png",
+      instrukcja_button: [0, 0]
+    Crafty.sprite 134, 34, "#{@imagesPath}tworcy.png",
+      tworcy_button: [0, 0]
+    Crafty.sprite 320, 75, "#{@imagesPath}mainMenuLeaves.png",
+      leaves_image: [0, 0]
+    Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
+      spr_runner: [0, 0]
+    Crafty.sprite 75, 75, "#{@spritesPath}face.png",
+      spr_face: [0, 0]
 
 
 
