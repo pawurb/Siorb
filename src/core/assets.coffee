@@ -1,7 +1,7 @@
 Siorb.Assets =
   spritesPath: "assets/sprites/"
   imagesPath: "assets/images/"
-  spriteFiles:
+  gameplaySpriteFiles:
     [
       "runner.png"
       "face.png"
@@ -10,11 +10,19 @@ Siorb.Assets =
       "leaf1.png"
       "psycho_vision.jpg"
     ]
-  imagesFiles:
+  gameplayImagesFiles:
     [
       "background.jpg"
     ]
-  load: ->
+  mainMenuImagesFiles:
+    [
+     "mainMenuBg.png"
+     "mainMenuLeaves.png"
+     "instrukcja.png"
+     "tworcy.png"
+     "start.png"
+    ]
+  loadGameplay: ->
     Crafty.sprite 800, 420, "#{@spritesPath}psycho_vision.jpg",
       spr_psycho: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
@@ -27,12 +35,24 @@ Siorb.Assets =
       spr_mushroom: [0, 0]
     Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
       spr_guarana: [0, 0]
+  loadMainMenu: ->
+    return
+
+
 
     # Crafty.background("url('assets/images/background.jpg')")
-  list: ->
+  gameplayList: ->
     list = []
-    _.each @spriteFiles, (file) =>
+    _.each @gameplaySpriteFiles, (file) =>
       list.push "#{@spritesPath}#{file}"
-    _.each @imagesFiles, (file) =>
+    _.each @gameplayImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
     list
+  mainMenuList: ->
+    list = []
+    _.each @gameplaySpriteFiles, (file) =>
+      list.push "#{@spritesPath}#{file}"
+    _.each @gameplayImagesFiles, (file) =>
+      list.push "#{@imagesPath}#{file}"
+    list
+

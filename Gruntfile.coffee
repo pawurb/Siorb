@@ -21,6 +21,7 @@ module.exports = (grunt) ->
           "dist/Siorb.js" : [
             "src/utils/*.coffee"
             "src/game.coffee"
+            "src/scenes/*.coffee"
             "src/core/*.coffee"
             "src/components/*.coffee"
             "src/entities/*.coffee"

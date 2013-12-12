@@ -8,10 +8,9 @@ window.Game =
   window: null
   start: ->
     Crafty.init @width, @height
-    Crafty.load Siorb.Assets.list(), =>
-      Siorb.Assets.load()
-      @setupGlobals()
-      @generatePlatforms()
+    Crafty.load Siorb.Assets.mainMenuList(), =>
+      Siorb.Assets.loadMainMenu()
+      Crafty.scene("MainMenu")
   generatePlatforms: ->
     levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
 
