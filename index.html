@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Siorb</title>
+  </head>
+  <style>
+#cr-stage {
+  background-image: url('assets/images/background2.jpg');
+}
+
+.Platform {
+  background-image: url('assets/sprites/platform_bg.png');
+}
+
+  </style>
+  <body>
+    <h2>Siorb</h2>
+  </body>
+    <script src="dist/jquery.js"></script>
+    <script src="dist/underscore.js"></script>
+    <script src="dist/crafty.js"></script>
+    <script src="dist/Siorb.js"></script>
+    <script>
+      jQuery(document).bind("keyup", function(e){
+          if(e.keyCode == 80){
+            Crafty.pause();
+          }
+      });
+      var Game = window.Game
+      Game.start();
+    </script>
+</html>
