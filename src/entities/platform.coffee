@@ -31,7 +31,7 @@ Crafty.c 'Platform',
     else if random < 0.9
       Crafty.e('Guarana').at(x + xOffset, y + 20)
     else
-      Crafty.e('Mushroom').at(x + xOffset, y + 15)
+      Crafty.e('Mushroom').at(x + xOffset, y + 6)
 
 
 

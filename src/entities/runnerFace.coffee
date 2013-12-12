@@ -4,7 +4,7 @@ Crafty.c 'RunnerFace',
     @requires 'Base, SpriteAnimation, spr_face'
     @attr
       z: 299
-    @move('e', 48)
+    @move('e', 33)
     @move('s', 148)
     @bind('Face:faster', @faceFaster)
     @bind('Face:normal', @faceNormal)
@@ -14,7 +14,7 @@ Crafty.c 'RunnerFace',
   faceNormal: ->
     @sprite(0, 0) unless @mode == 'crazy'
   faceFaster: ->
-    @sprite(0, 0) unless @mode == 'crazy' #missing graphics
+    @sprite(0, 3) unless @mode == 'crazy' #missing graphics
   faceCrazy: ->
     @mode = 'crazy'
     @sprite(0, 1)

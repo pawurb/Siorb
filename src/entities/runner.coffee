@@ -12,7 +12,7 @@ Crafty.c 'Runner',
     @attr
       x: 50
       y: Game.height/2
-      w: 82
+      w: 60
       h: 10
       z: 300
     @attach(Crafty.e 'RunnerImage' )

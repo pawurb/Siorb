@@ -23,7 +23,7 @@ Siorb.Assets =
       spr_face: [0, 0]
     Crafty.sprite 47, 56, "#{@spritesPath}leaf1.png",
       spr_leaf: [0, 0]
-    Crafty.sprite 36, 42, "#{@spritesPath}mushroom.png",
+    Crafty.sprite 40, 49, "#{@spritesPath}mushroom.png",
       spr_mushroom: [0, 0]
     Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
       spr_guarana: [0, 0]
