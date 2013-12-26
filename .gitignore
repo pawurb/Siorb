@@ -4,4 +4,4 @@ dist/
 .sass-cache
 bower_components/
 libComponents/
-assets/
+.DS_Store
