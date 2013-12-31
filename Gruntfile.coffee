@@ -28,6 +28,7 @@ module.exports = (grunt) ->
             "src/entities/*.coffee"
             "src/pools/*.coffee"
           ]
+
     coffeelint:
       options:
         max_line_length:
@@ -36,9 +37,7 @@ module.exports = (grunt) ->
       gruntfile: "Gruntfile.coffee"
       src: ["src/**/*.coffee"]
 
-
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks "grunt-coffeelint"
-
   grunt.registerTask 'default', ['coffee', 'watch']

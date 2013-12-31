@@ -10,7 +10,7 @@ window.Game =
     Crafty.init @width, @height
     Crafty.load Siorb.Assets.mainMenuList(), =>
       Siorb.Assets.loadMainMenu()
-      Crafty.scene("MainMenu")
+      Crafty.scene("Gameplay")
   generatePlatforms: ->
     levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
 
@@ -27,6 +27,7 @@ window.Game =
     Crafty.e 'BackgroundManager'
     Crafty.e 'ScoreBoard'
     Crafty.e 'GameObserver'
+    Crafty.e 'RunnerKiller'
   timeouts:
     slowDown1: null
     slowDown2: null

@@ -3,7 +3,6 @@ Crafty.c 'Runner',
   jumpValue: 10
   backgroundX: 0
   gravityValue: 0.60
-  gameEndingVelocity: 70
   scaredFaceVelocity: 40
   init: ->
     @requires 'Base, Twoway, Gravity'
@@ -26,7 +25,6 @@ Crafty.c 'Runner',
       if @_gy != 0 #if the runner changed his vertical position
 
         Crafty.trigger('Face:falling') if @_gy > @scaredFaceVelocity
-        window.location.reload() if @_gy > @gameEndingVelocity
         Crafty.trigger 'Runner:falling' if @_gy > 20
         Crafty.trigger 'Runner:jump', #send data to backgroundAnimator
           gy: @_gy
