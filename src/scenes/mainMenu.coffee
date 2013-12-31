@@ -13,9 +13,7 @@ Crafty.scene 'MainMenu', ->
 
   $(startButton._element).on('click', ->
     setTimeout ->
-      Crafty.load Siorb.Assets.gameplayList(), =>
-        Siorb.Assets.loadGameplay()
-        Crafty.scene("Gameplay")
+      Game.runScene.gameplay()
     , 200
   )
 

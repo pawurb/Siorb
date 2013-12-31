@@ -8,9 +8,7 @@ window.Game =
   window: null
   start: ->
     Crafty.init @width, @height
-    Crafty.load Siorb.Assets.mainMenuList(), =>
-      Siorb.Assets.loadMainMenu()
-      Crafty.scene("Gameplay")
+    @runScene.gameplay()
   generatePlatforms: ->
     levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
 
@@ -32,6 +30,16 @@ window.Game =
     slowDown1: null
     slowDown2: null
     speedAnimation: null
+  runScene:
+    mainMenu: ->
+      Crafty.load Siorb.Assets.mainMenuList(), =>
+        Siorb.Assets.loadMainMenu()
+        Crafty.scene("MainMenu")
+    gameplay: ->
+      Crafty.load Siorb.Assets.gameplayList(), =>
+        Siorb.Assets.loadGameplay()
+        Crafty.scene("Gameplay")
+
 
 
 

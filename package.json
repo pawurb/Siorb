@@ -14,7 +14,6 @@
     "grunt-contrib-clean": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-copy": "*",
-    "grunt-coffeelint": "*",
-    "grunt-contrib-connect": "*"
+    "grunt-coffeelint": "*"
   }
 }
