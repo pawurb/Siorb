@@ -1,15 +1,13 @@
-host = "https://googledrive.com/host/0B5NIb8_xcr4YdFBaRmtoMDM0Wkk"
-
 Siorb.Assets =
-  spritesPath: "#{host}/sprites/"
-  imagesPath: "#{host}/images/"
+  spritesPath: "#{Game.host}/sprites/"
+  imagesPath: "#{Game.host}/images/"
   gameplaySpriteFiles:
     [
       "runner.png"
       "face.png"
       "guarana.png"
       "mushroom.png"
-      "leaf1.png"
+      "leaf.png"
       "psycho_vision.jpg"
     ]
   gameplayImagesFiles:
@@ -33,7 +31,7 @@ Siorb.Assets =
       spr_runner: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}face.png",
       spr_face: [0, 0]
-    Crafty.sprite 47, 56, "#{@spritesPath}leaf1.png",
+    Crafty.sprite 47, 56, "#{@spritesPath}leaf.png",
       spr_leaf: [0, 0]
     Crafty.sprite 40, 49, "#{@spritesPath}mushroom.png",
       spr_mushroom: [0, 0]
@@ -53,9 +51,6 @@ Siorb.Assets =
     Crafty.sprite 75, 75, "#{@spritesPath}face.png",
       spr_face: [0, 0]
 
-
-
-    # Crafty.background("url('assets/images/background.jpg')")
   gameplayList: ->
     list = []
     _.each @gameplaySpriteFiles, (file) =>
