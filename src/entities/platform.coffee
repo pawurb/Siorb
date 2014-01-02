@@ -21,7 +21,7 @@ Crafty.c 'Platform',
       x = Utils.rand( @width + 200, @width + 400)
       y = -500
       @at(Game.width, @y + yOffset)
-      @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.7
+      @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.65
   generateCollectable: (x, y) ->
     random = Math.random()
     xOffset = Utils.rand(20, 30)
