@@ -9,7 +9,7 @@ window.Game =
   window: null
   start: ->
     Crafty.init @width, @height
-    @runScene.gameplay()
+    @runScene.mainMenu()
   generatePlatforms: ->
     platformArrangements = [
       [1,5,2,4,1,0,2,5,2,0],
@@ -22,7 +22,6 @@ window.Game =
 
     for i in [0..10]
       level = platformArrangements[Utils.rand(0, platformArrangements.length)][i]
-      console.log level
       yPos = 800 + (@height - @height/5 * level - 20)
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yPos)

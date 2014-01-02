@@ -3,3 +3,10 @@ Crafty.scene 'Gameplay', ->
   Game.setupGlobals()
   Game.generatePlatforms()
 
+,
+  ->
+    Crafty("*").destroy()
+
+
+
+

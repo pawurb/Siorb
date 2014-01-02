@@ -1,6 +1,5 @@
 Crafty.scene 'MainMenu', ->
-  Crafty.background "url('assets/images/mainMenuBg.png')"
-
+  Crafty.viewport.y = 0
   firstYCoord = 200
   buttonOffset = 60
 
@@ -10,11 +9,16 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('Base, leaves_image').at(429, 90)
   Crafty.e('RunnerImage').at(544, 90)
   Crafty.e('RunnerFace').at(544, 90)
+  Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
+
 
   $(startButton._element).on('click', ->
     setTimeout ->
       Game.runScene.gameplay()
     , 200
   )
+,
+  ->
+    Crafty("*").destroy()
 
 
