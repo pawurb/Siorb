@@ -1,6 +1,6 @@
 Siorb.Assets =
-  spritesPath: "http://localhost:8000/assets/sprites/"
-  imagesPath: "http://localhost:8000/assets/images/"
+  spritesPath: "https://dl.dropboxusercontent.com/u/49671063/siorb/assets/sprites/"
+  imagesPath: "https://dl.dropboxusercontent.com/u/49671063/siorb/assets/images/"
   gameplaySpriteFiles:
     [
       "runner.png"
