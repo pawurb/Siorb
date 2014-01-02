@@ -1,6 +1,8 @@
+host = "https://googledrive.com/host/0B5NIb8_xcr4YdFBaRmtoMDM0Wkk"
+
 Siorb.Assets =
-  spritesPath: "https://dl.dropboxusercontent.com/u/49671063/siorb/assets/sprites/"
-  imagesPath: "https://dl.dropboxusercontent.com/u/49671063/siorb/assets/images/"
+  spritesPath: "#{host}/sprites/"
+  imagesPath: "#{host}/images/"
   gameplaySpriteFiles:
     [
       "runner.png"
