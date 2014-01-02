@@ -13,11 +13,13 @@ window.Game =
   generatePlatforms: ->
     levels = [0, 0, 0, 1, 1, 2, 2, 3, 4, 5]
 
+
     for i in [0..10]
       level = levels[Utils.rand(0, levels.length)]
-      yInterval = @height - @height/5 * level - 20
+      console.log level
+      yPos = 800 + (@height - @height/5 * level - 20)
       xPos = @width/5 * i
-      Crafty.e('Platform').at(xPos, yInterval)
+      Crafty.e('Platform').at(xPos, yPos)
   setupGlobals: ->
     @window = document.getElementById('cr-stage')
     @window.style.backgroundPositionY = '850px'
@@ -27,6 +29,7 @@ window.Game =
     Crafty.e 'ScoreBoard'
     Crafty.e 'GameObserver'
     Crafty.e 'RunnerKiller'
+
   timeouts:
     slowDown1: null
     slowDown2: null

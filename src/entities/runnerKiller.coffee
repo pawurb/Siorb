@@ -6,7 +6,7 @@ Crafty.c 'RunnerKiller',
     @attr
       x: 0
       y: @deathGrenzenY
-      h: 5
+      h: 25
       w: Game.width
     @onHit('RunnerImage', ->
       window.location.reload())
