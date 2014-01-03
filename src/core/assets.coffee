@@ -1,6 +1,7 @@
 Siorb.Assets =
   spritesPath: "#{Game.host}/sprites/"
   imagesPath: "#{Game.host}/images/"
+  soundsPath: "#{Game.host}/sounds/"
   gameplaySpriteFiles:
     [
       "runner.png"
@@ -14,16 +15,22 @@ Siorb.Assets =
     [
       "background.jpg"
     ]
+  mainMenuSpriteFiles:
+    [
+      "runner.png"
+      "face.png"
+    ]
   mainMenuImagesFiles:
     [
-     "runner.png"
-     "face.png"
      "mainMenuBg.png"
      "mainMenuLeaves.png"
      "instrukcja.png"
      "tworcy.png"
      "start.png"
     ]
+  mainMenuSoundFiles: [
+    "mainMenu.ogg"
+  ]
   loadGameplay: ->
     Crafty.sprite 800, 420, "#{@spritesPath}psycho_vision.jpg",
       spr_psycho: [0, 0]
@@ -50,6 +57,12 @@ Siorb.Assets =
       spr_runner: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}face.png",
       spr_face: [0, 0]
+    Crafty.audio.add
+      mainMenu: [
+                 "#{@soundsPath}/mainMenu.ogg"
+                 "#{@soundsPath}/mainMenu.mp3"
+                 ] #missing formats !!
+
 
   gameplayList: ->
     list = []
@@ -60,9 +73,11 @@ Siorb.Assets =
     list
   mainMenuList: ->
     list = []
-    _.each @gameplaySpriteFiles, (file) =>
+    _.each @mainMenuSpriteFiles, (file) =>
       list.push "#{@spritesPath}#{file}"
-    _.each @gameplayImagesFiles, (file) =>
+    _.each @mainMenuImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
+    _.each @mainMenuSoundFiles, (file) =>
+      list.push "#{@soundsPath}#{file}"
     list
 

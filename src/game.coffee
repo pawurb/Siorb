@@ -1,6 +1,6 @@
 window.Siorb = {}
 window.Game =
-  host: "https://s3-eu-west-1.amazonaws.com/siorb/assets"
+  host: "http://localhost:8000/assets"
   floatSpeed: 5
   defaultFloatSpeed: 5
   score: 0
