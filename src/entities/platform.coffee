@@ -11,15 +11,15 @@ Crafty.c 'Platform',
     if @x < -200
       higher = [-168, -84]
       lower = [84, 168]
-      yOffset = if @y > 3000
-        higher[Utils.rand(0,1)]
-      else if @y < 1500
-        lower[Utils.rand(0,1)]
+      random = [-168, 168]
+      yOffset = if @y > 1500
+        higher[Utils.rand(0,2)]
+      else if @y < 1200
+        lower[Utils.rand(0,2)]
       else
-        [higher, lower][Utils.rand(0,1)][Utils.rand(0,1)]
+        random[Utils.rand(0,2)]
 
       x = Utils.rand( @width + 200, @width + 400)
-      y = -500
       @at(Game.width, @y + yOffset)
       @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.65
   generateCollectable: (x, y) ->

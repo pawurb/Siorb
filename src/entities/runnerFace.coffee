@@ -4,7 +4,7 @@ Crafty.c 'RunnerFace',
     @requires 'Base, SpriteAnimation, spr_face'
     @attr
       z: 299
-    @move('e', 33)
+    @move('e', 23)
     @move('s', 148)
     @bind('Face:faster', @faceFaster)
     @bind('Face:normal', @faceNormal)

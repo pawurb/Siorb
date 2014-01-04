@@ -5,7 +5,7 @@ Crafty.c 'RunnerKiller',
     @attr
       x: 0
       y: @deathGrenzenY
-      h: 80
+      h: 200
       w: Game.width
     @onHit('RunnerImage', ->
       Game.runScene.mainMenu())

@@ -4,7 +4,7 @@ Crafty.c 'RunnerImage',
     @requires 'Base, SpriteAnimation, spr_runner'
     @attr
       z: 299
-    @move('e', 35)
+    @move('e', 25)
     @move('s', 148)
     @reel('Runner:Runs', 300, 0, 0, 3)
     @reel('Runner:RunsFaster', 150, 0, 0, 3)

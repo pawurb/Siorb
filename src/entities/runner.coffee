@@ -1,5 +1,5 @@
 Crafty.c 'Runner',
-  speedValue: 3
+  speedValue: 0
   jumpValue: 10
   backgroundX: 0
   gravityValue: 0.60
@@ -11,7 +11,7 @@ Crafty.c 'Runner',
     @attr
       x: 50
       y: Game.height/2
-      w: 60
+      w: 50
       h: 10
       z: 300
     @attach(Crafty.e 'RunnerImage')
