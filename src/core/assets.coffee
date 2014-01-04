@@ -9,11 +9,12 @@ Siorb.Assets =
       "guarana.png"
       "mushroom.png"
       "leaf.png"
-      "psycho_vision.jpg"
+      "manaMeter.png"
     ]
   gameplayImagesFiles:
     [
       "background.jpg"
+      "psychoVision.jpg"
     ]
   mainMenuSpriteFiles:
     [
@@ -32,7 +33,7 @@ Siorb.Assets =
     "mainMenu.ogg"
   ]
   loadGameplay: ->
-    Crafty.sprite 800, 420, "#{@spritesPath}psycho_vision.jpg",
+    Crafty.sprite 800, 420, "#{@imagesPath}psychoVision.jpg",
       spr_psycho: [0, 0]
     Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
       spr_runner: [0, 0]
@@ -44,6 +45,9 @@ Siorb.Assets =
       spr_mushroom: [0, 0]
     Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
       spr_guarana: [0, 0]
+    Crafty.sprite 75, 75, "#{@spritesPath}manaMeter.png",
+      spr_mana: [0, 0]
+
   loadMainMenu: ->
     Crafty.sprite 94, 29, "#{@imagesPath}start.png",
       start_button: [0, 0]

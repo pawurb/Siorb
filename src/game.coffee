@@ -9,16 +9,15 @@ window.Game =
   window: null
   start: ->
     Crafty.init @width, @height
-    @runScene.mainMenu()
+    @runScene.gameplay()
   generatePlatforms: ->
-    platformArrangements = [
+    platformArrangements = [ #playable initial arrangements
       [1,5,2,4,1,0,2,5,2,0],
       [1,0,1,2,0,0,3,4,1,2],
       [5,1,0,2,0,5,3,0,3,5],
       [0,1,2,4,0,5,0,2,3,0],
       [0,2,1,2,0,4,1,3,2,5,4]
     ]
-
 
     for i in [0..10]
       level = platformArrangements[Utils.rand(0, platformArrangements.length)][i]
@@ -32,6 +31,7 @@ window.Game =
     Game.view = Crafty.viewport
     Crafty.e 'BackgroundManager'
     Crafty.e 'ScoreBoard'
+    Crafty.e 'ManaMeter'
     Crafty.e 'GameObserver'
     Crafty.e 'RunnerKiller'
 
