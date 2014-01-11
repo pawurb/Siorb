@@ -8,7 +8,7 @@ Crafty.c 'RunnerKiller',
       h: 200
       w: Game.width
     @onHit('RunnerImage', ->
-      Game.runScene.mainMenu())
+      Crafty.scene('MainMenu') )
 
 
 

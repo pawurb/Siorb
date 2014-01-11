@@ -3,7 +3,7 @@ Crafty.c 'BackgroundManager',
   scrollingSpeed: 1
   proportion: 4
   init: ->
-    Game.window.style.backgroundPosition = '0px -150px'
+    Game.window.style.backgroundPosition = '0px -450px'
     @bind('EnterFrame', ->
       #scroll background
       position = Game.window.style.backgroundPosition
