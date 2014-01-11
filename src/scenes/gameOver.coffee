@@ -13,6 +13,7 @@ Crafty.scene 'GameOver', ->
   , 1000)
 ,
   ->
+    Crafty.audio.stop()
     Crafty("*").destroy()
 
 

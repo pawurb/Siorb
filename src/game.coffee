@@ -1,4 +1,3 @@
-window.Siorb = {}
 window.Game =
   host: "http://localhost:8000/assets"
   floatSpeed: 5
@@ -8,6 +7,8 @@ window.Game =
   height : 420
   window: null
   scene: null
+  assets: null
+  mute: true # set to false to play music
   start: ->
     Crafty.init @width, @height
     unless localStorage.getItem('highScore')
@@ -24,7 +25,7 @@ window.Game =
 
     for i in [0..10]
       level = platformArrangements[Utils.rand(0, platformArrangements.length)][i]
-      yPos = 800 + (@height - @height/5 * level - 20)
+      yPos = 600 + (@height - @height/5 * level - 20)
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yPos)
   setupGlobals: ->
@@ -44,12 +45,12 @@ window.Game =
     speedAnimation: null
   runScene:
     mainMenu: ->
-      Crafty.load Siorb.Assets.mainMenuList(), =>
-        Siorb.Assets.loadMainMenu()
+      Crafty.load Game.assets.mainMenuList(), =>
+        Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")
     gameplay: ->
-      Crafty.load Siorb.Assets.gameplayList(), =>
-        Siorb.Assets.loadGameplay()
+      Crafty.load Game.assets.gameplayList(), =>
+        Game.assets.loadGameplay()
         Crafty.scene("Gameplay")
     gameOver: ->
       Crafty.scene('GameOver')

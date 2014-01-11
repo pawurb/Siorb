@@ -4,6 +4,7 @@ Crafty.scene 'MainMenu', ->
   firstYCoord = 200
   buttonOffset = 60
 
+  # what you see
   startButton = Crafty.e('Button, start_button').at(545, firstYCoord)
   Crafty.e('Button, instrukcja_button').at(492, firstYCoord + buttonOffset)
   Crafty.e('Button, tworcy_button').at(526, firstYCoord + buttonOffset*2)
@@ -12,6 +13,9 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('RunnerFace').at(544, 90)
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
+
+  # what you hear
+  Crafty.audio.play('mainMenu', 1) unless Game.mute
 
 
 
@@ -22,6 +26,7 @@ Crafty.scene 'MainMenu', ->
   )
 ,
   ->
+    Crafty.audio.stop()
     Crafty("*").destroy()
 
 

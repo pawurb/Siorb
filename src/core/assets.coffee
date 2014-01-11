@@ -1,4 +1,4 @@
-Siorb.Assets =
+Game.assets =
   spritesPath: "#{Game.host}/sprites/"
   imagesPath: "#{Game.host}/images/"
   soundsPath: "#{Game.host}/sounds/"
