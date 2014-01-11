@@ -1,13 +1,16 @@
 Crafty.scene 'GameOver', ->
+  Game.scene = 'GameOver'
   Crafty.viewport.y = 0
   Crafty.background('rgb(0,0,0)')
-  Crafty.load Siorb.Assets.gameOverList(), =>
-    Siorb.Assets.loadGameOver()
-    Crafty.e('PixelScoreBoard')
+  if Game.score > parseInt(localStorage.getItem('highScore'))
+    localStorage.setItem('highScore', Game.score)
 
-    # setTimeout(->
-    #   Crafty.scene('Gameplay')
-    # , 1000)
+  Crafty.e('PixelScoreBoard').displayAt(Game.width/2, Game.height/2)
+
+
+  setTimeout(->
+    Crafty.scene('MainMenu')
+  , 1000)
 ,
   ->
     Crafty("*").destroy()

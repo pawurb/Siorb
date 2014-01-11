@@ -1,4 +1,5 @@
 Crafty.scene 'MainMenu', ->
+  Game.scene = 'MainMenu'
   Crafty.viewport.y = 0
   firstYCoord = 200
   buttonOffset = 60
@@ -10,6 +11,8 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('RunnerImage').at(544, 90)
   Crafty.e('RunnerFace').at(544, 90)
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
+  Crafty.e('PixelScoreBoard').displayAt(740, 390)
+
 
 
   $(startButton._element).on('click', ->

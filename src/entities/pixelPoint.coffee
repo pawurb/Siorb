@@ -6,7 +6,6 @@ Crafty.c 'PixelPoint',
       h: 16
       z: 301
   print: (value) ->
-    console.log value
     @sprite(0, value)
     @
 

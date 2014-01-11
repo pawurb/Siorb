@@ -3,13 +3,16 @@ window.Game =
   host: "http://localhost:8000/assets"
   floatSpeed: 5
   defaultFloatSpeed: 5
-  score: 150
+  score: 0
   width : 800
   height : 420
   window: null
+  scene: null
   start: ->
     Crafty.init @width, @height
-    @runScene.gameOver()
+    unless localStorage.getItem('highScore')
+      localStorage.setItem('highScore', 0)
+    @runScene.mainMenu()
   generatePlatforms: ->
     platformArrangements = [ #playable initial arrangements
       [1,5,2,4,1,0,2,5,2,0],
