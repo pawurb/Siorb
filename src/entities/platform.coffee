@@ -9,17 +9,18 @@ Crafty.c 'Platform',
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
     if @x < -200
+      #here is the logic responsible for platforms arrangement
       higher = [-168, -84]
       lower = [84, 168]
       random = [-168, 168]
-      yOffset = if @y > 1500
+      yOffset = if @y > 1300
         higher[Utils.rand(0,2)]
-      else if @y < 1200
+      else if @y < 1000
         lower[Utils.rand(0,2)]
       else
         random[Utils.rand(0,2)]
 
-      x = Utils.rand( @width + 200, @width + 400)
+      x = Utils.rand( @width + 200, @width + 100)
       @at(Game.width, @y + yOffset)
       @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.65
   generateCollectable: (x, y) ->

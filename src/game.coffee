@@ -26,7 +26,7 @@ window.Game =
       Crafty.e('Platform').at(xPos, yPos)
   setupGlobals: ->
     @window = document.getElementById('cr-stage')
-    @window.style.backgroundPositionY = '850px'
+    @window.style.backgroundPositionY = '0px'
     Game.runner = Crafty.e 'Runner'
     Game.view = Crafty.viewport
     Crafty.e 'BackgroundManager'

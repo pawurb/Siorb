@@ -20,6 +20,7 @@ Siorb.Assets =
     [
       "runner.png"
       "face.png"
+      "digits.png"
     ]
   mainMenuImagesFiles:
     [
@@ -32,6 +33,10 @@ Siorb.Assets =
   mainMenuSoundFiles: [
     "mainMenu.ogg"
   ]
+  gameOverSpriteFiles : [
+    "digits.png"
+  ]
+
   loadGameplay: ->
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVision.jpg",
       spr_psycho: [0, 0]
@@ -65,7 +70,10 @@ Siorb.Assets =
       mainMenu: [
                  "#{@soundsPath}/mainMenu.ogg"
                  "#{@soundsPath}/mainMenu.mp3"
-                 ] #missing formats !!
+                 ]
+  loadGameOver: ->
+    Crafty.sprite 12, 16, "#{@spritesPath}digits.png",
+      spr_digits: [0, 0]
 
 
   gameplayList: ->
@@ -84,4 +92,10 @@ Siorb.Assets =
     _.each @mainMenuSoundFiles, (file) =>
       list.push "#{@soundsPath}#{file}"
     list
+  gameOverList: ->
+    list = []
+    _.each @gameOverSpriteFiles, (file) =>
+      list.push "#{@spritesPath}#{file}"
+    list
+
 
