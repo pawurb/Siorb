@@ -3,13 +3,13 @@ window.Game =
   host: "http://localhost:8000/assets"
   floatSpeed: 5
   defaultFloatSpeed: 5
-  score: 0
+  score: 150
   width : 800
   height : 420
   window: null
   start: ->
     Crafty.init @width, @height
-    @runScene.gameplay()
+    @runScene.gameOver()
   generatePlatforms: ->
     platformArrangements = [ #playable initial arrangements
       [1,5,2,4,1,0,2,5,2,0],
@@ -48,6 +48,8 @@ window.Game =
       Crafty.load Siorb.Assets.gameplayList(), =>
         Siorb.Assets.loadGameplay()
         Crafty.scene("Gameplay")
+    gameOver: ->
+      Crafty.scene('GameOver')
 
 
 

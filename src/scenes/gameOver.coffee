@@ -3,7 +3,7 @@ Crafty.scene 'GameOver', ->
   Crafty.background('rgb(0,0,0)')
   Crafty.load Siorb.Assets.gameOverList(), =>
     Siorb.Assets.loadGameOver()
-    Crafty.e('Button, spr_digits').at(545, 200)
+    Crafty.e('PixelScoreBoard')
 
     # setTimeout(->
     #   Crafty.scene('Gameplay')
