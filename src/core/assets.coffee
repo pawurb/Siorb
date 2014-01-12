@@ -1,5 +1,4 @@
 Game.assets =
-  spritesPath: "#{Game.host}/sprites/"
   imagesPath: "#{Game.host}/images/"
   soundsPath: "#{Game.host}/sounds/"
   gameplaySpriteFiles:
@@ -13,8 +12,8 @@ Game.assets =
     ]
   gameplayImagesFiles:
     [
-      "background.jpg"
-      "psychoVision.jpg"
+      "gameplayBg.jpg"
+      "psychoVisionBg.jpg"
     ]
   mainMenuSpriteFiles:
     [
@@ -26,44 +25,45 @@ Game.assets =
     [
      "mainMenuBg.png"
      "mainMenuLeaves.png"
-     "instrukcja.png"
-     "tworcy.png"
-     "start.png"
+     "instrukcjaT.png"
+     "tworcyT.png"
+     "startT.png"
     ]
   mainMenuSoundFiles: [
     "mainMenu.ogg"
+    "mainMenu.mp3"
   ]
 
   loadGameplay: -> #include assets for gameOver scene
-    Crafty.sprite 800, 420, "#{@imagesPath}psychoVision.jpg",
+    Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",
       spr_psycho: [0, 0]
-    Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
+    Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
       spr_runner: [0, 0]
-    Crafty.sprite 75, 75, "#{@spritesPath}face.png",
+    Crafty.sprite 75, 75, "#{@imagesPath}face.png",
       spr_face: [0, 0]
-    Crafty.sprite 47, 56, "#{@spritesPath}leaf.png",
+    Crafty.sprite 47, 56, "#{@imagesPath}leaf.png",
       spr_leaf: [0, 0]
-    Crafty.sprite 40, 49, "#{@spritesPath}mushroom.png",
+    Crafty.sprite 40, 49, "#{@imagesPath}mushroom.png",
       spr_mushroom: [0, 0]
-    Crafty.sprite 34, 34, "#{@spritesPath}guarana.png",
+    Crafty.sprite 34, 34, "#{@imagesPath}guarana.png",
       spr_guarana: [0, 0]
-    Crafty.sprite 75, 75, "#{@spritesPath}manaMeter.png",
+    Crafty.sprite 75, 75, "#{@imagesPath}manaMeter.png",
       spr_mana: [0, 0]
 
   loadMainMenu: ->
-    Crafty.sprite 94, 29, "#{@imagesPath}start.png",
+    Crafty.sprite 94, 29, "#{@imagesPath}startT.png",
       start_button: [0, 0]
-    Crafty.sprite 200, 34, "#{@imagesPath}instrukcja.png",
+    Crafty.sprite 200, 34, "#{@imagesPath}instrukcjaT.png",
       instrukcja_button: [0, 0]
-    Crafty.sprite 134, 34, "#{@imagesPath}tworcy.png",
+    Crafty.sprite 134, 34, "#{@imagesPath}tworcyT.png",
       tworcy_button: [0, 0]
     Crafty.sprite 320, 75, "#{@imagesPath}mainMenuLeaves.png",
       leaves_image: [0, 0]
-    Crafty.sprite 75, 75, "#{@spritesPath}runner.png",
+    Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
       spr_runner: [0, 0]
-    Crafty.sprite 75, 75, "#{@spritesPath}face.png",
+    Crafty.sprite 75, 75, "#{@imagesPath}face.png",
       spr_face: [0, 0]
-    Crafty.sprite 12, 16, "#{@spritesPath}digits.png",
+    Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
       spr_digits: [0, 0]
     Crafty.audio.add
       mainMenu: [
@@ -73,14 +73,14 @@ Game.assets =
   gameplayList: ->
     list = []
     _.each @gameplaySpriteFiles, (file) =>
-      list.push "#{@spritesPath}#{file}"
+      list.push "#{@imagesPath}#{file}"
     _.each @gameplayImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
     list
   mainMenuList: ->
     list = []
     _.each @mainMenuSpriteFiles, (file) =>
-      list.push "#{@spritesPath}#{file}"
+      list.push "#{@imagesPath}#{file}"
     _.each @mainMenuImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
     _.each @mainMenuSoundFiles, (file) =>
