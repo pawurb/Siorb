@@ -1,5 +1,5 @@
 Crafty.c 'RunnerKiller',
-  deathGrenzenY: 5800
+  deathGrenzenY: 3800
   init: ->
     @requires('Base, Collision')
     @attr
@@ -8,7 +8,19 @@ Crafty.c 'RunnerKiller',
       h: 200
       w: Game.width
     @onHit('RunnerImage', ->
-      Crafty.scene('GameOver') )
+      Crafty("ScoreBoard").destroy()
+      Crafty("ManaMeter").destroy()
+      Crafty("PsychoVision").destroy()
+
+      setTimeout ->
+        Crafty("BackgroundManager").destroy()
+      , 1000
+
+      setTimeout ->
+        Crafty.scene('GameOver')
+      , 2000
+
+    )
 
 
 

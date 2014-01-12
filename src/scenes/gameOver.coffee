@@ -1,5 +1,6 @@
 Crafty.scene 'GameOver', ->
   Game.scene = 'GameOver'
+
   Crafty.background "url('#{Game.host}/images/gameOverBg.png')"
   Crafty.viewport.y = 0
 
@@ -13,9 +14,10 @@ Crafty.scene 'GameOver', ->
   replayButton = Crafty.e('Button, jeszcze_button')
   replayButton.at(Game.width - offset - 147, Game.height - offset*2)
 
+
   $(replayButton._element).on('click', ->
     setTimeout ->
-      Crafty.scene('MainMenu')
+      Crafty.scene('Gameplay')
     , 200
   )
 ,

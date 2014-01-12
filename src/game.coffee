@@ -25,7 +25,7 @@ window.Game =
 
     for i in [0..10]
       level = platformArrangements[Utils.rand(0, platformArrangements.length)][i]
-      yPos = 600 + (@height - @height/5 * level - 20)
+      yPos = 200 + (@height - @height/5 * level - 20)
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yPos)
   setupGlobals: ->

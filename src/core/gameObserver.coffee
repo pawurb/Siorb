@@ -9,7 +9,7 @@ Crafty.c 'GameObserver',
     clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
 
     Game.timeouts.slowDown1 = setTimeout =>
-      Game.floatSpeed = Game.defaultFloatSpeed + 1.5
+      Game.floatSpeed = Game.defaultFloatSpeed + 1
     , 3000
 
     Game.timeouts.slowDown2 = setTimeout =>

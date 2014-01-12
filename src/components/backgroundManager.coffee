@@ -3,9 +3,9 @@ Crafty.c 'BackgroundManager',
   scrollingSpeed: 1
   proportion: 4
   init: ->
-    Game.window.style.backgroundPosition = '0px -550px'
+    Game.window.style.backgroundPosition = '0px -1000px'
     @bind('EnterFrame', ->
-      #scroll background
+      # scroll background
       position = Game.window.style.backgroundPosition
       backgroundY = parseInt(position.split(' ')[1])
       Game.window.style.backgroundPosition =  @backgroundX.toString() + "px " + backgroundY.toString() + "px"
@@ -15,7 +15,7 @@ Crafty.c 'BackgroundManager',
         @backgroundX -= @scrollingSpeed
     )
     @bind("Runner:jump", (data) ->
-      #center viewport on the runner
+      # center viewport on the runner
       Game.view.y -= (data.y + Game.view.y) - Game.height/2 + 75
       Game.view.x -= (data.x + Game.view.x) - 50
 
