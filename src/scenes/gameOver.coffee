@@ -10,11 +10,14 @@ Crafty.scene 'GameOver', ->
   Crafty.e('Button, punkty_button').at(offset, Game.height - offset*2)
   Crafty.e('PixelScoreBoard').displayAt(offset + 80, Game.height - offset*2)
 
-  Crafty.e('Button, jeszcze_button').at(Game.width - offset - 147, Game.height - offset*2)
+  replayButton = Crafty.e('Button, jeszcze_button')
+  replayButton.at(Game.width - offset - 147, Game.height - offset*2)
 
-  # setTimeout(->
-  #   Crafty.scene('MainMenu')
-  # , 2000)
+  $(replayButton._element).on('click', ->
+    setTimeout ->
+      Crafty.scene('MainMenu')
+    , 200
+  )
 ,
   ->
     Crafty.audio.stop()

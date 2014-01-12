@@ -6,3 +6,4 @@ Crafty.c 'Base',
     @attr
       x: x
       y: y
+    @
