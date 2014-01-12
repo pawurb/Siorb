@@ -16,7 +16,8 @@ Crafty.c 'PixelScoreBoard',
 
     _.each score.toString().split(''), (point, index) =>
       point = parseInt(point)
-      Crafty.e('PixelPoint').print(point).at(@x + (12 * index), @y)
+      pixelPoint = Crafty.e('PixelPoint').print(point).at(@x + (12 * index), @y)
+      pixelPoint.attr({alpha: 0.5}) if Game.scene == 'GameOver'
   displayAt: (x, y) ->
     @at(x, y)
     @printScore()

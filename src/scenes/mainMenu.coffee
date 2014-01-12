@@ -18,7 +18,6 @@ Crafty.scene 'MainMenu', ->
   Crafty.audio.play('mainMenu', 1) unless Game.mute
 
 
-
   $(startButton._element).on('click', ->
     setTimeout ->
       Game.runScene.gameplay()

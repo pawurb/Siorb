@@ -1,25 +1,21 @@
 Game.assets =
   imagesPath: "#{Game.host}/images/"
   soundsPath: "#{Game.host}/sounds/"
-  gameplaySpriteFiles:
+  gameplayImagesFiles:
     [
+      "gameplayBg.jpg"
+      "psychoVisionBg.jpg"
       "runner.png"
       "face.png"
       "guarana.png"
       "mushroom.png"
       "leaf.png"
       "manaMeter.png"
-    ]
-  gameplayImagesFiles:
-    [
-      "gameplayBg.jpg"
-      "psychoVisionBg.jpg"
-    ]
-  mainMenuSpriteFiles:
-    [
-      "runner.png"
-      "face.png"
-      "digits.png"
+
+      # Game Over assets
+      "tworcyT.png"
+      "jeszczeRazT.png"
+      "gameOverBg.png"
     ]
   mainMenuImagesFiles:
     [
@@ -28,6 +24,9 @@ Game.assets =
      "instrukcjaT.png"
      "tworcyT.png"
      "startT.png"
+     "runner.png"
+     "face.png"
+     "digits.png"
     ]
   mainMenuSoundFiles: [
     "mainMenu.ogg"
@@ -49,6 +48,13 @@ Game.assets =
       spr_guarana: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}manaMeter.png",
       spr_mana: [0, 0]
+
+    # Game Over assets
+    Crafty.sprite 147, 16, "#{@imagesPath}jeszczeRazT.png",
+      jeszcze_button: [0, 0]
+    Crafty.sprite 72, 18, "#{@imagesPath}punktyT.png",
+      punkty_button: [0, 0]
+
 
   loadMainMenu: ->
     Crafty.sprite 94, 29, "#{@imagesPath}startT.png",
@@ -72,15 +78,11 @@ Game.assets =
                  ]
   gameplayList: ->
     list = []
-    _.each @gameplaySpriteFiles, (file) =>
-      list.push "#{@imagesPath}#{file}"
     _.each @gameplayImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
     list
   mainMenuList: ->
     list = []
-    _.each @mainMenuSpriteFiles, (file) =>
-      list.push "#{@imagesPath}#{file}"
     _.each @mainMenuImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
     _.each @mainMenuSoundFiles, (file) =>
