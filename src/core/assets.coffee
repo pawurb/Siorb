@@ -24,6 +24,7 @@ Game.assets =
      "instrukcjaT.png"
      "tworcyT.png"
      "startT.png"
+     "rekordT.png"
      "runner.png"
      "face.png"
      "digits.png"
@@ -63,6 +64,8 @@ Game.assets =
       instrukcja_button: [0, 0]
     Crafty.sprite 134, 34, "#{@imagesPath}tworcyT.png",
       tworcy_button: [0, 0]
+    Crafty.sprite 132, 18, "#{@imagesPath}rekordT.png",
+      rekord_button: [0, 0]
     Crafty.sprite 320, 75, "#{@imagesPath}mainMenuLeaves.png",
       leaves_image: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
