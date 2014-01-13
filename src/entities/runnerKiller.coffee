@@ -1,5 +1,5 @@
 Crafty.c 'RunnerKiller',
-  deathGrenzenY: 2800
+  deathGrenzenY: 1800
   init: ->
     @requires('Base, Collision')
     @attr
@@ -18,7 +18,7 @@ Crafty.c 'RunnerKiller',
 
       setTimeout ->
         Crafty.scene('GameOver')
-      , 2000
+      , 2500
     )
 
 
