@@ -37,7 +37,19 @@ module.exports = (grunt) ->
       gruntfile: "Gruntfile.coffee"
       src: ["src/**/*.coffee"]
 
+    copy:
+      main:
+        files: [
+          src: "dist/siorb.js"
+          dest: "libs/siorb.js"
+        ,
+          src: "libComponents/Crafty/crafty.js"
+          dest: "libs/crafty.js"
+        ]
+
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks "grunt-coffeelint"
+  grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.registerTask 'default', ['coffee', 'watch']
+  grunt.registerTask 'release', ['copy']
