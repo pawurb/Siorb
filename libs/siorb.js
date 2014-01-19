@@ -12,7 +12,7 @@
   };
 
   window.Game = {
-    host: "http://localhost:8000/assets",
+    host: "http://www.siorb.dobreziele.pl/assets",
     floatSpeed: 4,
     defaultFloatSpeed: 4,
     score: 0,
