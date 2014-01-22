@@ -25,7 +25,7 @@ Crafty.scene 'MainMenu', ->
 
   # what you hear
   Crafty.audio.play('mainMenu', 1, 0.5)
-  if Game.mute then Crafty.audio.mute() else Crafty.autio.unmute()
+  if Game.mute then Crafty.audio.mute() else Crafty.audio.unmute()
 
 
   $(startButton._element).on('click', ->
