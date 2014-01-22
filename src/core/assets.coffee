@@ -28,6 +28,7 @@ Game.assets =
      "runner.png"
      "face.png"
      "digits.png"
+     "sound.png"
     ]
   mainMenuSoundFiles: [
     "mainMenu.ogg"
@@ -66,6 +67,8 @@ Game.assets =
       tworcy_button: [0, 0]
     Crafty.sprite 132, 18, "#{@imagesPath}rekordT.png",
       rekord_button: [0, 0]
+    Crafty.sprite 76, 64, "#{@imagesPath}sound.png",
+      sound_button: [0, 0]
     Crafty.sprite 320, 75, "#{@imagesPath}mainMenuLeaves.png",
       leaves_image: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}runner.png",

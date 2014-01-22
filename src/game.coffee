@@ -8,7 +8,7 @@ window.Game =
   window: null
   scene: null
   assets: null
-  mute: true # set to false to play music
+  mute: false # set to false to play music
   start: ->
     Crafty.init @width, @height
     unless localStorage.getItem('highScore')

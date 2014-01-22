@@ -16,7 +16,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
 
-  soundButton = Crafty.e('Button, start_button').at(20, 20)
+  soundButton = Crafty.e('Button, sound_button').at(50, 20)
   $(soundButton._element).on('click', ->
     Crafty.audio.toggleMute()
   )
@@ -24,8 +24,8 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('BlackMask').isVisible().hide()
 
   # what you hear
+  Crafty.audio.play('mainMenu', 1, 0.5)
   if Game.mute then Crafty.audio.mute() else Crafty.autio.unmute()
-  Crafty.audio.play('mainMenu', 1)
 
 
   $(startButton._element).on('click', ->
