@@ -138,7 +138,7 @@
     if (Game.mute) {
       Crafty.audio.mute();
     } else {
-      Crafty.autio.unmute();
+      Crafty.audio.unmute();
     }
     return $(startButton._element).on('click', function() {
       return setTimeout(function() {
