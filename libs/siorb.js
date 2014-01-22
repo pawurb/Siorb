@@ -21,7 +21,7 @@
     window: null,
     scene: null,
     assets: null,
-    mute: true,
+    mute: false,
     start: function() {
       Crafty.init(this.width, this.height);
       if (!localStorage.getItem('highScore')) {
@@ -129,17 +129,17 @@
     Crafty.e('RunnerFace').at(544, 90);
     Crafty.background("url('" + Game.host + "/images/mainMenuBg.png')");
     Crafty.e('PixelScoreBoard').displayAt(740, 390);
-    soundButton = Crafty.e('Button, start_button').at(20, 20);
+    soundButton = Crafty.e('Button, sound_button').at(20, 20);
     $(soundButton._element).on('click', function() {
       return Crafty.audio.toggleMute();
     });
     Crafty.e('BlackMask').isVisible().hide();
+    Crafty.audio.play('mainMenu', 1, 0.5);
     if (Game.mute) {
       Crafty.audio.mute();
     } else {
       Crafty.autio.unmute();
     }
-    Crafty.audio.play('mainMenu', 1);
     return $(startButton._element).on('click', function() {
       return setTimeout(function() {
         return Game.runScene.gameplay();
@@ -154,7 +154,7 @@
     imagesPath: "" + Game.host + "/images/",
     soundsPath: "" + Game.host + "/sounds/",
     gameplayImagesFiles: ["gameplayBg.jpg", "psychoVisionBg.jpg", "runner.png", "face.png", "guarana.png", "mushroom.png", "leaf.png", "manaMeter.png", "tworcyT.png", "jeszczeRazT.png", "gameOverBg.png"],
-    mainMenuImagesFiles: ["mainMenuBg.png", "mainMenuLeaves.png", "instrukcjaT.png", "tworcyT.png", "startT.png", "rekordT.png", "runner.png", "face.png", "digits.png"],
+    mainMenuImagesFiles: ["mainMenuBg.png", "mainMenuLeaves.png", "instrukcjaT.png", "tworcyT.png", "startT.png", "rekordT.png", "runner.png", "face.png", "digits.png", "sound.png"],
     mainMenuSoundFiles: ["mainMenu.ogg", "mainMenu.mp3"],
     loadGameplay: function() {
       Crafty.sprite(800, 420, "" + this.imagesPath + "psychoVisionBg.jpg", {
@@ -197,6 +197,9 @@
       });
       Crafty.sprite(132, 18, "" + this.imagesPath + "rekordT.png", {
         rekord_button: [0, 0]
+      });
+      Crafty.sprite(76, 64, "" + this.imagesPath + "sound.png", {
+        sound_button: [0, 0]
       });
       Crafty.sprite(320, 75, "" + this.imagesPath + "mainMenuLeaves.png", {
         leaves_image: [0, 0]
