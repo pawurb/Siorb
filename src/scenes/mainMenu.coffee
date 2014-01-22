@@ -16,7 +16,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
 
-  soundButton = Crafty.e('Button, sound_button').at(50, 20)
+  soundButton = Crafty.e('Button, sound_button').at(20, 20)
   $(soundButton._element).on('click', ->
     Crafty.audio.toggleMute()
   )
