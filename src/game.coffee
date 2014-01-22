@@ -1,5 +1,5 @@
 window.Game =
-  host: "http://www.siorb.dobreziele.pl/assets"
+  host: "http://#{window.location.host}/assets"
   floatSpeed: 4
   defaultFloatSpeed: 4
   score: 0
@@ -8,9 +8,10 @@ window.Game =
   window: null
   scene: null
   assets: null
-  mute: false # set to false to play music
+  mute: true # set to false to play music
   start: ->
     Crafty.init @width, @height
+    @setBindings()
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
     @runScene.mainMenu()
@@ -55,6 +56,11 @@ window.Game =
         Crafty.scene("Gameplay")
     gameOver: ->
       Crafty.scene('GameOver')
+  setBindings: ->
+    $(document).bind "keyup", (e) ->
+      Crafty.pause() if e.keyCode == 80
+
+
 
 
 
