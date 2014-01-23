@@ -26,7 +26,6 @@ module.exports = (grunt) ->
             "src/components/*.coffee"
             "src/interfaces/*.coffee"
             "src/entities/*.coffee"
-            "src/pools/*.coffee"
           ]
 
     coffeelint:
@@ -41,11 +40,25 @@ module.exports = (grunt) ->
       main:
         files: [
           src: "dist/siorb.js"
-          dest: "libs/siorb.js"
+          dest: "../ShellySiorb/libs/siorb.js"
         ,
           src: "libComponents/Crafty/crafty.js"
-          dest: "libs/crafty.js"
+          dest: "release/libs/crafty.js"
         ]
+      shelly:
+        files: [
+          expand: true,
+          cwd: 'assets/',
+          src: ['**/*'],
+          dest: "../ShellySiorb/assets/"
+        ,
+          src: "dist/siorb.js"
+          dest: "../shellysiorb/libs/siorb.js"
+        ,
+          src: "libcomponents/crafty/crafty.js"
+          dest: "../shellysiorb/libs/crafty.js"
+        ]
+
 
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
