@@ -79,8 +79,8 @@ Game.assets =
       spr_digits: [0, 0]
     Crafty.audio.add
       mainMenu: [
-                 "#{@soundsPath}/mainMenu.ogg"
-                 "#{@soundsPath}/mainMenu.mp3"
+                 "#{@soundsPath}mainMenu.ogg"
+                 "#{@soundsPath}mainMenu.mp3"
                  ]
   gameplayList: ->
     list = []
