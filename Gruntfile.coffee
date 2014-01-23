@@ -40,23 +40,34 @@ module.exports = (grunt) ->
       main:
         files: [
           src: "dist/siorb.js"
-          dest: "../ShellySiorb/libs/siorb.js"
+          dest: "release/libs/siorb.js"
         ,
           src: "libComponents/Crafty/crafty.js"
           dest: "release/libs/crafty.js"
+        ,
+          src: "prod_index.html"
+          dest: "release/index.html"
+        ,
+          expand: true,
+          cwd: 'assets/',
+          src: ['**/*'],
+          dest: "release/assets/"
         ]
       shelly:
         files: [
           expand: true,
           cwd: 'assets/',
           src: ['**/*'],
-          dest: "../ShellySiorb/assets/"
+          dest: "../ShellySiorb/public/assets/"
         ,
           src: "dist/siorb.js"
-          dest: "../shellysiorb/libs/siorb.js"
+          dest: "../ShellySiorb/public/libs/siorb.js"
         ,
           src: "libcomponents/crafty/crafty.js"
-          dest: "../shellysiorb/libs/crafty.js"
+          dest: "../ShellySiorb/public/libs/crafty.js"
+        ,
+          src: "prod_index.html"
+          dest: "../ShellySiorb/public/index.html"
         ]
 
 
