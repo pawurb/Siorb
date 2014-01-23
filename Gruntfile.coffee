@@ -39,19 +39,22 @@ module.exports = (grunt) ->
     copy:
       main:
         files: [
-          src: "dist/siorb.js"
-          dest: "release/libs/siorb.js"
-        ,
-          src: "libComponents/Crafty/crafty.js"
-          dest: "release/libs/crafty.js"
-        ,
-          src: "prod_index.html"
-          dest: "release/index.html"
-        ,
           expand: true,
           cwd: 'assets/',
           src: ['**/*'],
           dest: "release/assets/"
+        ,
+          src: "dist/siorb.js"
+          dest: "release/libs/siorb.js"
+        ,
+          src: "lib_components/Crafty/crafty.js"
+          dest: "release/libs/crafty.js"
+        ,
+          src: "bower_components/underscore/underscore.min.js"
+          dest: "release/libs/underscore.js"
+        ,
+          src: "prod_index.html"
+          dest: "release/index.html"
         ]
       shelly:
         files: [
@@ -63,8 +66,11 @@ module.exports = (grunt) ->
           src: "dist/siorb.js"
           dest: "../ShellySiorb/public/libs/siorb.js"
         ,
-          src: "libcomponents/crafty/crafty.js"
+          src: "lib_components/crafty/crafty.js"
           dest: "../ShellySiorb/public/libs/crafty.js"
+        ,
+          src: "bower_components/underscore/underscore.min.js"
+          dest: "../ShellySiorb/public/libs/underscore.min.js"
         ,
           src: "prod_index.html"
           dest: "../ShellySiorb/public/index.html"
