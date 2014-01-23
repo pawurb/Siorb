@@ -15,6 +15,7 @@ Game.assets =
       # Game Over assets
       "tworcyT.png"
       "jeszczeRazT.png"
+      "menuT.png"
       "gameOverBg.png"
     ]
   mainMenuImagesFiles:
@@ -56,6 +57,8 @@ Game.assets =
       jeszcze_button: [0, 0]
     Crafty.sprite 72, 18, "#{@imagesPath}punktyT.png",
       punkty_button: [0, 0]
+    Crafty.sprite 49, 16, "#{@imagesPath}menuT.png",
+      menu_button: [0, 0]
 
 
   loadMainMenu: ->
