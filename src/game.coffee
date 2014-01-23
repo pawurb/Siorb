@@ -8,7 +8,7 @@ window.Game =
   window: null
   scene: null
   assets: null
-  mute: true # set to false to play music
+  mute: false # set to false to play music
   start: ->
     Crafty.init @width, @height
     @setBindings()
@@ -47,6 +47,7 @@ window.Game =
     speedAnimation: null
   runScene:
     mainMenu: ->
+      Game.assets.loadSounds()
       Crafty.load Game.assets.mainMenuList(), =>
         Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")

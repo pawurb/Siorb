@@ -5,7 +5,7 @@ Crafty.scene 'GameOver', ->
   Crafty.viewport.y = 0
 
   if Game.score > parseInt(localStorage.getItem('highScore'))
-    localStorage.setItem('highScore', Utils.encode(Game.score))
+    localStorage.setItem('highScore', Game.score)
 
   offset = 24
   Crafty.e('Button, punkty_button').at(offset, Game.height - offset*2)

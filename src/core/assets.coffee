@@ -80,6 +80,7 @@ Game.assets =
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
       spr_digits: [0, 0]
+  loadSounds: ->
     Crafty.audio.add
       mainMenu: [
                  "#{@soundsPath}mainMenu.ogg"
