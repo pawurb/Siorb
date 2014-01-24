@@ -42,25 +42,6 @@ module.exports = (grunt) ->
           expand: true,
           cwd: 'assets/',
           src: ['**/*'],
-          dest: "release/assets/"
-        ,
-          src: "dist/siorb.js"
-          dest: "release/libs/siorb.js"
-        ,
-          src: "lib_components/Crafty/crafty.js"
-          dest: "release/libs/crafty.js"
-        ,
-          src: "bower_components/underscore/underscore-min.js"
-          dest: "release/libs/underscore-min.js"
-        ,
-          src: "prod_index.html"
-          dest: "release/index.html"
-        ]
-      shelly:
-        files: [
-          expand: true,
-          cwd: 'assets/',
-          src: ['**/*'],
           dest: "../ShellySiorb/public/assets/"
         ,
           src: "dist/siorb.js"
