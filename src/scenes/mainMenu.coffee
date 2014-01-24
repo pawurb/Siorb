@@ -23,14 +23,6 @@ Crafty.scene 'MainMenu', ->
 
   Crafty.e('BlackMask').isVisible().hide()
 
-  # what you hear
-  # if Game.mute then Crafty.audio.mute() else Crafty.audio.unmute()
-
-  # setTimeout -> # give some time for sounds to load
-  #   Crafty.audio.play('mainMenu', -1, 0.5)
-  # , 1000
-
-
   $(startButton._element).on('click', ->
     setTimeout ->
       Game.runScene.gameplay()
@@ -39,6 +31,5 @@ Crafty.scene 'MainMenu', ->
 ,
   ->
     Crafty.audio.stop()
-    Crafty("*").destroy()
 
 

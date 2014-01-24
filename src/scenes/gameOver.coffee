@@ -28,10 +28,6 @@ Crafty.scene 'GameOver', ->
       Crafty.scene('MainMenu')
     , 200
   )
-,
-  ->
-    Crafty.audio.stop()
-    Crafty("*").destroy()
 
 
 

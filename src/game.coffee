@@ -8,13 +8,13 @@ window.Game =
   window: null
   scene: null
   assets: null
-  mute: true # set to false to play music
   start: ->
     Crafty.init @width, @height
+    Crafty.e('AudioManager')
     @setBindings()
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
-    Crafty.trigger('Game:started')
+    Crafty.trigger('Game:initialized')
     @runScene.mainMenu()
   generatePlatforms: ->
     platformArrangements = [ #playable initial arrangements

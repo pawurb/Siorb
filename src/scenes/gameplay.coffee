@@ -1,5 +1,5 @@
 Crafty.scene 'Gameplay', ->
-  Crafty.audio.stop()
+  Crafty.trigger('Game:gameplay')
   Game.scene = 'Gameplay'
   Game.score = 0
   Crafty.audio.stop()
@@ -14,9 +14,6 @@ Crafty.scene 'Gameplay', ->
   Crafty.e 'ManaMeter'
   Crafty.e 'GameObserver'
   Crafty.e 'RunnerKiller'
-,
-  ->
-    Crafty("*").destroy()
 
 
 
