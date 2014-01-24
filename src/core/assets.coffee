@@ -32,8 +32,10 @@ Game.assets =
      "sound.png"
     ]
   mainMenuSoundFiles: [
-    "mainMenu.ogg"
     "mainMenu.mp3"
+    "gameplay.mp3"
+    "mushroomBeat.ogg"
+    "guaranaBeat.ogg"
   ]
 
   loadGameplay: -> #include assets for gameOver scene
@@ -83,7 +85,6 @@ Game.assets =
   loadSounds: ->
     Crafty.audio.add
       mainMenu: [
-                 "#{@soundsPath}mainMenu.ogg"
                  "#{@soundsPath}mainMenu.mp3"
                  ]
   gameplayList: ->
