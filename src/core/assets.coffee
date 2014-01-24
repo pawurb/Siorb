@@ -84,9 +84,10 @@ Game.assets =
       spr_digits: [0, 0]
   loadSounds: ->
     Crafty.audio.add
-      mainMenu: [
-                 "#{@soundsPath}mainMenu.mp3"
-                 ]
+      mainMenu: ["#{@soundsPath}mainMenu.mp3"]
+      gameplay: ["#{@soundsPath}gameplay.mp3"]
+      mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg"]
+      guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg"]
   gameplayList: ->
     list = []
     _.each @gameplayImagesFiles, (file) =>

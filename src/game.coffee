@@ -8,12 +8,13 @@ window.Game =
   window: null
   scene: null
   assets: null
-  mute: false # set to false to play music
+  mute: true # set to false to play music
   start: ->
     Crafty.init @width, @height
     @setBindings()
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
+    Crafty.trigger('Game:started')
     @runScene.mainMenu()
   generatePlatforms: ->
     platformArrangements = [ #playable initial arrangements
@@ -22,7 +23,6 @@ window.Game =
       [0,1,2,4,0,5,0,2,3,0],
       [0,2,1,2,0,4,1,3,2,5,4]
     ]
-
     randomArrangement = platformArrangements[Utils.rand(0, platformArrangements.length)]
 
     for i in [0..10]
@@ -30,17 +30,6 @@ window.Game =
       yPos = 200 + (@height - @height/5 * level - 20)
       xPos = @width/5 * i
       Crafty.e('Platform').at(xPos, yPos)
-  setupGlobals: ->
-    @window = document.getElementById('cr-stage')
-    @window.style.backgroundPositionY = '0px'
-    Game.runner = Crafty.e 'Runner'
-    Game.view = Crafty.viewport
-    Crafty.e 'BackgroundManager'
-    Crafty.e 'ScoreBoard'
-    Crafty.e 'ManaMeter'
-    Crafty.e 'GameObserver'
-    Crafty.e 'RunnerKiller'
-
   timeouts:
     slowDown1: null
     slowDown2: null
