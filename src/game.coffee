@@ -10,8 +10,8 @@ window.Game =
   assets: null
   guaranaDuration: 7300
   mushroomDuration: 13600
-  leafProbability: 0.7
-  guaranaProbability: 0.925
+  leafProbability: 0.75
+  guaranaProbability: 0.95
   timeouts:
     slowDown1: null
     slowDown2: null
