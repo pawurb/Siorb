@@ -29,6 +29,8 @@ Crafty.scene 'GameOver', ->
     , 200
   )
 
+  Crafty.e('GameOverAd').addLink()
+
 
 
 
