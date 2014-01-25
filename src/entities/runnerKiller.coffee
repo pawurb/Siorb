@@ -20,6 +20,10 @@ Crafty.c 'RunnerKiller',
         , 1000
 
         setTimeout ->
+          clearTimeout(Game.timeouts.speedAnimation) if Game.timeouts.speedAnimation
+          clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
+          clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
+
           Crafty.scene('GameOver')
         , 2500
     )
