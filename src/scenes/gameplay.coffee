@@ -1,9 +1,9 @@
 Crafty.scene 'Gameplay', ->
   generatePlatforms = ->
     platformArrangements = [ #playable initial arrangements
-      [1,0,1,2,0,0,3,4,1,2],
-      [5,1,0,2,0,5,3,0,3,5],
-      [0,1,2,4,0,5,0,2,3,0],
+      [1,0,1,2,0,0,3,4,1,2,3],
+      [5,1,0,2,0,5,3,0,3,5,4],
+      [0,1,2,4,0,5,0,2,3,0,1],
       [0,2,1,2,0,4,1,3,2,5,4]
     ]
     randomArrangement = platformArrangements[Utils.rand(0, platformArrangements.length)]

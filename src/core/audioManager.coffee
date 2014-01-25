@@ -1,5 +1,5 @@
 Crafty.c 'AudioManager',
-  mute: true
+  mute: false
   mode: 'normal'
   delay: 2000
   startGameplayMusic: ->
