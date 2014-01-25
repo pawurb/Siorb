@@ -28,8 +28,5 @@ Crafty.scene 'MainMenu', ->
       Game.initScene.gameplay()
     , 200
   )
-,
-  ->
-    Crafty.audio.stop()
 
 
