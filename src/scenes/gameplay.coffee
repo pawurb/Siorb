@@ -16,6 +16,7 @@ Crafty.scene 'Gameplay', ->
 
   Crafty.trigger('Game:gameplay')
   Game.scene = 'Gameplay'
+  Game.firstGameplay = false
   Game.score = 0
   Crafty.background('')
   Game.window = document.getElementById('cr-stage')

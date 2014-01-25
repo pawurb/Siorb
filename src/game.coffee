@@ -8,6 +8,7 @@ window.Game =
   window: null
   scene: null
   assets: null
+  firstGameplay: true
   guaranaDuration: 7300
   mushroomDuration: 13600
   leafProbability: 0.75

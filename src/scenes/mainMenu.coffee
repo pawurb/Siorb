@@ -23,8 +23,12 @@ Crafty.scene 'MainMenu', ->
 
   Crafty.e('BlackMask').isVisible().hide()
 
+  startClicked = false
+
   $(startButton._element).on('click', ->
-    Game.initScene.gameplay()
+    unless startClicked
+      startClicked = true
+      if Game.firstGameplay then Game.initScene.gameplay() else Crafty.scene('Gameplay')
   )
 
 
