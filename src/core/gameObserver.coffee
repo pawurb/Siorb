@@ -14,6 +14,8 @@ Crafty.c 'GameObserver',
 
     Game.timeouts.slowDown2 = setTimeout =>
       Game.floatSpeed = Game.defaultFloatSpeed
+      Crafty.audio.stop('guaranaBeat')
+      Crafty.audio.unpause('gameplay')
     , 4000
   scorePoint: ->
     Game.score += 1

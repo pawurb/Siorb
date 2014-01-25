@@ -33,7 +33,7 @@ Game.assets =
     ]
   mainMenuSoundFiles: [
     "mainMenu.mp3"
-    "gameplay.mp3"
+    "gameplay.ogg"
     "mushroomBeat.ogg"
     "guaranaBeat.ogg"
   ]
@@ -85,7 +85,7 @@ Game.assets =
   loadSounds: ->
     Crafty.audio.add
       mainMenu: ["#{@soundsPath}mainMenu.mp3"]
-      gameplay: ["#{@soundsPath}gameplay.mp3"]
+      gameplay: ["#{@soundsPath}gameplay.ogg", "#{@soundsPath}gameplay.mp3"]
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg"]
   gameplayList: ->

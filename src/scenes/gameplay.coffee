@@ -14,6 +14,8 @@ Crafty.scene 'Gameplay', ->
   Crafty.e 'ManaMeter'
   Crafty.e 'GameObserver'
   Crafty.e 'RunnerKiller'
+, ->
+  Crafty.audio.stop()
 
 
 

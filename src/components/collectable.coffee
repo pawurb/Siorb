@@ -9,7 +9,7 @@ Crafty.c 'Collectable',
       @destroy())
     setTimeout =>
       @destroy()
-    , 5000
+    , 8000
 
 
 

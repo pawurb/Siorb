@@ -27,9 +27,9 @@ Crafty.c 'Platform',
     random = Math.random()
     xOffset = Utils.rand(20, 30)
 
-    if random < 0.9
+    if random < 0.8
       Crafty.e('Leaf').at(x + xOffset, y)
-    else if random < 0.97
+    else if random < 0.9
       Crafty.e('Guarana').at(x + xOffset, y + 20)
     else
       Crafty.e('Mushroom').at(x + xOffset, y + 6)

@@ -23,6 +23,8 @@ Crafty.c 'PsychoVision',
       setTimeout =>
         @isAnimating = false
         Crafty.trigger('Face:stopCrazy')
+        Crafty.audio.stop('mushroomBeat')
+        Crafty.audio.unpause('gameplay')
       , @duration
 
 

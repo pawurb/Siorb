@@ -15,7 +15,7 @@ window.Game =
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
     Crafty.trigger('Game:initialized')
-    @runScene.mainMenu()
+    @initScene.mainMenu()
   generatePlatforms: ->
     platformArrangements = [ #playable initial arrangements
       [1,0,1,2,0,0,3,4,1,2],
@@ -34,7 +34,7 @@ window.Game =
     slowDown1: null
     slowDown2: null
     speedAnimation: null
-  runScene:
+  initScene:
     mainMenu: ->
       Game.assets.loadSounds()
       Crafty.load Game.assets.mainMenuList(), =>

@@ -25,7 +25,7 @@ Crafty.scene 'MainMenu', ->
 
   $(startButton._element).on('click', ->
     setTimeout ->
-      Game.runScene.gameplay()
+      Game.initScene.gameplay()
     , 200
   )
 ,
