@@ -9,7 +9,7 @@ window.Game =
   scene: null
   assets: null
   guaranaDuration: 7300
-  mushroomDuration: 15000
+  mushroomDuration: 13600
   leafProbability: 0.5
   guaranaProbability: 0.8
   timeouts:
@@ -26,7 +26,6 @@ window.Game =
     @initScene.mainMenu()
   initScene:
     mainMenu: ->
-      Game.assets.loadSounds()
       Crafty.load Game.assets.mainMenuList(), =>
         Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")

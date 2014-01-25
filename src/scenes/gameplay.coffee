@@ -17,7 +17,6 @@ Crafty.scene 'Gameplay', ->
   Crafty.trigger('Game:gameplay')
   Game.scene = 'Gameplay'
   Game.score = 0
-  Crafty.audio.stop()
   Crafty.background('')
   Game.window = document.getElementById('cr-stage')
   Game.window.style.backgroundPositionY = '0px'

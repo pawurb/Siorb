@@ -31,14 +31,22 @@ Game.assets =
      "digits.png"
      "sound.png"
     ]
-  soundFiles: [
+  mainMenuSounds: [
     "mainMenu.mp3"
+  ]
+
+  gameplaySounds: [
     "gameplay.ogg"
+    "gameplay.mp3"
     "mushroomBeat.ogg"
     "guaranaBeat.ogg"
   ]
 
   loadGameplay: -> #include assets for gameOver scene
+    Crafty.audio.add
+      gameplay: ["#{@soundsPath}gameplay.mp3"]
+      mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg"]
+      guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg"]
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",
       spr_psycho: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
@@ -64,6 +72,8 @@ Game.assets =
 
 
   loadMainMenu: ->
+    Crafty.audio.add
+      mainMenu: ["#{@soundsPath}mainMenu.mp3"]
     Crafty.sprite 94, 29, "#{@imagesPath}startT.png",
       start_button: [0, 0]
     Crafty.sprite 200, 34, "#{@imagesPath}instrukcjaT.png",
@@ -82,22 +92,18 @@ Game.assets =
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
       spr_digits: [0, 0]
-  loadSounds: ->
-    Crafty.audio.add
-      mainMenu: ["#{@soundsPath}mainMenu.mp3"]
-      gameplay: ["#{@soundsPath}gameplay.ogg", "#{@soundsPath}gameplay.mp3"]
-      mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg"]
-      guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg"]
   gameplayList: ->
     list = []
     _.each @gameplayImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
+    _.each @gameplaySounds, (file) =>
+      list.push "#{@soundsPath}#{file}"
     list
   mainMenuList: ->
     list = []
     _.each @mainMenuImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
-    _.each @soundFiles, (file) =>
+    _.each @mainMenuSounds, (file) =>
       list.push "#{@soundsPath}#{file}"
     list
 
