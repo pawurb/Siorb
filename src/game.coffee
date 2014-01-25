@@ -11,8 +11,11 @@ window.Game =
   guaranaDuration: 4000
   mushroomDuration: 15000
   leafProbability: 0.5
-  guaranaProbability: 0.95
-
+  guaranaProbability: 0.8
+  timeouts:
+    slowDown1: null
+    slowDown2: null
+    speedAnimation: null
   start: ->
     Crafty.init @width, @height
     Crafty.e('AudioManager')
@@ -21,24 +24,6 @@ window.Game =
       localStorage.setItem('highScore', 0)
     Crafty.trigger('Game:initialized')
     @initScene.mainMenu()
-  generatePlatforms: ->
-    platformArrangements = [ #playable initial arrangements
-      [1,0,1,2,0,0,3,4,1,2],
-      [5,1,0,2,0,5,3,0,3,5],
-      [0,1,2,4,0,5,0,2,3,0],
-      [0,2,1,2,0,4,1,3,2,5,4]
-    ]
-    randomArrangement = platformArrangements[Utils.rand(0, platformArrangements.length)]
-
-    for i in [0..10]
-      level = randomArrangement[i]
-      yPos = 200 + (@height - @height/5 * level - 20)
-      xPos = @width/5 * i
-      Crafty.e('Platform').at(xPos, yPos)
-  timeouts:
-    slowDown1: null
-    slowDown2: null
-    speedAnimation: null
   initScene:
     mainMenu: ->
       Game.assets.loadSounds()

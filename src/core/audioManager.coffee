@@ -1,16 +1,11 @@
 Crafty.c 'AudioManager',
   mute: true
-  scene: null
   mode: 'normal'
   delay: 2000
   startGameplayMusic: ->
-    setTimeout =>
-      Crafty.audio.play('gameplay', -1, 0.5)
-    , @delay
+    Crafty.audio.play('gameplay', -1, 0.5)
   startMenuMusic: ->
-    setTimeout =>
-      Crafty.audio.play('mainMenu', -1, 0.5)
-    , @delay
+    Crafty.audio.play('mainMenu', -1, 0.5)
   init: ->
     @requires('Persist')
     if @mute then Crafty.audio.mute() else Crafty.audio.unmute()
@@ -19,27 +14,20 @@ Crafty.c 'AudioManager',
 
       # music playing logic goes here
       if data.oldScene == null and data.newScene == 'MainMenu'
-        @scene = 'MainMenu'
         @startMenuMusic()
 
       else if data.oldScene == 'MainMenu' and data.newScene == 'Gameplay'
-        @scene = 'Gameplay'
-
         Crafty.audio.stop('mainMenu')
         @startGameplayMusic()
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
-        @scene = 'GameOver'
         Crafty.audio.stop()
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
-        @scene = 'Gameplay'
         @startGameplayMusic()
 
       else if data.oldScene == 'GameOver' and data.newScene == 'MainMenu'
-        @scene = 'MainMenu'
         @startMenuMusic()
-
     )
 
     @bind('Runner:collectedGuarana', ->

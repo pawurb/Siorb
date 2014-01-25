@@ -31,7 +31,7 @@ Game.assets =
      "digits.png"
      "sound.png"
     ]
-  mainMenuSoundFiles: [
+  soundFiles: [
     "mainMenu.mp3"
     "gameplay.ogg"
     "mushroomBeat.ogg"
@@ -97,7 +97,7 @@ Game.assets =
     list = []
     _.each @mainMenuImagesFiles, (file) =>
       list.push "#{@imagesPath}#{file}"
-    _.each @mainMenuSoundFiles, (file) =>
+    _.each @soundFiles, (file) =>
       list.push "#{@soundsPath}#{file}"
     list
 
