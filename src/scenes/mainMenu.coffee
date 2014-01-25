@@ -24,9 +24,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('BlackMask').isVisible().hide()
 
   $(startButton._element).on('click', ->
-    setTimeout ->
-      Game.initScene.gameplay()
-    , 200
+    Game.initScene.gameplay()
   )
 
 
