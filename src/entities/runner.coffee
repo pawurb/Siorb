@@ -34,6 +34,9 @@ Crafty.c 'Runner',
           y: @y)
     @multijumps(2, @jumpValue/2, true)
     @bind('Collected', @handleCollected)
+    @bind('Guarana:ended', ->
+      @gravityConst(@gravityValue)
+    )
   at: (x, y) ->
     @attr
       x: x
@@ -41,20 +44,9 @@ Crafty.c 'Runner',
   handleCollected: (data) ->
     if data.name == 'guarana'
       Crafty.trigger('Runner:collectedGuarana')
-      Crafty.audio.pause('gameplay')
-      Crafty.audio.stop('guaranaBeat')
-      Crafty.audio.stop('mushroomBeat')
-      Crafty.audio.play('guaranaBeat', 1, 0.5)
       @gravityConst(@gravityValue - 0.2)
-      setTimeout =>
-        @gravityConst(@gravityValue)
-      , 2000
     else if data.name == 'leaf'
       Crafty.trigger('Runner:collectedLeaf')
     else if data.name == 'mushroom'
       Crafty.trigger('Runner:collectedMushroom')
-      Crafty.audio.pause('gameplay')
-      Crafty.audio.stop('mushroomBeat')
-      Crafty.audio.stop('guranaBeat')
-      Crafty.audio.play('mushroomBeat', 1, 0.5)
       Crafty.trigger('Runner:psychoVision')

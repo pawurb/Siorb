@@ -10,12 +10,12 @@ Crafty.c 'GameObserver',
 
     Game.timeouts.slowDown1 = setTimeout =>
       Game.floatSpeed = Game.defaultFloatSpeed + 1
-    , 3000
+    , Game.guaranaDuration - 1000
 
     Game.timeouts.slowDown2 = setTimeout =>
       Game.floatSpeed = Game.defaultFloatSpeed
       Crafty.trigger('Guarana:ended')
-    , 4000
+    , Game.guaranaDuration
   scorePoint: ->
     Game.score += 1
     Crafty.trigger('ScoreBoard:scorePoint')

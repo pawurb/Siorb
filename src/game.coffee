@@ -8,6 +8,11 @@ window.Game =
   window: null
   scene: null
   assets: null
+  guaranaDuration: 4000
+  mushroomDuration: 15000
+  leafProbability: 0.5
+  guaranaProbability: 0.95
+
   start: ->
     Crafty.init @width, @height
     Crafty.e('AudioManager')

@@ -9,10 +9,10 @@ Crafty.c 'Platform',
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
     if @x < -200
-      #here is the logic responsible for platforms arrangement
+      # logic responsible for platforms arrangement
       higher = [-168, -84]
       lower = [84, 168]
-      random = [-168, 168]
+      random = [-84, 84]
       yOffset = if @y > 1300
         higher[Utils.rand(0,2)]
       else if @y < 1000
@@ -27,9 +27,9 @@ Crafty.c 'Platform',
     random = Math.random()
     xOffset = Utils.rand(20, 30)
 
-    if random < 0.8
+    if random < Game.leafProbability
       Crafty.e('Leaf').at(x + xOffset, y)
-    else if random < 0.9
+    else if random < Game.guaranaProbability
       Crafty.e('Guarana').at(x + xOffset, y + 20)
     else
       Crafty.e('Mushroom').at(x + xOffset, y + 6)

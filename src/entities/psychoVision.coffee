@@ -1,6 +1,6 @@
 Crafty.c 'PsychoVision',
   isAnimating: false
-  duration: 15000
+  duration: Game.mushroomDuration
   init: ->
     @requires 'Base, spr_psycho'
     @bind('Runner:psychoVision', @showVision)

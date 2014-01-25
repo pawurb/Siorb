@@ -36,7 +36,7 @@ Crafty.c 'RunnerImage',
       @mode = 'normal'
       Crafty.trigger('Face:normal')
       @animate('Runner:Runs', -1)
-    , 3000
+    , Game.guaranaDuration
 
 
 

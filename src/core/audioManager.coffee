@@ -43,26 +43,28 @@ Crafty.c 'AudioManager',
     )
 
     @bind('Runner:collectedGuarana', ->
-
-      @mode = 'guarana'
-      console.log 'guaranabum'
-
+      if @mode == 'normal'
+        @mode = 'guarana'
+        Crafty.audio.pause('gameplay')
+        Crafty.audio.play('guaranaBeat', 1, 0.5)
     )
 
     @bind('Runner:collectedMushroom', ->
-      @mode = 'mushroom'
-
-      console.log 'shroomy shroom'
-
+      unless @mode == 'mushroom'
+        @mode = 'mushroom'
+        Crafty.audio.pause('gameplay')
+        Crafty.audio.stop('guaranaBeat')
+        Crafty.audio.play('mushroomBeat', 1, 0.5)
     )
 
     @bind('Guarana:ended', ->
-      console.log 'guarana end'
-      Crafty.audio.stop('guaranaBeat')
-      Crafty.audio.unpause('gameplay')
+      unless @mode == 'mushroom'
+        @mode = 'normal'
+        Crafty.audio.stop('guaranaBeat')
+        Crafty.audio.unpause('gameplay')
     )
     @bind('Mushroom:ended', ->
-      console.log 'shroom finish'
+      @mode = 'normal'
       Crafty.audio.stop('mushroomBeat')
       Crafty.audio.unpause('gameplay')
     )
