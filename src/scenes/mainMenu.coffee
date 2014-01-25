@@ -6,7 +6,7 @@ Crafty.scene 'MainMenu', ->
 
   # what you see
   startButton = Crafty.e('Button, start_button').at(545, firstYCoord)
-  Crafty.e('Button, instrukcja_button').at(492, firstYCoord + buttonOffset)
+  instructionButton = Crafty.e('Button, instrukcja_button').at(492, firstYCoord + buttonOffset)
   Crafty.e('Button, tworcy_button').at(526, firstYCoord + buttonOffset*2)
   Crafty.e('Button, rekord_button').at(Game.width - 210, Game.height - 30)
 
@@ -21,11 +21,17 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('BlackMask').isVisible().hide()
 
   startClicked = false
-
   $(startButton._element).on('click', ->
     unless startClicked
       startClicked = true
-      if Game.firstGameplay then Game.initScene.gameplay() else Crafty.scene('Gameplay')
+      Game.initScene.gameplay()
+  )
+
+  instructionClicked = false
+  $(instructionButton._element).on('click', ->
+    unless instructionClicked
+      instructionClicked = true
+      Game.initScene.instruction()
   )
 
 

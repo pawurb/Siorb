@@ -9,6 +9,7 @@ window.Game =
   scene: null
   assets: null
   firstGameplay: true
+  firstInstruction: true
   guaranaDuration: 7300
   mushroomDuration: 13600
   leafProbability: 0.75
@@ -31,11 +32,22 @@ window.Game =
         Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")
     gameplay: ->
-      Crafty.load Game.assets.gameplayList(), =>
-        Game.assets.loadGameplay()
+      if Game.firstGameplay
+        Crafty.load Game.assets.gameplayList(), =>
+          Game.assets.loadGameplay()
+          Crafty.scene("Gameplay")
+      else
         Crafty.scene("Gameplay")
     gameOver: ->
       Crafty.scene('GameOver')
+    instruction: ->
+      if Game.firstInstruction
+        Crafty.load Game.assets.instructionList(), =>
+          Game.assets.loadInstruction()
+          Crafty.scene("Instruction")
+      else
+        Crafty.scene("Instruction")
+
   setBindings: ->
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80

@@ -2,7 +2,7 @@ Crafty.c 'ScoreBoard',
   init: ->
     @requires '2D, DOM, Text'
     @attr
-      x: Game.width - 63
+      x: Game.width - 55
       y: Game.view.y + Game.runner.y
       w: 400
       z: 301

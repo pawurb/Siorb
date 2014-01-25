@@ -31,6 +31,12 @@ Game.assets =
      "digits.png"
      "sound.png"
     ]
+  instructionImagesFiles:
+    [
+      "instruction1.png"
+      "instruction2.png"
+      "instruction3.png"
+    ]
   mainMenuSounds: [
     "mainMenu.mp3"
   ]
@@ -92,6 +98,15 @@ Game.assets =
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
       spr_digits: [0, 0]
+
+  loadInstruction: ->
+    Crafty.sprite 431, 287, "#{@imagesPath}instruction1.png",
+      spr_instruction1: [0, 0]
+    Crafty.sprite 431, 287, "#{@imagesPath}instruction2.png",
+      spr_instruction2: [0, 0]
+    Crafty.sprite 431, 287, "#{@imagesPath}instruction3.png",
+      spr_instruction3: [0, 0]
+
   gameplayList: ->
     list = []
     _.each @gameplayImagesFiles, (file) =>
@@ -105,6 +120,11 @@ Game.assets =
       list.push "#{@imagesPath}#{file}"
     _.each @mainMenuSounds, (file) =>
       list.push "#{@soundsPath}#{file}"
+    list
+  instructionList: ->
+    list = []
+    _.each @instructionImagesFiles, (file) =>
+      list.push "#{@imagesPath}#{file}"
     list
 
 

@@ -8,7 +8,7 @@ Crafty.scene 'GameOver', ->
     localStorage.setItem('highScore', Game.score)
 
   offset = 24
-  Crafty.e('Button, punkty_button').at(offset, Game.height - offset*2)
+  Crafty.e('Base, punkty_button').at(offset, Game.height - offset*2)
   Crafty.e('PixelScoreBoard').displayAt(offset + 80, Game.height - offset*2)
 
   replayButton = Crafty.e('Button, jeszcze_button')
