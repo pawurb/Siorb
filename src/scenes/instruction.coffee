@@ -5,6 +5,15 @@ Crafty.scene 'Instruction', ->
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('InstructionField').load()
 
+  returnButton = Crafty.e('Button, powrot_button').at(640, 370)
+
+  returnClicked = false
+  $(returnButton._element).on('click', ->
+    unless returnClicked
+      returnClicked = true
+      Game.runScene.mainMenu()
+  )
+
 
 
 

@@ -16,7 +16,7 @@ Crafty.scene 'GameOver', ->
 
   $(replayButton._element).on('click', ->
     setTimeout ->
-      Crafty.scene('Gameplay')
+      Game.runScene.gameplay()
     , 200
   )
 
@@ -25,7 +25,7 @@ Crafty.scene 'GameOver', ->
 
   $(menu_button._element).on('click', ->
     setTimeout ->
-      Crafty.scene('MainMenu')
+      Game.runScene.mainMenu()
     , 200
   )
 

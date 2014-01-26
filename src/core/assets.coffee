@@ -36,6 +36,7 @@ Game.assets =
       "instruction1.png"
       "instruction2.png"
       "instruction3.png"
+      "powrotT.png"
     ]
   mainMenuSounds: [
     "mainMenu.mp3"
@@ -106,6 +107,8 @@ Game.assets =
       spr_instruction2: [0, 0]
     Crafty.sprite 431, 287, "#{@imagesPath}instruction3.png",
       spr_instruction3: [0, 0]
+    Crafty.sprite 119, 36, "#{@imagesPath}powrotT.png",
+      powrot_button: [0, 0]
 
   gameplayList: ->
     list = []

@@ -25,8 +25,8 @@ window.Game =
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
     Crafty.trigger('Game:initialized')
-    @initScene.mainMenu()
-  initScene:
+    @runScene.mainMenu()
+  runScene:
     mainMenu: ->
       Crafty.load Game.assets.mainMenuList(), =>
         Game.assets.loadMainMenu()

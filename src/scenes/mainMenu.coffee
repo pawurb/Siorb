@@ -24,16 +24,16 @@ Crafty.scene 'MainMenu', ->
   $(startButton._element).on('click', ->
     unless startClicked
       startClicked = true
-      Game.initScene.gameplay()
+      Game.runScene.gameplay()
   )
 
   instructionClicked = false
   $(instructionButton._element).on('click', ->
     unless instructionClicked
       instructionClicked = true
-      Game.initScene.instruction()
+      Game.runScene.instruction()
   )
 
-  Game.initScene.instruction()
+  Game.runScene.instruction()
 
 
