@@ -1,5 +1,5 @@
 Crafty.c 'AudioManager',
-  mute: true
+  mute: Game.muted
   mode: 'normal'
   startGameplayMusic: ->
     Crafty.audio.play('gameplay', -1, 0.5)

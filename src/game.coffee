@@ -15,6 +15,7 @@ window.Game =
   mushroomDuration: 13600
   leafProbability: 0.75
   guaranaProbability: 0.95
+  muted: (if localStorage.getItem('muted') == 'false' then false else true)
   timeouts:
     slowDown1: null
     slowDown2: null
@@ -25,6 +26,8 @@ window.Game =
     @setBindings()
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)
+    unless localStorage.getItem('muted')
+      localStorage.setItem('muted', false)
     Crafty.trigger('Game:initialized')
     @runScene.mainMenu()
   runScene:
