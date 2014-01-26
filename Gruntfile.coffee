@@ -47,6 +47,9 @@ module.exports = (grunt) ->
           src: "dist/siorb.js"
           dest: "../ShellySiorb/public/libs/siorb.js"
         ,
+          src: "dist/styles.css"
+          dest: "../ShellySiorb/public/libs/styles.css"
+        ,
           src: "lib_components/crafty/crafty.js"
           dest: "../ShellySiorb/public/libs/crafty.js"
         ,
