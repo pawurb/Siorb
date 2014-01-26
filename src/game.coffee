@@ -16,7 +16,7 @@ window.Game =
   leafProbability: 0.75
   guaranaProbability: 0.95
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
-  volume: 0.4
+  volume: 0.5
   timeouts:
     slowDown1: null
     slowDown2: null
@@ -25,6 +25,7 @@ window.Game =
     Crafty.init @width, @height
     @setBindings()
     Crafty.e('AudioManager')
+    Crafty.e('BlackMaskManager')
 
     unless localStorage.getItem('highScore')
       localStorage.setItem('highScore', 0)

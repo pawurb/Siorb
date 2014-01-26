@@ -16,10 +16,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('RunnerFace').at(544, 90)
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
-
   Crafty.e('SoundButton')
-
-  Crafty.e('BlackMask').isVisible().hide() # move to blackout manager SceneChangeEvent
 
   startClicked = false
   jQuery ->

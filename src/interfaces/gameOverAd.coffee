@@ -4,7 +4,6 @@ Crafty.c 'GameOverAd',
     @attr
       x: 400
       y: 210
-  addLink: ->
     if Math.random() < 0.5
       adNumber = if Math.random() < 0.5 then 1 else 2
       image = "gameOverAd#{adNumber}.png"

@@ -3,24 +3,28 @@ Crafty.c 'BlackMask',
     @requires('Base')
     @color('black')
     @attr(
-      x: Crafty.viewport.x
+      x: 0
       y: Crafty.viewport.y
-      w: Game.width
-      h: Game.height
+      w: Game.width + 200
+      h: Game.height + 200
       z: 358)
+    setTimeout =>
+      @destroy()
+    , 2000
   isVisible: ->
     @attr
       alpha: 1
     @
   isInvisible: ->
-    $(@_element).hide()
+    @attr
+      alpha: 0
     @
   show: ->
     setTimeout =>
       $(@_element).fadeIn('slow')
-    , 500
+    , 300
   hide: ->
     setTimeout =>
       $(@_element).fadeOut('slow')
-    , 500
+    , 300
 

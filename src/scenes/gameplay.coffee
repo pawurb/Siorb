@@ -29,6 +29,10 @@ Crafty.scene 'Gameplay', ->
   Crafty.e 'ManaMeter'
   Crafty.e 'GameObserver'
   Crafty.e 'RunnerKiller'
+  Crafty.pause()
+  setTimeout ->
+    Crafty.pause()
+  , 1000
 
 
 
