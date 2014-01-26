@@ -56,6 +56,9 @@ module.exports = (grunt) ->
           src: "bower_components/underscore/underscore-min.js"
           dest: "../ShellySiorb/public/libs/underscore-min.js"
         ,
+          src: "bower_components/jcarousel/dist/jquery.jcarousel.min.js"
+          dest: "../ShellySiorb/public/libs/jcarousel-min.js"
+        ,
           src: "prod_index.html"
           dest: "../ShellySiorb/public/index.html"
         ]
