@@ -3,7 +3,7 @@ Crafty.scene 'Instruction', ->
   Game.firstInstruction = false
   Crafty.e('SoundButton')
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
-  Crafty.e('InstructionField').load()
+  Crafty.e('InstructionField')
 
   returnButton = Crafty.e('Button, powrot_button').at(640, 370)
 
@@ -13,6 +13,8 @@ Crafty.scene 'Instruction', ->
       returnClicked = true
       Game.runScene.mainMenu()
   )
+
+
 
 
 

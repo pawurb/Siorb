@@ -1,5 +1,6 @@
 Crafty.scene 'MainMenu', ->
   Game.scene = 'MainMenu'
+  Game.firstMainMenu = false
   Crafty.viewport.y = 0
   firstYCoord = 200
   buttonOffset = 60
@@ -18,22 +19,23 @@ Crafty.scene 'MainMenu', ->
 
   Crafty.e('SoundButton')
 
-  Crafty.e('BlackMask').isVisible().hide()
+  Crafty.e('BlackMask').isVisible().hide() # move to blackout manager SceneChangeEvent
 
   startClicked = false
-  $(startButton._element).on('click', ->
-    unless startClicked
-      startClicked = true
-      Game.runScene.gameplay()
-  )
+  jQuery ->
+    $(startButton._element).on('click', ->
+      unless startClicked
+        startClicked = true
+        Game.runScene.gameplay()
+    )
 
-  instructionClicked = false
-  $(instructionButton._element).on('click', ->
-    unless instructionClicked
-      instructionClicked = true
-      Game.runScene.instruction()
-  )
+    instructionClicked = false
+    $(instructionButton._element).on('click', ->
+      unless instructionClicked
+        instructionClicked = true
+        Game.runScene.instruction()
+    )
 
-  Game.runScene.instruction()
+
 
 

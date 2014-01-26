@@ -8,6 +8,7 @@ window.Game =
   window: null
   scene: null
   assets: null
+  firstMainMenu: true
   firstGameplay: true
   firstInstruction: true
   guaranaDuration: 7300
@@ -28,8 +29,11 @@ window.Game =
     @runScene.mainMenu()
   runScene:
     mainMenu: ->
-      Crafty.load Game.assets.mainMenuList(), =>
-        Game.assets.loadMainMenu()
+      if Game.firstMainMenu
+        Crafty.load Game.assets.mainMenuList(), =>
+          Game.assets.loadMainMenu()
+          Crafty.scene("MainMenu")
+      else
         Crafty.scene("MainMenu")
     gameplay: ->
       if Game.firstGameplay
