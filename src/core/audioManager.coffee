@@ -1,14 +1,16 @@
 Crafty.c 'AudioManager',
-  mute: Game.muted
   mode: 'normal'
   startGameplayMusic: ->
-    Crafty.audio.play('gameplay', -1, 0.5)
+    Crafty.audio.play('gameplay', -1, Game.volume)
   startMenuMusic: ->
-    Crafty.audio.play('mainMenu', -1, 0.5)
+    Crafty.audio.play('mainMenu', -1, Game.volume)
+  setInitialMute: ->
+    unless localStorage.getItem('muted')
+      localStorage.setItem('muted', false)
+    if Game.muted then Crafty.audio.mute() else Crafty.audio.unmute()
   init: ->
     @requires('Persist')
-    if @mute then Crafty.audio.mute() else Crafty.audio.unmute()
-
+    @setInitialMute()
     @bind('SceneChange', (data)->
 
       # music playing logic goes here
@@ -34,7 +36,7 @@ Crafty.c 'AudioManager',
         @mode = 'guarana'
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
-        Crafty.audio.play('guaranaBeat', 1, 0.5)
+        Crafty.audio.play('guaranaBeat', 1, Game.volume)
     )
 
     @bind('Runner:collectedMushroom', ->
@@ -42,7 +44,7 @@ Crafty.c 'AudioManager',
         @mode = 'mushroom'
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
-        Crafty.audio.play('mushroomBeat', 1, 0.5)
+        Crafty.audio.play('mushroomBeat', 1, Game.volume)
     )
 
     @bind('Guarana:ended', ->
