@@ -4,7 +4,7 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ["src/**/*.coffee", "devel_index.html"]
+        files: ["src/**/*.coffee", "devel_index.html", "dist/styles.css"]
         tasks: [
           "coffeelint:src"
           "coffee:src"

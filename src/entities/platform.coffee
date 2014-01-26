@@ -3,7 +3,7 @@ Crafty.c 'Platform',
   init: ->
     @requires('Base, Solid, Floatable')
     @attr
-      h: 20
+      h: 15
       w: @sizes[Utils.rand(0, @sizes.length)]
       z: 200
     @bind('EnterFrame', @resetPosition)

@@ -16,7 +16,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
 
-  soundButton = Crafty.e('SoundButton')
+  Crafty.e('SoundButton')
 
   Crafty.e('BlackMask').isVisible().hide()
 
@@ -33,5 +33,7 @@ Crafty.scene 'MainMenu', ->
       instructionClicked = true
       Game.initScene.instruction()
   )
+
+  Game.initScene.instruction()
 
 
