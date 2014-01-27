@@ -4,6 +4,7 @@ Crafty.scene 'Instruction', ->
   Crafty.e('SoundButton')
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('InstructionField')
+  Crafty.e('LogoButton')
 
   returnButton = Crafty.e('Button, powrot_button').at(640, 370)
 

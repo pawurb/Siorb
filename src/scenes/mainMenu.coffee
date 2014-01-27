@@ -17,6 +17,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
   Crafty.e('SoundButton')
+  Crafty.e('LogoButton')
 
   startClicked = false
   jQuery ->
