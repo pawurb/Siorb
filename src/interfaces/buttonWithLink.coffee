@@ -1,5 +1,5 @@
 Crafty.c 'ButtonWithLink',
-saturation: 0.8
+  saturation: 0.8
   init: ->
     @requires '2D, DOM'
   addLinkHtml: (html) ->
