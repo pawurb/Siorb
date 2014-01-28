@@ -11,7 +11,7 @@ window.Game =
   firstMainMenu: true
   firstGameplay: true
   firstInstruction: true
-  guaranaDuration: 7300
+  speedUpDuration: 7300
   mushroomDuration: 13600
   leafProbability: 0.75
   guaranaProbability: 0.85
