@@ -36,6 +36,11 @@ module.exports = (grunt) ->
       gruntfile: "Gruntfile.coffee"
       src: ["src/**/*.coffee"]
 
+    uglify:
+      release:
+        files:
+          "dist/siorb-min.js": ["dist/siorb.js"]
+          "dist/crafty-min.js": ["lib_components/crafty/crafty.js"]
     copy:
       main:
         files: [
@@ -44,14 +49,14 @@ module.exports = (grunt) ->
           src: ['**/*'],
           dest: "../ShellySiorb/public/assets/"
         ,
-          src: "dist/siorb.js"
-          dest: "../ShellySiorb/public/libs/siorb.js"
+          src: "dist/siorb-min.js"
+          dest: "../ShellySiorb/public/libs/siorb-min.js"
         ,
           src: "dist/styles.css"
           dest: "../ShellySiorb/public/libs/styles.css"
         ,
-          src: "lib_components/crafty/crafty.js"
-          dest: "../ShellySiorb/public/libs/crafty.js"
+          src: "dist/crafty-min.js"
+          dest: "../ShellySiorb/public/libs/crafty-min.js"
         ,
           src: "bower_components/underscore/underscore-min.js"
           dest: "../ShellySiorb/public/libs/underscore-min.js"
@@ -68,5 +73,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks "grunt-coffeelint"
   grunt.loadNpmTasks "grunt-contrib-copy"
+  grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.registerTask 'default', ['coffee', 'watch']
-  grunt.registerTask 'release', ['copy']
+  grunt.registerTask 'release', ['uglify', 'copy']
