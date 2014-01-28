@@ -7,13 +7,12 @@ Crafty.c 'Runner',
   init: ->
     @requires 'Base, Twoway, Gravity'
     @attr
-      z: 299
-    @attr
       x: 50
       y: Game.height/2
       w: 50
       h: 10
       z: 300
+    @attach(Crafty.e 'RunnerBlush' )
     @attach(Crafty.e 'RunnerImage')
     @attach(Crafty.e 'RunnerFace')
     @attach(Crafty.e 'PsychoVision' )
@@ -50,3 +49,7 @@ Crafty.c 'Runner',
     else if data.name == 'mushroom'
       Crafty.trigger('Runner:collectedMushroom')
       Crafty.trigger('Runner:psychoVision')
+    else if data.name == 'mrsCoffee'
+      console.log 'kawu'
+    else if data.name == 'mrHot'
+      Crafty.trigger('Runner:collectedMrHot')

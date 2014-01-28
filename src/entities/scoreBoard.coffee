@@ -11,7 +11,7 @@ Crafty.c 'ScoreBoard',
       size: "20px"
       family: 'Arial'
     @text("#{Game.score}")
-    @bind('ScoreBoard:scorePoint', @updateScoreBoard)
+    @bind('ScoreBoard:updatePoints', @updateScoreBoard)
     @bind("Runner:jump", (data) ->
       #always display in the same screen place
       @y = Game.runner.y + Game.view.y + data.y - 215)

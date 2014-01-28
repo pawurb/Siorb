@@ -23,6 +23,7 @@ Crafty.c 'RunnerKiller',
           clearTimeout(Game.timeouts.speedAnimation) if Game.timeouts.speedAnimation
           clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
           clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
+          Game.floatSpeed = Game.defaultFloatSpeed
 
           Game.runScene.gameOver()
         , 2500

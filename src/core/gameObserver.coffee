@@ -2,6 +2,7 @@ Crafty.c 'GameObserver',
   init: ->
     @bind('Runner:collectedGuarana', @speedUpFloating)
     @bind('Runner:collectedLeaf', @scorePoint)
+    @bind('Runner:collectedMrHot', @losePoints)
   speedUpFloating: ->
     Game.floatSpeed += 3 if Game.floatSpeed == Game.defaultFloatSpeed
 
@@ -18,7 +19,10 @@ Crafty.c 'GameObserver',
     , Game.guaranaDuration
   scorePoint: ->
     Game.score += 1
-    Crafty.trigger('ScoreBoard:scorePoint')
+    Crafty.trigger('ScoreBoard:updatePoints')
+  losePoints: ->
+    if Game.score > 5 then Game.score -= 5 else Game.score = 0
+    Crafty.trigger('ScoreBoard:updatePoints')
 
 
 
