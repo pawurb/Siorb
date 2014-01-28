@@ -1,9 +1,16 @@
 Crafty.c 'GameObserver',
   init: ->
-    @bind('Runner:collectedGuarana', @speedUpFloating)
+    @bind('Runner:collectedGuarana', @speedUpGuarana)
     @bind('Runner:collectedLeaf', @scorePoint)
     @bind('Runner:collectedMrHot', @losePoints)
-  speedUpFloating: ->
+    @bind('Runner:collectedMrsCoffee', @losePoints)
+    @bind('Runner:collectedMrsCoffee', @speedUpCoffee)
+  speedUpGuarana: ->
+    @speedUpPlatforms()
+  speedUpCoffee: ->
+    console.log 'speda cofa??'
+    @speedUpPlatforms()
+  speedUpPlatforms: ->
     Game.floatSpeed += 3 if Game.floatSpeed == Game.defaultFloatSpeed
 
     clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
@@ -17,6 +24,7 @@ Crafty.c 'GameObserver',
       Game.floatSpeed = Game.defaultFloatSpeed
       Crafty.trigger('Guarana:ended')
     , Game.guaranaDuration
+
   scorePoint: ->
     Game.score += 1
     Crafty.trigger('ScoreBoard:updatePoints')

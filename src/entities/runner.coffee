@@ -36,6 +36,10 @@ Crafty.c 'Runner',
     @bind('Guarana:ended', ->
       @gravityConst(@gravityValue)
     )
+    @bind('Runner:collectedMrsCoffee', ->
+      @gravityConst(@gravityValue)
+    )
+
   at: (x, y) ->
     @attr
       x: x
@@ -50,6 +54,6 @@ Crafty.c 'Runner',
       Crafty.trigger('Runner:collectedMushroom')
       Crafty.trigger('Runner:psychoVision')
     else if data.name == 'mrsCoffee'
-      console.log 'kawu'
+      Crafty.trigger('Runner:collectedMrsCoffee')
     else if data.name == 'mrHot'
       Crafty.trigger('Runner:collectedMrHot')

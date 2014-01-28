@@ -10,7 +10,8 @@ Crafty.c 'RunnerImage',
     @reel('Runner:RunsFaster', 150, 0, 0, 3)
     @animate('Runner:Runs', -1)
     @bind('hitGround', @groundHitPose)
-    @bind('Runner:collectedGuarana', @runFaster)
+    @bind('Runner:collectedGuarana', @runFasterGuarana)
+    @bind('Runner:collectedMrsCoffee', @runFasterCoffee)
   groundHitPose: ->
     @resumeAnimation()
     @bind('Runner:falling', @fallingPose)
@@ -26,9 +27,16 @@ Crafty.c 'RunnerImage',
       @pauseAnimation()
       @sprite(0, 1)
       @unbind("Runner:jump")
-  runFaster: ->
+  runFasterGuarana: ->
+    Crafty.trigger('Face:fasterGuarana')
+    @runFasterAnimation()
+
+  runFasterCoffee: ->
+    Crafty.trigger('Face:fasterCoffee')
+    @runFasterAnimation()
+
+  runFasterAnimation: ->
     @animate('Runner:RunsFaster', -1)
-    Crafty.trigger('Face:faster')
     @mode = 'fast'
 
     clearTimeout(Game.timeouts.speedAnimation) if Game.timeouts.speedAnimation
@@ -37,6 +45,7 @@ Crafty.c 'RunnerImage',
       Crafty.trigger('Face:normal')
       @animate('Runner:Runs', -1)
     , Game.guaranaDuration
+
 
 
 
