@@ -3,9 +3,10 @@ Crafty.c 'ButtonWithLink',
     @requires '2D, DOM'
   addLinkHtml: (html) ->
     $(@_element).append(html)
-    $('a').stop().fadeTo(200, 0.8)
-    $('a').hover ->
-      $('a').stop().fadeTo(200, 1)
+    link = $(@_element).children()[0]
+    $(link).stop().fadeTo(0, 0.8)
+    $(link).hover ->
+      $(link).stop().fadeTo(200, 1)
     , ->
-      $('a').stop().fadeTo(200, 0.8)
+      $(link).stop().fadeTo(200, 0.8)
 

@@ -7,6 +7,8 @@ Crafty.scene 'Instruction', ->
   Crafty.e('LogoButton')
 
   returnButton = Crafty.e('Button, powrot_button').at(640, 370)
+  Crafty.e('FBLikeButton').atBottomCorner()
+
 
   returnClicked = false
   $(returnButton._element).on('click', ->

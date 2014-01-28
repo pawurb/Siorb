@@ -18,6 +18,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('PixelScoreBoard').displayAt(740, 390)
   Crafty.e('SoundButton')
   Crafty.e('LogoButton')
+  Crafty.e('FBLikeButton').atBottomCorner()
 
   startClicked = false
 

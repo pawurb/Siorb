@@ -14,6 +14,9 @@ Crafty.scene 'GameOver', ->
   replayButton = Crafty.e('Button, jeszcze_button')
   replayButton.at(Game.width - offset - 147, Game.height - offset*2)
 
+  Crafty.e('FBLikeButton').atTopCorner()
+
+
   $(replayButton._element).on('click', ->
     setTimeout ->
       Game.runScene.gameplay()
