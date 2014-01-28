@@ -33,15 +33,14 @@ Game.assets =
     ]
   instructionImagesFiles:
     [
-      "instruction1.png"
-      "instruction2.png"
-      "instruction3.png"
       "powrotT.png"
+      "arrowL.png"
+      "arrowR.png"
     ]
-  mainMenuSounds: [
-    "mainMenu.mp3"
-  ]
-
+  mainMenuSounds:
+    [
+      "mainMenu.mp3"
+    ]
   gameplaySounds: [
     "gameplay.ogg"
     "gameplay.mp3"
@@ -101,14 +100,12 @@ Game.assets =
       spr_digits: [0, 0]
 
   loadInstruction: ->
-    Crafty.sprite 431, 287, "#{@imagesPath}instruction1.png",
-      spr_instruction1: [0, 0]
-    Crafty.sprite 431, 287, "#{@imagesPath}instruction2.png",
-      spr_instruction2: [0, 0]
-    Crafty.sprite 431, 287, "#{@imagesPath}instruction3.png",
-      spr_instruction3: [0, 0]
     Crafty.sprite 119, 36, "#{@imagesPath}powrotT.png",
       powrot_button: [0, 0]
+    Crafty.sprite 20, 20, "#{@imagesPath}arrowR.png",
+      arrow_r_button: [0, 0]
+    Crafty.sprite 20, 20, "#{@imagesPath}arrowL.png",
+      arrow_l_button: [0, 0]
 
   gameplayList: ->
     list = []

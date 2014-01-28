@@ -13,10 +13,10 @@ Crafty.c 'InstructionField',
                   </ul>
                 </div>"
 
-    scrollButtonsY = 360
-    scrollButtonsX = 400
-    Crafty.e('Button, jcarousel-prev').attr({w: 50, h:50}).at(scrollButtonsX, scrollButtonsY).color('red')
-    Crafty.e('Button, jcarousel-next').attr({w: 50, h:50}).at(scrollButtonsX + 60, scrollButtonsY).color('blue')
+    scrollButtonsY = 370
+    scrollButtonsX = 480
+    Crafty.e('Button, arrow_l_button, jcarousel-prev').at(scrollButtonsX, scrollButtonsY)
+    Crafty.e('Button, arrow_r_button, jcarousel-next').at(scrollButtonsX + 60, scrollButtonsY)
 
     $(@_element).append(content)
     $('.jcarousel').jcarousel(
