@@ -7,17 +7,17 @@ Crafty.c 'BlackMaskManager',
     @requires('Persist')
     @bind('SceneChange', (data)->
 
-      # mask showing logic
+      # mask showing logic, not always work with scene schange event and have to trigger custom ones
       if data.oldScene == null and data.newScene == 'MainMenu'
-        @fadeOutMask()
-      else if data.oldScene == 'MainMenu' and data.newScene == 'Gameplay'
-        @fadeOutMask()
-      else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
         @fadeOutMask()
       else if data.oldScene == 'GameOver' and data.newScene == 'MainMenu'
         @fadeOutMask()
     )
-    @bind('GameOver:started', ->
+    @bind('Game:gameOverStarted', ->
+      @fadeOutMask()
+    )
+
+    @bind('Game:gameplayStarted', ->
       @fadeOutMask()
     )
 

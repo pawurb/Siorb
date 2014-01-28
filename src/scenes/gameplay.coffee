@@ -14,7 +14,7 @@ Crafty.scene 'Gameplay', ->
       xPos = Game.width/5 * i
       Crafty.e('Platform').at(xPos, yPos)
 
-  Crafty.trigger('Game:gameplay')
+  Crafty.trigger('Game:gameplayStarted')
   Game.scene = 'Gameplay'
   Game.firstGameplay = false
   Game.score = 0

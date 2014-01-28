@@ -41,6 +41,13 @@ Crafty.c 'AudioManager',
         Crafty.audio.play('guaranaBeat', 1, Game.volume)
     )
 
+    @bind('Runner:collectedMrsCoffee', ->
+      unless @mode == 'mushroom'
+        @mode = 'coffee'
+        Crafty.audio.stop('guaranaBeat')
+        Crafty.audio.unpause('gameplay')
+    )
+
     @bind('Runner:collectedMushroom', ->
       unless @mode == 'mushroom'
         @mode = 'mushroom'

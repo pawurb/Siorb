@@ -2,7 +2,7 @@ Crafty.scene 'GameOver', ->
   Game.scene = 'GameOver'
   Crafty.background "url('#{Game.host}/images/gameOverBg.png')"
   Crafty.viewport.y = 0
-  Crafty.trigger('GameOver:started')
+  Crafty.trigger('Game:gameOverStarted')
 
   if Game.score > parseInt(localStorage.getItem('highScore'))
     localStorage.setItem('highScore', Game.score)
