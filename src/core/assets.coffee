@@ -11,6 +11,8 @@ Game.assets =
       "mushroom.png"
       "leaf.png"
       "manaMeter.png"
+      "mrsCoffee.png"
+      "mrHot.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -48,11 +50,12 @@ Game.assets =
     "guaranaBeat.ogg"
   ]
 
-  loadGameplay: -> #include assets for gameOver scene
+  loadGameplay: -> # also include assets for gameOver scene
     Crafty.audio.add
       gameplay: ["#{@soundsPath}gameplay.mp3"]
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg"]
+
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",
       spr_psycho: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
@@ -67,6 +70,10 @@ Game.assets =
       spr_guarana: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}manaMeter.png",
       spr_mana: [0, 0]
+    Crafty.sprite 116, 132, "#{@imagesPath}mrsCoffee.png",
+      spr_mrs_coffee: [0, 0]
+    Crafty.sprite 108, 164, "#{@imagesPath}mrHot.png",
+      spr_mr_hot: [0, 0]
 
     # Game Over assets
     Crafty.sprite 147, 16, "#{@imagesPath}jeszczeRazT.png",

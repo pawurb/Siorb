@@ -28,11 +28,15 @@ Crafty.c 'Platform',
     xOffset = Utils.rand(20, 30)
 
     if random < Game.leafProbability
-      Crafty.e('Leaf').at(x + xOffset, y)
+      # Crafty.e('Leaf').at(x + xOffset, y)
+      # Crafty.e('MrsCoffee').at(x + xOffset, y)
+      Crafty.e('MrHot').at(x + xOffset, y + 2)
     else if random < Game.guaranaProbability
-      Crafty.e('Guarana').at(x + xOffset, y + 20)
+      # Crafty.e('Guarana').at(x + xOffset, y + 20)
+      1==1
     else
-      Crafty.e('Mushroom').at(x + xOffset, y + 6)
+      1==1
+      # Crafty.e('Mushroom').at(x + xOffset, y + 6)
 
 
 
