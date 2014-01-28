@@ -18,14 +18,7 @@
   <body>
     <!-- fb like -->
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=209305515933336";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
+
 
     <div class="fb-like" data-href="https://www.facebook.com/dobrezielepl" data-width="200" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
     <!-- fb like end -->
@@ -38,6 +31,14 @@
   <script src="lib_components/Crafty/crafty.js"></script>
   <script src="dist/Siorb.js"></script>
   <script src="http://localhost:35729/livereload.js"></script>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1&appId=209305515933336";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
   <script>
     Game.start();
   </script>
