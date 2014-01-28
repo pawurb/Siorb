@@ -21,8 +21,6 @@ Crafty.scene 'MainMenu', ->
 
   startClicked = false
 
-  Game.runScene.gameplay() # for now
-
   jQuery ->
     $(startButton._element).on('click', ->
       unless startClicked

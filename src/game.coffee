@@ -14,7 +14,10 @@ window.Game =
   guaranaDuration: 7300
   mushroomDuration: 13600
   leafProbability: 0.75
-  guaranaProbability: 0.95
+  guaranaProbability: 0.85
+  mrsCoffeeProbability: 0.91
+  mrHotProbability: 0.97
+  mushroomProbability: 1.01
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
   volume: 0.5
   timeouts:

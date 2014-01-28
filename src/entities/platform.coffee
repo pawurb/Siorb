@@ -22,21 +22,21 @@ Crafty.c 'Platform',
 
       x = Utils.rand( @width + 200, @width + 400)
       @at(Game.width, @y + yOffset)
-      @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.65
+      @generateCollectable(@x + 30, @y - 50) if Math.random() > 0.6
   generateCollectable: (x, y) ->
     random = Math.random()
     xOffset = Utils.rand(20, 30)
 
     if random < Game.leafProbability
-      # Crafty.e('Leaf').at(x + xOffset, y)
-      # Crafty.e('MrsCoffee').at(x + xOffset, y)
-      Crafty.e('MrHot').at(x + xOffset, y + 2)
+      Crafty.e('Leaf').at(x + xOffset, y)
     else if random < Game.guaranaProbability
-      # Crafty.e('Guarana').at(x + xOffset, y + 20)
-      1==1
+      Crafty.e('Guarana').at(x + xOffset, y + 20)
+    else if random < Game.mrsCoffeeProbability
+      Crafty.e('MrsCoffee').at(x + xOffset, y)
+    else if random < Game.mrHotProbability
+      Crafty.e('MrHot').at(x + xOffset, y)
     else
-      1==1
-      # Crafty.e('Mushroom').at(x + xOffset, y + 6)
+      Crafty.e('Mushroom').at(x + xOffset, y + 6)
 
 
 

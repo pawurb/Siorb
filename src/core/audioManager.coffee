@@ -1,7 +1,9 @@
 Crafty.c 'AudioManager',
   mode: 'normal'
   startGameplayMusic: ->
-    Crafty.audio.play('gameplay', -1, Game.volume)
+    setTimeout ->
+      Crafty.audio.play('gameplay', -1, Game.volume)
+    , 1000
   startMenuMusic: ->
     Crafty.audio.play('mainMenu', -1, Game.volume)
   setInitialMute: ->
