@@ -1,5 +1,6 @@
 Crafty.c 'GameObserver',
   init: ->
+    @requires 'Recyclable'
     @bind('Runner:collectedGuarana', @speedUpGuarana)
     @bind('Runner:collectedLeaf', @scorePoint)
     @bind('Runner:collectedMrHot', @losePoints)

@@ -16,6 +16,8 @@ Crafty.scene 'Instruction', ->
       returnClicked = true
       Game.runScene.mainMenu()
   )
+, ->
+  Crafty('Recyclable').destroy()
 
 
 

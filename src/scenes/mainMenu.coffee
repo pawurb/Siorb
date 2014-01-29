@@ -37,4 +37,4 @@ Crafty.scene 'MainMenu', ->
     )
 
 , ->
-  Crafty('Base').destroy()
+  Crafty('Recyclable').destroy()

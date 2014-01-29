@@ -36,7 +36,7 @@ Crafty.scene 'Gameplay', ->
     Crafty.pause()
   , 1000
 , ->
-  Crafty('Base').destroy()
+  Crafty('Recyclable').destroy()
 
 
 

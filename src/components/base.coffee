@@ -1,6 +1,6 @@
 Crafty.c 'Base',
   init: ->
-    @requires '2D, DOM, Color'
+    @requires '2D, DOM, Color, Recyclable'
     @
   at: (x, y) ->
     @attr
