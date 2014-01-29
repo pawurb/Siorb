@@ -8,7 +8,7 @@ Crafty.scene 'MainMenu', ->
   # what you see
   startButton = Crafty.e('Button, start_button').at(545, firstYCoord)
   instructionButton = Crafty.e('Button, instrukcja_button').at(492, firstYCoord + buttonOffset)
-  Crafty.e('Button, tworcy_button').at(526, firstYCoord + buttonOffset*2)
+  authorsButton = Crafty.e('Button, tworcy_button').at(526, firstYCoord + buttonOffset*2)
   Crafty.e('Button, rekord_button').at(Game.width - 210, Game.height - 30)
 
   Crafty.e('Base, leaves_image').at(429, 90)
@@ -20,9 +20,10 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('LogoButton')
   Crafty.e('FBLikeButton').atBottomCorner()
 
-  startClicked = false
 
+  # navigation
   jQuery ->
+    startClicked = false
     $(startButton._element).on('click', ->
       unless startClicked
         startClicked = true
@@ -34,6 +35,13 @@ Crafty.scene 'MainMenu', ->
       unless instructionClicked
         instructionClicked = true
         Game.runScene.instruction()
+    )
+
+    authorsClicked = false
+    $(authorsButton._element).on('click', ->
+      unless authorsClicked
+        authorsClicked = true
+        Game.runScene.authors()
     )
 
 , ->

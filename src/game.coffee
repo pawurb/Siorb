@@ -11,6 +11,7 @@ window.Game =
   firstMainMenu: true
   firstGameplay: true
   firstInstruction: true
+  firstAuthors: true
   speedUpDuration: 7300
   mushroomDuration: 13600
   leafProbability: 0.75
@@ -63,6 +64,13 @@ window.Game =
           Crafty.scene("Instruction")
       else
         Crafty.scene("Instruction")
+    authors: ->
+      if Game.firstAuthors
+        Crafty.load Game.assets.authorsList(), =>
+          Game.assets.loadAuthors()
+          Crafty.scene("Authors")
+      else
+        Crafty.scene("Authors")
 
   setBindings: ->
     $(document).bind "keyup", (e) ->

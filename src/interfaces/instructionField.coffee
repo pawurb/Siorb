@@ -14,7 +14,7 @@ Crafty.c 'InstructionField',
                 </div>"
 
     scrollButtonsY = 370
-    scrollButtonsX = 480
+    scrollButtonsX = 500
     Crafty.e('Button, arrow_l_button, jcarousel-prev').at(scrollButtonsX, scrollButtonsY)
     Crafty.e('Button, arrow_r_button, jcarousel-next').at(scrollButtonsX + 60, scrollButtonsY)
 

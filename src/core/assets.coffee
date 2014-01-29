@@ -1,7 +1,7 @@
 Game.assets =
   imagesPath: "#{Game.host}/images/"
   soundsPath: "#{Game.host}/sounds/"
-  gameplayImagesFiles:
+  gameplayImages:
     [
       "gameplayBg.jpg"
       "psychoVisionBg.jpg"
@@ -13,6 +13,7 @@ Game.assets =
       "manaMeter.png"
       "mrsCoffee.png"
       "mrHot.png"
+      "blush.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -20,7 +21,7 @@ Game.assets =
       "menuT.png"
       "gameOverBg.png"
     ]
-  mainMenuImagesFiles:
+  mainMenuImages:
     [
      "mainMenuBg.png"
      "mainMenuLeaves.png"
@@ -32,13 +33,15 @@ Game.assets =
      "face.png"
      "digits.png"
      "sound.png"
-     "blush.png"
+     "powrotButton.png"
     ]
-  instructionImagesFiles:
+  instructionImages:
     [
-      "powrotT.png"
       "arrowL.png"
       "arrowR.png"
+    ]
+  authorsImages:
+    [
     ]
   mainMenuSounds:
     [
@@ -113,33 +116,40 @@ Game.assets =
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
       spr_digits: [0, 0]
+    Crafty.sprite 23, 28, "#{@imagesPath}powrotButton.png",
+      powrot_button: [0, 0]
 
   loadInstruction: ->
-    Crafty.sprite 119, 36, "#{@imagesPath}powrotT.png",
-      powrot_button: [0, 0]
     Crafty.sprite 20, 20, "#{@imagesPath}arrowR.png",
       arrow_r_button: [0, 0]
     Crafty.sprite 20, 20, "#{@imagesPath}arrowL.png",
       arrow_l_button: [0, 0]
-
+  loadAuthors: ->
+    undefined
   gameplayList: ->
     list = []
-    _.each @gameplayImagesFiles, (file) =>
+    _.each @gameplayImages, (file) =>
       list.push "#{@imagesPath}#{file}"
     _.each @gameplaySounds, (file) =>
       list.push "#{@soundsPath}#{file}"
     list
   mainMenuList: ->
     list = []
-    _.each @mainMenuImagesFiles, (file) =>
+    _.each @mainMenuImages, (file) =>
       list.push "#{@imagesPath}#{file}"
     _.each @mainMenuSounds, (file) =>
       list.push "#{@soundsPath}#{file}"
     list
   instructionList: ->
     list = []
-    _.each @instructionImagesFiles, (file) =>
+    _.each @instructionImages, (file) =>
       list.push "#{@imagesPath}#{file}"
     list
+  authorsList: ->
+    list = []
+    _.each @authorsImages, (file) =>
+      list.push "#{@imagesPath}#{file}"
+    list
+
 
 
