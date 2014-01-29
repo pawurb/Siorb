@@ -98,7 +98,7 @@ Game.assets =
   loadMainMenu: ->
     Crafty.audio.add
       mainMenu: ["#{@soundsPath}mainMenu.mp3"]
-    Crafty.sprite 94, 29, "#{@imagesPath}startT.png",
+    Crafty.sprite 204, 29, "#{@imagesPath}startT.png",
       start_button: [0, 0]
     Crafty.sprite 200, 34, "#{@imagesPath}instrukcjaT.png",
       instrukcja_button: [0, 0]
