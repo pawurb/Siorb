@@ -40,11 +40,11 @@ Crafty.c 'GameObserver',
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
   losePoints: ->
-    if Game.score > 5 then Game.score -= 2 else Game.score = 0
+    if Game.score > 5 then Game.score -= 3 else Game.score = 0
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
   setDifficulty: ->
-    if Game.score < 35
+    if Game.score < 25
       Game.platformSizes.current = Game.platformSizes.easy
     else if Game.score < 75
       Game.platformSizes.current = Game.platformSizes.medium

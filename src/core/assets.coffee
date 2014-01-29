@@ -47,6 +47,8 @@ Game.assets =
   gameplaySounds: [
     "gameplay.ogg"
     "gameplay.mp3"
+    "gameOver.mp3"
+    "gameOver.ogg"
     "mushroomBeat.ogg"
     "mushroomBeat.mp3"
     "guaranaBeat.ogg"
@@ -55,7 +57,8 @@ Game.assets =
 
   loadGameplay: -> # also include assets for gameOver scene
     Crafty.audio.add
-      gameplay: ["#{@soundsPath}gameplay.mp3"]
+      gameplay: ["#{@soundsPath}gameplay.ogg", "#{@soundsPath}gameplay.mp3"]
+      gameOver: ["#{@soundsPath}gameOver.ogg", "#{@soundsPath}gameOver.mp3"]
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg", "#{@soundsPath}mushroomBeat.mp3"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg", "#{@soundsPath}guaranaBeat.mp3"]
 

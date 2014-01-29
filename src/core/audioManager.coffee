@@ -25,6 +25,7 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
         Crafty.audio.stop()
+        Crafty.audio.play('gameOver', 1, 0.7)
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
         @startGameplayMusic()
