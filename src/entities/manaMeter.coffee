@@ -8,12 +8,12 @@ Crafty.c 'ManaMeter',
       h: 75
       z: 300
       alpha: 0.6
-    @bind('ScoreBoard:scorePoint', @updateScoreBoard)
+    @bind('ScoreBoard:updatePoints', @updateYerbaLevel)
     @bind("Runner:jump", (data) ->
       #always display in the same screen place
       @y = Game.runner.y + Game.view.y + data.y - 250)
 
-  updateScoreBoard: ->
+  updateYerbaLevel: ->
     manaLevel = if Game.score < 90
       parseInt(Game.score / 10)
     else

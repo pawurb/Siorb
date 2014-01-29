@@ -50,7 +50,6 @@ Crafty.c 'GameObserver',
       Game.platformSizes.current = Game.platformSizes.medium
     else
       Game.platformSizes.current = Game.platformSizes.hard
-    console.log Game.platformSizes.current
 
 
 
