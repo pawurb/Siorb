@@ -36,6 +36,5 @@ Crafty.scene 'MainMenu', ->
         Game.runScene.instruction()
     )
 
-
-
-
+, ->
+  Crafty('Base').destroy()

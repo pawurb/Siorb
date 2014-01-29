@@ -1,5 +1,7 @@
 Crafty.scene 'Gameplay', ->
   generatePlatforms = ->
+    Game.platformSizes.current = Game.platformSizes.easy
+
     platformArrangements = [ #playable initial arrangements
       [1,0,1,2,0,0,3,4,1,2,3],
       [5,1,0,2,0,5,3,0,3,5,4],
@@ -33,6 +35,8 @@ Crafty.scene 'Gameplay', ->
   setTimeout ->
     Crafty.pause()
   , 1000
+, ->
+  Crafty('Base').destroy()
 
 
 

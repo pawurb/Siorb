@@ -24,6 +24,11 @@ window.Game =
     slowDown1: null
     slowDown2: null
     speedAnimation: null
+  platformSizes:
+    current: null
+    easy: [150, 150, 200, 200, 200]
+    medium: [50, 100, 150, 150, 200]
+    hard: [50, 100, 100, 150, 150]
   start: ->
     Crafty.init @width, @height
     @setBindings()
