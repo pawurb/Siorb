@@ -9,7 +9,7 @@ Crafty.c 'Platform',
       z: 200
     @bind('EnterFrame', @resetPosition)
   resetPosition: ->
-    if @x < -200
+    if @x < -250
       # logic responsible for platforms arrangement
       higher = [-168, -84]
       lower = [84, 168]
