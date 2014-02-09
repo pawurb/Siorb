@@ -42,12 +42,9 @@ Game.assets =
     ]
   authorsImages:
     [
-      "autCebulaLogo.png"
       "autCebulaText.png"
-      "autBossLogo.png"
       "autBossText.png"
-      "autPabloLogo.png"
-      "autPaboText.png"
+      "autPabloText.png"
       "autMusicText.png"
     ]
   mainMenuSounds:
@@ -105,7 +102,7 @@ Game.assets =
   loadMainMenu: ->
     Crafty.audio.add
       mainMenu: ["#{@soundsPath}mainMenu.mp3"]
-    Crafty.sprite 204, 29, "#{@imagesPath}startT.png",
+    Crafty.sprite 214, 39, "#{@imagesPath}startT.png",
       start_button: [0, 0]
     Crafty.sprite 200, 34, "#{@imagesPath}instrukcjaT.png",
       instrukcja_button: [0, 0]
@@ -132,16 +129,10 @@ Game.assets =
     Crafty.sprite 20, 20, "#{@imagesPath}arrowL.png",
       arrow_l_button: [0, 0]
   loadAuthors: ->
-    Crafty.sprite 78, 101, "#{@imagesPath}autCebulaLogo.png",
-      aut_cebula_logo: [0, 0]
     Crafty.sprite 140, 22, "#{@imagesPath}autCebulaText.png",
       aut_cebula_text: [0, 0]
-    Crafty.sprite 114, 49, "#{@imagesPath}autBossLogo.png",
-      aut_boss_logo: [0, 0]
     Crafty.sprite 98, 16, "#{@imagesPath}autBossText.png",
       aut_boss_text: [0, 0]
-    Crafty.sprite 71, 61, "#{@imagesPath}autPabloLogo.png",
-      aut_pablo_logo: [0, 0]
     Crafty.sprite 154, 18, "#{@imagesPath}autPabloText.png",
       aut_pablo_text: [0, 0]
     Crafty.sprite 161, 18, "#{@imagesPath}autMusicText.png",

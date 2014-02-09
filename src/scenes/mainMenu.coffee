@@ -6,7 +6,7 @@ Crafty.scene 'MainMenu', ->
   buttonOffset = 60
 
   # what you see
-  startButton = Crafty.e('Button, start_button').at(495, firstYCoord)
+  startButton = Crafty.e('Button, start_button').at(485, firstYCoord)
   instructionButton = Crafty.e('Button, instrukcja_button').at(492, firstYCoord + buttonOffset)
   authorsButton = Crafty.e('Button, tworcy_button').at(526, firstYCoord + buttonOffset*2)
   Crafty.e('Button, rekord_button').at(Game.width - 210, Game.height - 30)

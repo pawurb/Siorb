@@ -1,8 +1,7 @@
 Crafty.c 'FBLikeButton',
   init: ->
     @requires 'ButtonWithLink'
-    link = "<a href='https://www.facebook.com/dobrezielepl' target='_blank'><img src='assets/images/fbLikeButton.png'</img></a>"
-    @addLinkHtml(link)
+    @addLink('https://www.facebook.com/dobrezielepl', 'fbLikeButton.png', 'Dobre Ziele')
   atBottomCorner: ->
     @attr
       x: 5
