@@ -6,10 +6,10 @@ Crafty.c 'PixelScoreBoard',
       h: 50
       z: 301
     @
-  printScore: ->
-    score = if Game.scene == 'GameOver'
+  printScore: (scoreType) ->
+    score = if scoreType == 'current'
       Game.score
-    else if Game.scene == 'MainMenu'
+    else if scoreType == 'top'
       localStorage.getItem('highScore')
     else
       0
@@ -18,9 +18,9 @@ Crafty.c 'PixelScoreBoard',
       point = parseInt(point)
       pixelPoint = Crafty.e('PixelPoint').print(point).at(@x + (12 * index), @y)
       pixelPoint.attr({alpha: 0.5}) if Game.scene == 'GameOver'
-  displayAt: (x, y) ->
+  displayAt: (x, y, type) ->
     @at(x, y)
-    @printScore()
+    @printScore(type)
 
 
 
