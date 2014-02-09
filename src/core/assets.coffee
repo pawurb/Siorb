@@ -42,6 +42,13 @@ Game.assets =
     ]
   authorsImages:
     [
+      "autCebulaLogo.png"
+      "autCebulaText.png"
+      "autBossLogo.png"
+      "autBossText.png"
+      "autPabloLogo.png"
+      "autPaboText.png"
+      "autMusicText.png"
     ]
   mainMenuSounds:
     [
@@ -125,7 +132,22 @@ Game.assets =
     Crafty.sprite 20, 20, "#{@imagesPath}arrowL.png",
       arrow_l_button: [0, 0]
   loadAuthors: ->
-    undefined
+    Crafty.sprite 78, 101, "#{@imagesPath}autCebulaLogo.png",
+      aut_cebula_logo: [0, 0]
+    Crafty.sprite 140, 22, "#{@imagesPath}autCebulaText.png",
+      aut_cebula_text: [0, 0]
+    Crafty.sprite 114, 49, "#{@imagesPath}autBossLogo.png",
+      aut_boss_logo: [0, 0]
+    Crafty.sprite 98, 16, "#{@imagesPath}autBossText.png",
+      aut_boss_text: [0, 0]
+    Crafty.sprite 71, 61, "#{@imagesPath}autPabloLogo.png",
+      aut_pablo_logo: [0, 0]
+    Crafty.sprite 154, 18, "#{@imagesPath}autPabloText.png",
+      aut_pablo_text: [0, 0]
+    Crafty.sprite 161, 18, "#{@imagesPath}autMusicText.png",
+      aut_music_text: [0, 0]
+    Crafty.sprite 357, 14, "#{@imagesPath}autSupportBox.png",
+      aut_mailbox: [0, 0]
   gameplayList: ->
     list = []
     _.each @gameplayImages, (file) =>
