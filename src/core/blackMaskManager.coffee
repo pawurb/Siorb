@@ -20,6 +20,3 @@ Crafty.c 'BlackMaskManager',
     @bind('Game:gameplayStarted', ->
       @fadeOutMask()
     )
-
-
-

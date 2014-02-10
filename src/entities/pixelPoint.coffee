@@ -8,6 +8,3 @@ Crafty.c 'PixelPoint',
   print: (value) ->
     @sprite(0, value)
     @
-
-
-

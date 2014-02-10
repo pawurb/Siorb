@@ -11,11 +11,3 @@ Crafty.scene 'Instruction', ->
 
 , ->
   Crafty('Recyclable').destroy()
-
-
-
-
-
-
-
-

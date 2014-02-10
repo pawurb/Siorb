@@ -28,9 +28,11 @@ Crafty.c 'AudioManager',
         Crafty.audio.play('gameOver', 1, 0.7)
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
+        Crafty.audio.stop('gameOver')
         @startGameplayMusic()
 
       else if data.oldScene == 'GameOver' and data.newScene == 'MainMenu'
+        Crafty.audio.stop('gameOver')
         @startMenuMusic()
     )
 
@@ -68,5 +70,3 @@ Crafty.c 'AudioManager',
       Crafty.audio.stop('mushroomBeat')
       Crafty.audio.unpause('gameplay')
     )
-
-

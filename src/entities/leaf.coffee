@@ -3,4 +3,3 @@ Crafty.c 'Leaf',
   init: ->
     @requires 'Collectable, spr_leaf'
 
-

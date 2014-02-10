@@ -31,5 +31,3 @@ Crafty.c 'InstructionField',
     $('.jcarousel-next').jcarouselControl({
       target: '+=1'
     })
-
-

@@ -58,10 +58,3 @@ Crafty.c 'RunnerImage',
         @animate('Runner:Runs', -1)
     , Game.speedUpDuration
 
-
-
-
-
-
-
-

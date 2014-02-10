@@ -37,7 +37,3 @@ Crafty.scene 'Gameplay', ->
   , 1000
 , ->
   Crafty('Recyclable').destroy()
-
-
-
-

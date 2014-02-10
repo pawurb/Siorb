@@ -42,7 +42,3 @@ Crafty.c 'Platform',
     else
       Crafty.e('Mushroom').at(x + xOffset, y + 6)
 
-
-
-
-

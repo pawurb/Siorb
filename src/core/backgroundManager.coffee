@@ -28,5 +28,3 @@ Crafty.c 'BackgroundManager',
         data.gy
       backgroundY = (Number(arr.join('')) - treshold/@proportion).toString()
       Game.window.style.backgroundPosition =  @backgroundX.toString() + "px " + backgroundY.toString() + "px")
-
-

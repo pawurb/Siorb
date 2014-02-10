@@ -20,7 +20,7 @@ Crafty.scene 'MainMenu', ->
 
   Crafty.e('SoundButton')
   Crafty.e('LogoButton')
-  Crafty.e('FBLikeButton').atBottomCorner()
+  Crafty.e('FBLikeButton')
 
 
   # navigation

@@ -76,9 +76,3 @@ window.Game =
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80
 
-
-
-
-
-
-

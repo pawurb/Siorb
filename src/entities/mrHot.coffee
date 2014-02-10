@@ -7,4 +7,3 @@ Crafty.c 'MrHot',
       h: 50
       z: 304)
     @attach(Crafty.e 'MrHotImage')
-

@@ -17,5 +17,3 @@ Crafty.c 'ButtonWithLink',
       x: x
       y: y
     @
-
-

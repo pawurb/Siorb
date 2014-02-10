@@ -26,7 +26,3 @@ Crafty.c 'PsychoVision',
         Crafty.trigger('Mushroom:ended')
       , @duration
 
-
-
-
-

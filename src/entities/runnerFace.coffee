@@ -29,5 +29,3 @@ Crafty.c 'RunnerFace',
     @sprite(0, 0)
   faceFalling: ->
     @sprite(0, 2) unless @mode == 'crazy'
-
-

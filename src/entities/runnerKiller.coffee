@@ -29,8 +29,3 @@ Crafty.c 'RunnerKiller',
         , 2500
     )
 
-
-
-
-
-

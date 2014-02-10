@@ -9,6 +9,3 @@ Crafty.c 'ReturnButton',
         @clicked = true
         Game.runScene.mainMenu()
     )
-
-
-

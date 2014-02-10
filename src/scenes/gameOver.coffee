@@ -38,6 +38,3 @@ Crafty.scene 'GameOver', ->
 
 , ->
   Crafty('Base').destroy()
-
-
-

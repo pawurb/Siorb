@@ -10,9 +10,3 @@ Crafty.c 'RunnerBlush',
   showBlush: ->
     $(@_element).stop().fadeIn('slow').delay(3000).fadeOut('slow')
 
-
-
-
-
-
-

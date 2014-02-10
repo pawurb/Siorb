@@ -22,9 +22,3 @@ Crafty.c 'PixelScoreBoard',
     @at(x, y)
     @printScore(type)
 
-
-
-
-
-
-

@@ -164,5 +164,3 @@ Game.assets =
       list.push "#{@imagesPath}#{file}"
     list
 
-
-

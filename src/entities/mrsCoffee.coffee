@@ -6,4 +6,3 @@ Crafty.c 'MrsCoffee',
       w: 50
       h: 50)
     @attach(Crafty.e 'MrsCoffeeImage')
-

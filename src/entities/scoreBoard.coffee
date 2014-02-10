@@ -18,6 +18,3 @@ Crafty.c 'ScoreBoard',
 
   updateScoreBoard: ->
     @text("#{Game.score}")
-
-
-
