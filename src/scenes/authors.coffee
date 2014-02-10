@@ -6,7 +6,6 @@ Crafty.scene 'Authors', ->
   Crafty.e('LogoButton')
 
   Crafty.e('ReturnButton')
-  Crafty.e('FBLikeButton').atBottomCorner()
 
   # authors data
   topY = 120
