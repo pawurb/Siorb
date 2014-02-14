@@ -5,7 +5,7 @@ Crafty.scene 'GameOver', ->
   Crafty.trigger('Game:gameOverStarted')
 
   playDuration = ((new Date).getTime() - Game.gameplayStarted) / 1000
-  Game.submitScore(Game.score, playDuration)
+  Game.submitScore(Game.score, parseInt(playDuration))
 
   if Game.score > parseInt(localStorage.getItem('highScore'))
     localStorage.setItem('highScore', Game.score)
