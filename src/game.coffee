@@ -75,4 +75,11 @@ window.Game =
   setBindings: ->
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80
+  submitScore: (score, duration) ->
+    $.ajax
+      url: "/scores?score=#{score}&duration=#{duration}"
+      type: 'PUT'
+  gameplayStarted: null
+
+
 

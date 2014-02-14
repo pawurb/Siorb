@@ -17,6 +17,7 @@ Crafty.scene 'Gameplay', ->
       Crafty.e('Platform').at(xPos, yPos)
 
   Crafty.trigger('Game:gameplayStarted')
+  Game.gameplayStarted = (new Date).getTime()
   Game.scene = 'Gameplay'
   Game.firstGameplay = false
   Game.score = 0
