@@ -20,7 +20,10 @@ Crafty.scene 'MainMenu', ->
 
   Crafty.e('SoundButton')
   Crafty.e('LogoButton')
-  Crafty.e('FBLikeButton')
+
+  unless Game.firstMainMenu
+    # works only on first run
+    Crafty.e('FBLikeButton')
 
 
   # navigation
