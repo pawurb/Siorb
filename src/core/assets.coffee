@@ -131,9 +131,9 @@ Game.assets =
   loadAuthors: ->
     Crafty.sprite 140, 22, "#{@imagesPath}autCebulaText.png",
       aut_cebula_text: [0, 0]
-    Crafty.sprite 98, 16, "#{@imagesPath}autBossText.png",
+    Crafty.sprite 98, 22, "#{@imagesPath}autBossText.png",
       aut_boss_text: [0, 0]
-    Crafty.sprite 154, 18, "#{@imagesPath}autPabloText.png",
+    Crafty.sprite 154, 22, "#{@imagesPath}autPabloText.png",
       aut_pablo_text: [0, 0]
     Crafty.sprite 161, 18, "#{@imagesPath}autMusicText.png",
       aut_music_text: [0, 0]
