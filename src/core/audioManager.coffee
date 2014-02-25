@@ -3,16 +3,23 @@ Crafty.c 'AudioManager',
   startGameplayMusic: ->
     setTimeout ->
       Crafty.audio.play('gameplay', -1, Game.volume)
+      false
     , 1000
   startMenuMusic: ->
     Crafty.audio.play('mainMenu', -1, Game.volume)
+    false
   setInitialMute: ->
     unless localStorage.getItem('muted')
       localStorage.setItem('muted', false)
     if Game.muted then Crafty.audio.mute() else Crafty.audio.unmute()
+  setJumpEffect: ->
+    $(document).bind('keydown', (e) ->
+      if e.keyCode == 38 and Game.runner._multijumpsLeft >= 0
+        Crafty.audio.play('jumpSound', 1, Game.volume))
   init: ->
     @requires('Persist')
     @setInitialMute()
+    @setJumpEffect()
     @bind('SceneChange', (data)->
 
       # music playing logic goes here
