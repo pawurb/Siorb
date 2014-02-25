@@ -60,6 +60,10 @@ Game.assets =
     "mushroomBeat.mp3"
     "guaranaBeat.ogg"
     "guaranaBeat.mp3"
+    "jumpSound.ogg"
+    "jumpSound.mp3"
+    "leafSound.ogg"
+    "leafSound.mp3"
   ]
 
   loadGameplay: -> # also include assets for gameOver scene
@@ -69,6 +73,8 @@ Game.assets =
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg", "#{@soundsPath}mushroomBeat.mp3"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg", "#{@soundsPath}guaranaBeat.mp3"]
       jumpSound: ["#{@soundsPath}jumpSound.ogg", "#{@soundsPath}jumpSound.mp3"]
+      leafSound: ["#{@soundsPath}leafSound.ogg", "#{@soundsPath}leafSound.mp3"]
+
 
 
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",

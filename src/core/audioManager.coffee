@@ -16,10 +16,14 @@ Crafty.c 'AudioManager',
     $(document).bind('keydown', (e) ->
       if e.keyCode == 38 and Game.runner._multijumpsLeft >= 0
         Crafty.audio.play('jumpSound', 1, Game.volume))
+  setLeafCollectEffect: ->
+    @bind('Runner:collectedLeaf', ->
+      Crafty.audio.play('leafSound', 1, Game.volume))
   init: ->
     @requires('Persist')
     @setInitialMute()
     @setJumpEffect()
+    @setLeafCollectEffect()
     @bind('SceneChange', (data)->
 
       # music playing logic goes here
