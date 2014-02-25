@@ -16,6 +16,8 @@ Crafty.c 'Runner',
     @attach(Crafty.e 'RunnerImage')
     @attach(Crafty.e 'RunnerFace')
     @attach(Crafty.e 'PsychoVision' )
+    # @attach(Crafty.e 'ComicCloud' )
+    # @attach(Crafty.e 'ComicSayings' )
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
     @gravityConst(@gravityValue)

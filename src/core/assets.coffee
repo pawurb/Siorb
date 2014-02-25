@@ -14,6 +14,7 @@ Game.assets =
       "mrsCoffee.png"
       "mrHot.png"
       "blush.png"
+      "sayings.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -106,6 +107,10 @@ Game.assets =
       spr_mrs_coffee: [0, 0]
     Crafty.sprite 108, 164, "#{@imagesPath}mrHot.png",
       spr_mr_hot: [0, 0]
+    Crafty.sprite 159, 12, "#{@imagesPath}sayings.png",
+      spr_sayings: [0, 0]
+    Crafty.sprite 323, 138, "#{@imagesPath}cloud.png",
+      spr_cloud: [0, 0]
 
     # Game Over assets
     Crafty.sprite 147, 16, "#{@imagesPath}jeszczeRazT.png",

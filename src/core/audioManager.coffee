@@ -64,7 +64,7 @@ Crafty.c 'AudioManager',
         @mode = 'guarana'
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
-        Crafty.audio.play('guaranaBeat', 1, Game.volume*1.6)
+        Crafty.audio.play('guaranaBeat', 1, Game.volume*1.1)
     )
 
     @bind('Runner:collectedMrsCoffee', ->
