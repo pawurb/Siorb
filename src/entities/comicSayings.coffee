@@ -11,7 +11,7 @@ Crafty.c 'ComicSayings',
   showSaying: ->
     unless @isVisible
       @isVisible = true
-      $(@_element).stop().fadeIn('fast').delay(3000).fadeOut('fast')
+      $(@_element).stop().fadeIn('fast').delay(3001).fadeOut('fast')
       setTimeout =>
         @isVisible = false
       , 3000

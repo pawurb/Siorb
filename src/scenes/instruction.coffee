@@ -7,7 +7,6 @@ Crafty.scene 'Instruction', ->
   Crafty.e('LogoButton')
 
   Crafty.e('ReturnButton')
-  Crafty.e('FBLikeButton').atBottomCorner()
 
 , ->
   Crafty('Recyclable').destroy()
