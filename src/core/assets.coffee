@@ -64,6 +64,12 @@ Game.assets =
     "jumpSound.mp3"
     "leafSound.ogg"
     "leafSound.mp3"
+    "burnSound.ogg"
+    "burnSound.mp3"
+    "coffeeEndSound.ogg"
+    "coffeeEndSound.mp3"
+    "coffeeStartSound.ogg"
+    "coffeeStartSound.mp3"
   ]
 
   loadGameplay: -> # also include assets for gameOver scene
@@ -74,6 +80,9 @@ Game.assets =
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg", "#{@soundsPath}guaranaBeat.mp3"]
       jumpSound: ["#{@soundsPath}jumpSound.ogg", "#{@soundsPath}jumpSound.mp3"]
       leafSound: ["#{@soundsPath}leafSound.ogg", "#{@soundsPath}leafSound.mp3"]
+      burnSound: ["#{@soundsPath}burnSound.ogg", "#{@soundsPath}burnSound.mp3"]
+      coffeeStartSound: ["#{@soundsPath}coffeeStartSound.ogg", "#{@soundsPath}coffeeStartSound.mp3"]
+      coffeeEndSound: ["#{@soundsPath}coffeeEndSound.ogg", "#{@soundsPath}coffeeEndSound.mp3"]
 
 
 

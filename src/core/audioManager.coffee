@@ -19,11 +19,23 @@ Crafty.c 'AudioManager',
   setLeafCollectEffect: ->
     @bind('Runner:collectedLeaf', ->
       Crafty.audio.play('leafSound', 1, Game.volume))
+  setMrHotCollectEffect: ->
+    @bind('Runner:collectedMrHot', ->
+      Crafty.audio.stop('burnSound')
+      Crafty.audio.play('burnSound', 1, Game.volume))
+  setMrsCoffeeCollectEffects: ->
+    @bind('Runner:collectedMrsCoffee', ->
+      Crafty.audio.play('coffeeStartSound', 1, Game.volume))
+    @bind('Coffee:speedUpEnded', ->
+      Crafty.audio.play('coffeeEndSound', 1, Game.volume))
+
   init: ->
     @requires('Persist')
     @setInitialMute()
     @setJumpEffect()
     @setLeafCollectEffect()
+    @setMrHotCollectEffect()
+    @setMrsCoffeeCollectEffects()
     @bind('SceneChange', (data)->
 
       # music playing logic goes here
@@ -52,7 +64,7 @@ Crafty.c 'AudioManager',
         @mode = 'guarana'
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
-        Crafty.audio.play('guaranaBeat', 1, Game.volume)
+        Crafty.audio.play('guaranaBeat', 1, Game.volume*1.6)
     )
 
     @bind('Runner:collectedMrsCoffee', ->
