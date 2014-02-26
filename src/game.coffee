@@ -42,36 +42,25 @@ window.Game =
     @runScene.mainMenu()
   runScene:
     mainMenu: ->
-      if Game.firstMainMenu
-        Crafty.load Game.assets.mainMenuList(), =>
-          Game.assets.loadMainMenu()
-          Crafty.scene("MainMenu")
-      else
+      Crafty.assets = []
+      Crafty.load Game.assets.mainMenuList(), =>
+        Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")
     gameplay: ->
-      if Game.firstGameplay
-        Crafty.load Game.assets.gameplayList(), =>
-          Game.assets.loadGameplay()
-          Crafty.scene("Gameplay")
-      else
+      Crafty.assets = []
+      Crafty.load Game.assets.gameplayList(), =>
+        Game.assets.loadGameplay()
         Crafty.scene("Gameplay")
     gameOver: ->
       Crafty.scene('GameOver')
     instruction: ->
-      if Game.firstInstruction
-        Crafty.load Game.assets.instructionList(), =>
-          Game.assets.loadInstruction()
-          Crafty.scene("Instruction")
-      else
+      Crafty.load Game.assets.instructionList(), =>
+        Game.assets.loadInstruction()
         Crafty.scene("Instruction")
     authors: ->
-      if Game.firstAuthors
-        Crafty.load Game.assets.authorsList(), =>
-          Game.assets.loadAuthors()
-          Crafty.scene("Authors")
-      else
+      Crafty.load Game.assets.authorsList(), =>
+        Game.assets.loadAuthors()
         Crafty.scene("Authors")
-
   setBindings: ->
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80

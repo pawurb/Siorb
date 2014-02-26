@@ -3,7 +3,6 @@ Game.assets =
   soundsPath: "#{Game.host}/sounds/"
   gameplayImages:
     [
-      "gameplayBg.jpg"
       "psychoVisionBg.jpg"
       "face.png"
       "guarana.png"
@@ -14,6 +13,7 @@ Game.assets =
       "mrHot.png"
       "blush.png"
       "sayings.png"
+      "cloud.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -83,7 +83,6 @@ Game.assets =
       burnSound: ["#{@soundsPath}burnSound.ogg", "#{@soundsPath}burnSound.mp3"]
       coffeeStartSound: ["#{@soundsPath}coffeeStartSound.ogg", "#{@soundsPath}coffeeStartSound.mp3"]
       coffeeEndSound: ["#{@soundsPath}coffeeEndSound.ogg", "#{@soundsPath}coffeeEndSound.mp3"]
-
 
 
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",
