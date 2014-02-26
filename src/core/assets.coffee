@@ -5,7 +5,6 @@ Game.assets =
     [
       "gameplayBg.jpg"
       "psychoVisionBg.jpg"
-      "runner.png"
       "face.png"
       "guarana.png"
       "mushroom.png"
