@@ -35,6 +35,7 @@ Crafty.scene 'Gameplay', ->
   Crafty.pause()
   setTimeout ->
     Crafty.pause()
+    Crafty.trigger('Runner:saysSomething')
   , 1000
 , ->
   Crafty('Recyclable').destroy()
