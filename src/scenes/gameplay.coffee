@@ -28,14 +28,17 @@ Crafty.scene 'Gameplay', ->
   Game.view = Crafty.viewport
   generatePlatforms()
   Crafty.e 'BackgroundManager'
+  shortcutManager = Crafty.e('MainMenuShortcuts')
   Crafty.e 'ScoreBoard'
   Crafty.e 'ManaMeter'
   Crafty.e 'GameObserver'
   Crafty.e 'RunnerKiller'
   Crafty.pause()
+
   setTimeout ->
     Crafty.pause()
     Crafty.trigger('Runner:saysSomething')
   , 1000
 , ->
+  $("#cr-stage").unbind("click")
   Crafty('Recyclable').destroy()

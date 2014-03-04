@@ -22,17 +22,7 @@ Crafty.c 'Runner',
     @gravity('Solid')
     @gravityConst(@gravityValue)
     # @color('black')
-    @bind("Move", ->
-      if @_gy != 0 #if the runner changed his vertical position
-
-        Crafty.trigger('Face:falling') if @_gy > @scaredFaceVelocity
-        Crafty.trigger 'Runner:falling' if @_gy > 20
-        Crafty.trigger 'Runner:jump', #send data to backgroundAnimator
-          gy: @_gy
-          up: @_up
-          jumpSpeed: @_jumpSpeed
-          x: @x
-          y: @y)
+    @bind("Move", @runnerDidMove)
     @multijumps(2, @jumpValue/2, true)
     @bind('Collected', @handleCollected)
     @bind('Guarana:ended', ->
@@ -41,6 +31,18 @@ Crafty.c 'Runner',
     @bind('Runner:collectedMrsCoffee', ->
       @gravityConst(@gravityValue)
     )
+
+  runnerDidMove: ->
+    if @_gy != 0 #if the runner changed his vertical position
+
+      Crafty.trigger('Face:falling') if @_gy > @scaredFaceVelocity
+      Crafty.trigger 'Runner:falling' if @_gy > 20
+      Crafty.trigger 'Runner:jump', #send data to backgroundAnimator
+        gy: @_gy
+        up: @_up
+        jumpSpeed: @_jumpSpeed
+        x: @x
+        y: @y
 
   at: (x, y) ->
     @attr
