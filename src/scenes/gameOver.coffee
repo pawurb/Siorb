@@ -41,4 +41,4 @@ Crafty.scene 'GameOver', ->
   Crafty.e('GameOverAd')
 
 , ->
-  Crafty('Base').destroy()
+  Crafty('Recyclable').destroy()

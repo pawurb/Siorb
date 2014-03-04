@@ -1,4 +1,4 @@
-Crafty.c 'MainMenuShortcuts',
+Crafty.c 'GameplayShortcuts',
   spaceCode: 32
   init: ->
     @requires 'Recyclable, Keyboard, Mouse'
@@ -9,6 +9,7 @@ Crafty.c 'MainMenuShortcuts',
 
     $('#cr-stage').on("click", (data) =>
       @makeRunnerJump()
+      Crafty.trigger('Runner:jumpEffect')
     )
 
   makeRunnerJump: ->

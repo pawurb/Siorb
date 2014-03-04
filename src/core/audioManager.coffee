@@ -13,12 +13,17 @@ Crafty.c 'AudioManager',
       localStorage.setItem('muted', false)
     if Game.muted then Crafty.audio.mute() else Crafty.audio.unmute()
   setJumpEffect: ->
-    $(document).bind('keydown', (e) ->
-      if e.keyCode == 38 and Game.runner._multijumpsLeft >= 0
-        Crafty.audio.play('jumpSound', 1, Game.volume))
+    $(document).bind('keydown', (e) =>
+      if e.keyCode == 38 || e.keyCode == 32
+        @playJumpEffect()
+    )
+    @bind("Runner:jumpEffect", @playJumpEffect)
+  playJumpEffect: ->
+    if Game.runner._multijumpsLeft >=0
+      Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   setLeafCollectEffect: ->
     @bind('Runner:collectedLeaf', ->
-      Crafty.audio.play('leafSound', 1, Game.volume))
+      Crafty.audio.play('leafSound', 1, Game.volume*0.5))
   setMrHotCollectEffect: ->
     @bind('Runner:collectedMrHot', ->
       Crafty.audio.stop('burnSound')

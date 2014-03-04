@@ -28,7 +28,7 @@ Crafty.scene 'Gameplay', ->
   Game.view = Crafty.viewport
   generatePlatforms()
   Crafty.e 'BackgroundManager'
-  shortcutManager = Crafty.e('MainMenuShortcuts')
+  shortcutManager = Crafty.e('GameplayShortcuts')
   Crafty.e 'ScoreBoard'
   Crafty.e 'ManaMeter'
   Crafty.e 'GameObserver'
