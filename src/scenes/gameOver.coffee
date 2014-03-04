@@ -3,6 +3,7 @@ Crafty.scene 'GameOver', ->
   Crafty.background "url('#{Game.host}/images/gameOverBg.png')"
   Crafty.viewport.y = 0
   Crafty.trigger('Game:gameOverStarted')
+  Crafty.e('GameOverShortcuts')
 
   playDuration = ((new Date).getTime() - Game.gameplayStarted) / 1000
   Game.submitScore(Game.score, parseInt(playDuration))
