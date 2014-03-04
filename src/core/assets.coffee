@@ -20,6 +20,8 @@ Game.assets =
       "jeszczeRazT.png"
       "menuT.png"
       "gameOverBg.png"
+      "gOrekordT.png"
+      "gOpunktyT.png"
     ]
   mainMenuImages:
     [
@@ -113,8 +115,10 @@ Game.assets =
     # Game Over assets
     Crafty.sprite 147, 16, "#{@imagesPath}jeszczeRazT.png",
       jeszcze_button: [0, 0]
-    Crafty.sprite 72, 18, "#{@imagesPath}punktyT.png",
-      punkty_button: [0, 0]
+    Crafty.sprite 72, 18, "#{@imagesPath}gOpunktyT.png",
+      gOpunkty_button: [0, 0]
+    Crafty.sprite 136, 18, "#{@imagesPath}gOrekordT.png",
+      gOrekord_button: [0, 0]
     Crafty.sprite 49, 16, "#{@imagesPath}menuT.png",
       menu_button: [0, 0]
 

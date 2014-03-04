@@ -13,9 +13,9 @@ Crafty.scene 'GameOver', ->
   # score panels
   offset = 24
   Crafty.e('PixelScoreBoard').displayAt(offset + 80, Game.height - offset*3, 'current')
-  Crafty.e('Base, punkty_button').at(offset, Game.height - offset*3)
+  Crafty.e('Base, gOpunkty_button').at(offset, Game.height - offset*3)
 
-  Crafty.e('Base, rekord_button').at(offset, Game.height - offset*2)
+  Crafty.e('Base, gOrekord_button').at(offset, Game.height - offset*2)
   Crafty.e('PixelScoreBoard').displayAt(offset + 140, Game.height - offset*2, 'top')
 
 
