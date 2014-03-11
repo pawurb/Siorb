@@ -1,3 +1,5 @@
+backendDir = '/Users/pablo/Programming/Ruby/railsy/Siorbackend
+'
 module.exports = (grunt) ->
   grunt.initConfig
     pkg: '<json:package.json>'
@@ -49,25 +51,22 @@ module.exports = (grunt) ->
           expand: true,
           cwd: 'assets/',
           src: ['**/*'],
-          dest: "../ShellySiorb/public/assets/"
+          dest: "#{backendDir}/public/assets/"
         ,
           src: "dist/siorb-min.js"
-          dest: "../ShellySiorb/public/libs/siorb-min.js"
+          dest: "#{backendDir}/public/libs/siorb-min.js"
         ,
           src: "dist/styles.css"
-          dest: "../ShellySiorb/public/libs/styles.css"
+          dest: "#{backendDir}/assets/stylesheets/siorb.css"
         ,
           src: "dist/crafty-min.js"
-          dest: "../ShellySiorb/public/libs/crafty-min.js"
+          dest: "#{backendDir}/public/libs/crafty-min.js"
         ,
           src: "bower_components/underscore/underscore-min.js"
-          dest: "../ShellySiorb/public/libs/underscore-min.js"
+          dest: "#{backendDir}/public/libs/underscore-min.js"
         ,
           src: "bower_components/jcarousel/dist/jquery.jcarousel.min.js"
-          dest: "../ShellySiorb/public/libs/jcarousel-min.js"
-        ,
-          src: "prod_index.html"
-          dest: "../ShellySiorb/public/index.html"
+          dest: "#{backendDir}/public/libs/jcarousel-min.js"
         ]
 
 
