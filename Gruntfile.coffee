@@ -57,13 +57,10 @@ module.exports = (grunt) ->
           dest: "#{backendDir}/public/libs/siorb-min.js"
         ,
           src: "dist/styles.css"
-          dest: "#{backendDir}/assets/stylesheets/siorb.css"
+          dest: "#{backendDir}/app/assets/stylesheets/siorb.css"
         ,
           src: "dist/crafty-min.js"
           dest: "#{backendDir}/public/libs/crafty-min.js"
-        ,
-          src: "bower_components/underscore/underscore-min.js"
-          dest: "#{backendDir}/public/libs/underscore-min.js"
         ,
           src: "bower_components/jcarousel/dist/jquery.jcarousel.min.js"
           dest: "#{backendDir}/public/libs/jcarousel-min.js"

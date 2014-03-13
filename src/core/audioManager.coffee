@@ -1,5 +1,6 @@
 Crafty.c 'AudioManager',
   mode: 'normal'
+  canPlayJump: true
   startGameplayMusic: ->
     setTimeout ->
       Crafty.audio.play('gameplay', -1, Game.volume)
@@ -14,8 +15,12 @@ Crafty.c 'AudioManager',
     if Game.muted then Crafty.audio.mute() else Crafty.audio.unmute()
   setJumpEffect: ->
     $(document).bind('keydown', (e) =>
-      if e.keyCode == 38 || e.keyCode == 32
+      if (e.keyCode == 38 || e.keyCode == 32) and @canPlayJump
         @playJumpEffect()
+        @canPlayJump = false
+    )
+    $(document).bind('keyup', (e) =>
+      @canPlayJump = true
     )
     @bind("Runner:jumpEffect", @playJumpEffect)
   playJumpEffect: ->
