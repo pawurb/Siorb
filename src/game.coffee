@@ -66,7 +66,7 @@ window.Game =
       Crafty.pause() if e.keyCode == 80
   submitScore: (score, duration) ->
     $.ajax
-      url: "/user?score=#{score}}"
+      url: "/user?score=#{score}"
       type: 'PUT'
   gameplayStarted: null
 
