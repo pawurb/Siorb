@@ -11,12 +11,12 @@ Crafty.c 'PsychoVision',
     $(@_element).hide()
   showVision: ->
     unless @isAnimating
-      $(@_element).show('slow').fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
-      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
-      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
-      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
-      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
-      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0)
+      $(@_element).fadeIn(@duration/13).fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
+      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
+      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
+      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
+      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
+      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0)
 
       @isAnimating = true
       Crafty.trigger('Face:crazy')
