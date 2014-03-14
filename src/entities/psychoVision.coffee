@@ -8,15 +8,18 @@ Crafty.c 'PsychoVision',
       x: 0
       y: 76
       z: 200
-    $(@_element).hide()
+      alpha: 0
+    $(@_element).css('display', "none")
+
   showVision: ->
     unless @isAnimating
-      $(@_element).fadeIn(@duration/13).fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
-      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
-      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
-      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
-      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0.1)
-      .fadeTo(@duration/13, 0.2).fadeTo(@duration/13, 0)
+      $(@_element).css('opacity', '0.01').css('display', 'block').fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0)
+
 
       @isAnimating = true
       Crafty.trigger('Face:crazy')
