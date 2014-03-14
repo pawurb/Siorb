@@ -11,7 +11,7 @@ Crafty.c 'PsychoVision',
     $(@_element).hide()
   showVision: ->
     unless @isAnimating
-      $(@_element).stop().fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
+      $(@_element).fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)

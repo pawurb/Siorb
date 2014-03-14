@@ -14,7 +14,7 @@ window.Game =
   firstAuthors: true
   speedUpDuration: 7300
   mushroomDuration: 13600
-  leafProbability: 0.79
+  leafProbability: 0.77
   guaranaProbability: 0.85
   mrsCoffeeProbability: 0.91
   mrHotProbability: 0.97
