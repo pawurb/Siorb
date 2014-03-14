@@ -4,10 +4,11 @@ Crafty.c 'Platform',
     @requires('Base, Solid, Floatable')
     @sizesSize = Game.platformSizes.current.length
     @attr
-      h: 15
+      h: 10
       w: Game.platformSizes.current[Utils.rand(0, @sizesSize)]
       z: 200
     @bind('EnterFrame', @resetPosition)
+    # @color('red')
   resetPosition: ->
     if @x < -250
       # logic responsible for platforms arrangement
