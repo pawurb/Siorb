@@ -24,18 +24,14 @@ Crafty.scene 'GameOver', ->
   replayButton.at(Game.width - offset - 147, Game.height - offset*2)
 
   $(replayButton._element).on('click', ->
-    setTimeout ->
-      Game.runScene.gameplay()
-    , 200
+    Game.runScene.gameplay()
   )
 
   menu_button = Crafty.e('Button, menu_button')
   menu_button.at(Game.width - offset - 147, Game.height - offset * 3)
 
   $(menu_button._element).on('click', ->
-    setTimeout ->
-      Game.runScene.mainMenu()
-    , 200
+    window.location.reload()
   )
 
   Crafty.e('GameOverAd')

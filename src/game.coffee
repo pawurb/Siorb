@@ -43,11 +43,13 @@ window.Game =
   runScene:
     mainMenu: ->
       Crafty.assets = []
+      Crafty.audio.sounds = {}
       Crafty.load Game.assets.mainMenuList(), =>
         Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")
     gameplay: ->
       Crafty.assets = []
+      Crafty.audio.sounds = {}
       Crafty.load Game.assets.gameplayList(), =>
         Game.assets.loadGameplay()
         Crafty.scene("Gameplay")

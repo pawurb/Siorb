@@ -7,7 +7,7 @@ Crafty.c 'GameOverShortcuts',
       if keystroke.keyCode == @enterCode
         Game.runScene.gameplay()
       else if keystroke.keyCode == @escCode
-        Game.runScene.mainMenu()
+        window.location.reload()
     )
 
 

@@ -1,11 +1,6 @@
 Crafty.c 'AudioManager',
   mode: 'normal'
   canPlayJump: true
-  startGameplayMusic: ->
-    setTimeout ->
-      Crafty.audio.play('gameplay', -1, Game.volume)
-      false
-    , 1000
   startMenuMusic: ->
     Crafty.audio.play('mainMenu', -1, Game.volume)
     false
@@ -54,7 +49,7 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'MainMenu' and data.newScene == 'Gameplay'
         Crafty.audio.stop('mainMenu')
-        @startGameplayMusic()
+        Crafty.audio.play('gameplay', -1, Game.volume)
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
         Crafty.audio.stop()
@@ -62,11 +57,9 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
         Crafty.audio.stop('gameOver')
-        @startGameplayMusic()
+        Crafty.audio.play('gameplay', -1, Game.volume)
+        Crafty.audio.play('gameplay', -1, Game.volume)
 
-      else if data.oldScene == 'GameOver' and data.newScene == 'MainMenu'
-        Crafty.audio.stop('gameOver')
-        @startMenuMusic()
     )
 
     @bind('Runner:collectedGuarana', ->
