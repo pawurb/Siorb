@@ -39,7 +39,7 @@ Crafty.c 'GameObserver',
     Game.score += 1
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
-    Crafty.trigger('Runner:saysSomething') if (Game.score % 10) == 0
+    Crafty.trigger('Runner:saysSomething') if (Game.score % 2) == 0
   losePoints: ->
     if Game.score >= 2 then Game.score -= 2 else Game.score = 0
     @setDifficulty()

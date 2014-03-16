@@ -22,7 +22,7 @@ Crafty.scene 'Gameplay', ->
   Game.firstGameplay = false
   Game.score = 0
   Crafty.background('')
-  Game.window = document.getElementById('cr-stage')
+  Game.window = document.getElementById('game')
   Game.window.style.backgroundPositionY = '0px'
   Game.runner = Crafty.e 'Runner'
   Game.view = Crafty.viewport
@@ -40,5 +40,5 @@ Crafty.scene 'Gameplay', ->
     Crafty.trigger('Runner:saysSomething')
   , 1000
 , ->
-  $("#cr-stage").unbind("click")
+  $("#game").unbind("click")
   Crafty('Recyclable').destroy()

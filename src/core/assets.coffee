@@ -107,19 +107,19 @@ Game.assets =
       spr_mrs_coffee: [0, 0]
     Crafty.sprite 108, 164, "#{@imagesPath}mrHot.png",
       spr_mr_hot: [0, 0]
-    Crafty.sprite 159, 12, "#{@imagesPath}sayings.png",
+    Crafty.sprite 159, 24, "#{@imagesPath}sayings.png",
       spr_sayings: [0, 0]
     Crafty.sprite 323, 138, "#{@imagesPath}cloud.png",
       spr_cloud: [0, 0]
 
     # Game Over assets
-    Crafty.sprite 147, 16, "#{@imagesPath}jeszczeRazT.png",
+    Crafty.sprite 224, 16, "#{@imagesPath}jeszczeRazT.png",
       jeszcze_button: [0, 0]
-    Crafty.sprite 72, 18, "#{@imagesPath}gOpunktyT.png",
+    Crafty.sprite 178, 18, "#{@imagesPath}gOpunktyT.png",
       gOpunkty_button: [0, 0]
     Crafty.sprite 136, 18, "#{@imagesPath}gOrekordT.png",
       gOrekord_button: [0, 0]
-    Crafty.sprite 49, 16, "#{@imagesPath}menuT.png",
+    Crafty.sprite 101, 16, "#{@imagesPath}menuT.png",
       menu_button: [0, 0]
 
 
