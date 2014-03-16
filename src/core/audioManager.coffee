@@ -17,7 +17,6 @@ Crafty.c 'AudioManager',
     $(document).bind('keyup', (e) =>
       @canPlayJump = true
     )
-    @bind("Runner:jumpEffect", @playJumpEffect)
   playJumpEffect: ->
     if Game.runner._multijumpsLeft >=0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
@@ -48,10 +47,12 @@ Crafty.c 'AudioManager',
         @startMenuMusic()
 
       else if data.oldScene == 'MainMenu' and data.newScene == 'Gameplay'
+        @bind("Runner:jumpEffect", @playJumpEffect)
         Crafty.audio.stop('mainMenu')
         Crafty.audio.play('gameplay', -1, Game.volume)
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
+        @unbind("Runner:jumpEffect", @playJumpEffect)
         Crafty.audio.stop()
         Crafty.audio.play('gameOver', 1, 0.7)
 
