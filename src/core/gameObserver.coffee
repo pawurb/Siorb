@@ -1,4 +1,5 @@
 Crafty.c 'GameObserver',
+  absoluteScore: 0
   init: ->
     @requires 'Recyclable'
     @bind('Runner:collectedGuarana', @speedUpGuarana)
@@ -37,9 +38,10 @@ Crafty.c 'GameObserver',
     , Game.speedUpDuration/2
   scorePoint: ->
     Game.score += 1
+    @absoluteScore += 1
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
-    Crafty.trigger('Runner:saysSomething') if (Game.score % 2) == 0
+    Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0
   losePoints: ->
     if Game.score >= 2 then Game.score -= 2 else Game.score = 0
     @setDifficulty()
