@@ -107,9 +107,7 @@ Crafty.c 'AudioManager',
         Crafty.audio.stop('gameOver')
         Crafty.audio.play('gameplay', -1, Game.volume)
         Crafty.audio.play('gameplay', -1, Game.volume)
-
     )
-
 
     @bind('Siorb:victory', ->
       # @unbind('Runner:collectedMushroom')

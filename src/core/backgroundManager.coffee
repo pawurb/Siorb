@@ -3,7 +3,7 @@ Crafty.c 'BackgroundManager',
   yScrollFrame: 0
   backgroundX: 0
   xScrollingSpeed: 2
-  proportion: 2
+  proportion: 3
   init: ->
     Game.window.style.backgroundPosition = '0px -1000px'
     @bind('EnterFrame', @scrollBackgroundX)
@@ -28,7 +28,7 @@ Crafty.c 'BackgroundManager',
     @yScrollFrame += 1
     @yScrollFrame = 0 if @yScrollFrame == 1000
 
-    if @yScrollFrame % 2
+    if @yScrollFrame % 3 == 0
       @scrollBackgroundY(data)
   scrollBackgroundY: (data) ->
     arr = Game.window.style.backgroundPosition.split(' ')[1].split('')

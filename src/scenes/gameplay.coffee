@@ -23,9 +23,9 @@ Crafty.scene 'Gameplay', ->
 
     Game.leafProbability = Game.defaultLeafProbability
     Game.guaranaProbability = Game.defaultGuaranaProbability
-    Game.mrsCoffeeProbability = Game.defualtMrsCoffeeProbabilty
+    Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
     Game.mrHotProbability = Game.defaultMrHotProbability
-    Game.mushroomProbability = Game.defaultMushroomProbabiliy
+    Game.mushroomProbability = Game.defaultMushroomProbability
 
 
   setDefaults()

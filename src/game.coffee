@@ -4,9 +4,10 @@ window.Game =
   mediumFloatSpeed: 5
   victoryFloatSpeed: 6
   mode: 'easy'
-  mediumScore: 12
-  hardScore: 75
-  victoryScore: 50
+  mediumScore: 16
+  hardScore: 80
+  victoryScore: 100
+  scorePenalty: 8
   score: 0
   width : 800
   height : 420
@@ -17,7 +18,7 @@ window.Game =
   speedUpDuration: 7300
   mushroomDuration: 13600
   defaultLeafProbability: 0.77
-  defaultGuaranaProbability: 0.85
+  defaultGuaranaProbability: 0.84
   defaultMrsCoffeeProbability: 0.91
   defaultMrHotProbability: 0.97
   defaultMushroomProbability: 1.01

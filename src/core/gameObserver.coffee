@@ -42,13 +42,13 @@ Crafty.c 'GameObserver',
     , Game.speedUpDuration/2
   scorePoint: (data)->
     Game.score += data.points
-    @absoluteScore += 1
+    @absoluteScore += data.points
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
-    Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0
+    Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 16) == 0
     Crafty.trigger('Siorb:victory') if Game.score >= Game.victoryScore && Game.victory == false
   losePoints: ->
-    if Game.score >= 2 then Game.score -= 2 else Game.score = 0
+    if Game.score >= Game.scorePenalty then Game.score -= Game.scorePenalty else Game.score = 0
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
   setDifficulty: ->

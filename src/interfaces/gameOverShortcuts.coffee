@@ -5,7 +5,10 @@ Crafty.c 'GameOverShortcuts',
     @requires 'Recyclable, Keyboard'
     @bind('KeyDown', (keystroke)->
       if keystroke.keyCode == @enterCode
-        Game.runScene.gameplay()
+        if Game.victory
+          window.location.reload()
+        else
+          Game.runScene.gameplay()
       else if keystroke.keyCode == @escCode
         window.location.reload()
     )

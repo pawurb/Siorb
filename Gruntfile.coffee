@@ -41,6 +41,8 @@ module.exports = (grunt) ->
       src: ["src/**/*.coffee"]
 
     uglify:
+      options:
+        banner: '/* Copyright (c) 2014 Paweł Urbanek. All rights reserved. */'
       release:
         files:
           "dist/siorb-min.js": ["dist/siorb.js"]
