@@ -15,10 +15,21 @@ Crafty.scene 'Gameplay', ->
       yPos = 200 + (Game.height - Game.height/5 * level - 20)
       xPos = Game.width/5 * i
       Crafty.e('Platform').at(xPos, yPos)
+  setDefaults = ->
+    Game.victory = false
+    Game.floatSpeed = Game.initialFloatSpeed
+    Game.defaultFloatSpeed = Game.initialFloatSpeed
 
+    Game.leafProbability = Game.defaultLeafProbability
+    Game.guaranaProbability = Game.defaultGuaranaProbability
+    Game.mrsCoffeeProbability = Game.defualtMrsCoffeeProbabilty
+    Game.mrHotProbability = Game.defaultMrHotProbability
+    Game.mushroomProbability = Game.defaultMushroomProbabiliy
+
+
+  setDefaults()
   Crafty.trigger('Game:gameplayStarted')
   Game.scene = 'Gameplay'
-  Game.firstGameplay = false
   Game.score = 0
   Crafty.background('')
   Game.window = document.getElementById('game')

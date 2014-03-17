@@ -34,7 +34,7 @@ Crafty.c 'AudioManager',
   playCoffeeEndEffect: ->
     Crafty.audio.play('coffeeEndSound', 1, Game.volume)
   playMushroomStartEffect: ->
-    if @mode == 'mushroom'
+    if @mode == 'mushroom' || @mode == 'victory'
       Crafty.audio.play('mushroomCollect')
     else
       @mode = 'mushroom'
@@ -48,7 +48,9 @@ Crafty.c 'AudioManager',
     Crafty.audio.unpause('gameplay')
 
   playGuaranaStartEffect: ->
-    unless @mode == 'mushroom'
+    if @mode == 'mushroom' || @mode == 'victory'
+      Crafty.audio.play('guaranaCollect', 1, Game.volume*1.1)
+    else
       @mode = 'guarana'
       Crafty.audio.pause('gameplay')
       Crafty.audio.stop('guaranaBeat')
@@ -70,6 +72,7 @@ Crafty.c 'AudioManager',
     @bind('Runner:collectedMrsCoffee', @playCoffeeStartEffect)
     @bind('Coffee:speedUpEnded', @playCoffeeEndEffect)
     @bind("Runner:jumpEffect", @playJumpEffect)
+    @mode = 'normal'
 
     @bind('SceneChange', (data)->
 
@@ -107,8 +110,9 @@ Crafty.c 'AudioManager',
 
 
     @bind('Siorb:victory', ->
-      @unbind('Runner:collectedMushroom')
-      @unbind('Runner:collectedGuarana')
+      # @unbind('Runner:collectedMushroom')
+      # @unbind('Runner:collectedGuarana')
+      @mode = 'victory'
       @unbind('Guarana:ended')
       @unbind('Mushroom:ended')
       Crafty.audio.stop()

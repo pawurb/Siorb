@@ -77,6 +77,8 @@ Game.assets =
     "coffeeStartSound.mp3"
     "victoryBeat.ogg"
     "victoryBeat.mp3"
+    "guaranaCollect.ogg"
+    "guaranaCollect.mp3"
   ]
 
   loadGameplay: -> # also include assets for gameOver scene
@@ -85,6 +87,7 @@ Game.assets =
       gameOver: ["#{@soundsPath}gameOver.ogg", "#{@soundsPath}gameOver.mp3"]
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg", "#{@soundsPath}mushroomBeat.mp3"]
       mushroomCollect: ["#{@soundsPath}mushroomCollect.ogg", "#{@soundsPath}mushroomCollect.mp3"]
+      guaranaCollect: ["#{@soundsPath}guaranaCollect.ogg", "#{@soundsPath}guaranaCollect.mp3"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg", "#{@soundsPath}guaranaBeat.mp3"]
       jumpSound: ["#{@soundsPath}jumpSound.ogg", "#{@soundsPath}jumpSound.mp3"]
       leafSound: ["#{@soundsPath}leafSound.ogg", "#{@soundsPath}leafSound.mp3"]

@@ -1,7 +1,11 @@
 window.Game =
   host: "http://#{window.location.host}/assets"
-  floatSpeed: 4
-  defaultFloatSpeed: 4
+  initialFloatSpeed: 4
+  mediumFloatSpeed: 5
+  victoryFloatSpeed: 7
+  mediumScore: 12
+  hardScore: 75
+  victoryScore: 30
   score: 0
   width : 800
   height : 420
@@ -9,16 +13,13 @@ window.Game =
   scene: null
   assets: null
   firstMainMenu: true
-  firstGameplay: true
-  firstInstruction: true
-  firstAuthors: true
   speedUpDuration: 7300
   mushroomDuration: 13600
-  leafProbability: 0.77
-  guaranaProbability: 0.85
-  mrsCoffeeProbability: 0.91
-  mrHotProbability: 0.97
-  mushroomProbability: 1.01
+  defaultLeafProbability: 0.77
+  defaultGuaranaProbability: 0.85
+  defaultMrsCoffeeProbability: 0.91
+  defaultMrHotProbability: 0.97
+  defaultMushroomProbability: 1.01
   victory: false
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
   volume: 0.5

@@ -44,25 +44,30 @@ Crafty.c 'GameObserver',
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
     Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0
-    Crafty.trigger('Siorb:victory') if Game.score > 9 && Game.victory == false
+    Crafty.trigger('Siorb:victory') if Game.score >= Game.victoryScore && Game.victory == false
   losePoints: ->
     if Game.score >= 2 then Game.score -= 2 else Game.score = 0
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
   setDifficulty: ->
-    if Game.score < 12
+    if Game.score < Game.mediumScore
       Game.platformSizes.current = Game.platformSizes.easy
-    else if Game.score < 75
+    else if Game.score < Game.hardScore
+      Game.floatSpeed = Game.mediumFloatSpeed
+      Game.defaultFloatSpeed = Game.mediumFloatSpeed
       Game.platformSizes.current = Game.platformSizes.medium
     else
       Game.platformSizes.current = Game.platformSizes.hard
   handleVictory: ->
-    console.log 'dup dup'
     Crafty.e('DiscoText')
     Game.victory = true
     Game.leafProbability = 0.60
     Game.guaranaProbability = 0.70
     Game.mushroomProbability = 1.01
-    Game.floatSpeed = 8
-    Game.defaultFloatSpeed = 8
+
+    # will appear no more
+    Game.mrHotProbability = 0
+    Game.mushroomProbability = 0
+    Game.floatSpeed = Game.victoryFloatSpeed
+    Game.defaultFloatSpeed = Game.victoryFloatSpeed
 
