@@ -5,11 +5,10 @@ Crafty.scene 'GameOver', ->
   Crafty.trigger('Game:gameOverStarted')
   Crafty.e('GameOverShortcuts')
 
-  playDuration = ((new Date).getTime() - Game.gameplayStarted) / 1000
   if Game.score > parseInt(localStorage.getItem('highScore'))
     localStorage.setItem('highScore', Game.score)
 
-  Game.submitScore()
+  Game.submitScore(Game.score)
 
   # score panels
   offset = 24

@@ -64,10 +64,10 @@ window.Game =
   setBindings: ->
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80
-  submitScore: ->
-    highscore = parseInt(localStorage.getItem('highScore'))
+  submitScore: (score)->
+    scoreParam = btoa(parseInt(score))
     $.ajax
-      url: "/user?user[score]=#{highscore}"
+      url: "/user?user[noturbusiness]=#{scoreParam}"
       type: 'PUT'
   gameplayStarted: null
 

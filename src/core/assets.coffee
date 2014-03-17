@@ -60,6 +60,8 @@ Game.assets =
     "gameOver.ogg"
     "mushroomBeat.ogg"
     "mushroomBeat.mp3"
+    "mushroomCollect.ogg"
+    "mushroomCollect.mp3"
     "guaranaBeat.ogg"
     "guaranaBeat.mp3"
     "jumpSound.ogg"
@@ -79,6 +81,7 @@ Game.assets =
       gameplay: ["#{@soundsPath}gameplay.ogg", "#{@soundsPath}gameplay.mp3"]
       gameOver: ["#{@soundsPath}gameOver.ogg", "#{@soundsPath}gameOver.mp3"]
       mushroomBeat: ["#{@soundsPath}mushroomBeat.ogg", "#{@soundsPath}mushroomBeat.mp3"]
+      mushroomCollect: ["#{@soundsPath}mushroomCollect.ogg", "#{@soundsPath}mushroomCollect.mp3"]
       guaranaBeat: ["#{@soundsPath}guaranaBeat.ogg", "#{@soundsPath}guaranaBeat.mp3"]
       jumpSound: ["#{@soundsPath}jumpSound.ogg", "#{@soundsPath}jumpSound.mp3"]
       leafSound: ["#{@soundsPath}leafSound.ogg", "#{@soundsPath}leafSound.mp3"]

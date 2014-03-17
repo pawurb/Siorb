@@ -6,6 +6,7 @@ Crafty.c 'GameObserver',
     @bind('Runner:collectedLeaf', @scorePoint)
     @bind('Runner:collectedMrHot', @losePoints)
     @bind('Runner:collectedMrsCoffee', @losePoints)
+    @bind('Runner:collectedMushroom', @scorePoint)
     @bind('Runner:collectedMrsCoffee', @speedUpCoffee)
     @bind('Coffee:speedUpEnded', @slowDownPlatforms)
   speedUpGuarana: ->
@@ -36,8 +37,8 @@ Crafty.c 'GameObserver',
       Game.floatSpeed = Game.defaultFloatSpeed
       Crafty.trigger('Coffee:slowDownEnded')
     , Game.speedUpDuration/2
-  scorePoint: ->
-    Game.score += 1
+  scorePoint: (data)->
+    Game.score += data.points
     @absoluteScore += 1
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')

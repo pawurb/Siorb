@@ -18,7 +18,7 @@ Crafty.c 'AudioManager',
       @canPlayJump = true
     )
   playJumpEffect: ->
-    if Game.runner._multijumpsLeft >=0
+    if Game.runner && Game.runner._multijumpsLeft >=0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   setLeafCollectEffect: ->
     @bind('Runner:collectedLeaf', ->
@@ -79,8 +79,11 @@ Crafty.c 'AudioManager',
     )
 
     @bind('Runner:collectedMushroom', ->
-      unless @mode == 'mushroom'
+      if @mode == 'mushroom'
+        Crafty.audio.play('mushroomCollect')
+      else
         @mode = 'mushroom'
+        Crafty.audio.play('mushroomCollect')
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
         Crafty.audio.play('mushroomBeat', 1, Game.volume)
