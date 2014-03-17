@@ -74,7 +74,7 @@ Crafty.c 'AudioManager',
     @bind("Runner:jumpEffect", @playJumpEffect)
     @mode = 'normal'
 
-    @bind('SceneChange', (data)->
+    @bind('SceneChange', (data) ->
 
       if data.newScene == 'Gameplay'
         @unbind('Runner:collectedMushroom')

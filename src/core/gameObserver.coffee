@@ -64,16 +64,16 @@ Crafty.c 'GameObserver',
       Game.mode = 'hard'
       Game.platformSizes.current = Game.platformSizes.hard
   handleVictory: ->
-    Crafty.e('DiscoText')
     Game.victory = true
     Game.leafProbability = 0.60
     Game.guaranaProbability = 0.66
     Game.mushroomProbability = 1.01
-
-    # will appear no more
+    #they will appear no more
     Game.mrHotProbability = 0
     Game.mushroomProbability = 0
+
     Game.floatSpeed = Game.victoryFloatSpeed if Game.floatSpeed < Game.victoryFloatSpeed
     Game.defaultFloatSpeed = Game.victoryFloatSpeed
+    Crafty.e('DiscoText')
 
 
