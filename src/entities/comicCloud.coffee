@@ -1,6 +1,6 @@
 Crafty.c 'ComicCloud',
   isVisible: false
-  delay: 2000
+  delay: 3000
   init: ->
     @requires 'Base, spr_cloud'
     @attr

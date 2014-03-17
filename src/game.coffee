@@ -2,10 +2,11 @@ window.Game =
   host: "http://#{window.location.host}/assets"
   initialFloatSpeed: 4
   mediumFloatSpeed: 5
-  victoryFloatSpeed: 7
+  victoryFloatSpeed: 6
+  mode: 'easy'
   mediumScore: 12
   hardScore: 75
-  victoryScore: 30
+  victoryScore: 50
   score: 0
   width : 800
   height : 420

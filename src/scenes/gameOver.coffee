@@ -24,7 +24,10 @@ Crafty.scene 'GameOver', ->
   replayButton.at(Game.width - offset - buttonsOffset, Game.height - offset * 3)
 
   $(replayButton._element).on('click', ->
-    Game.runScene.gameplay()
+    if Game.victory
+      window.location.reload()
+    else
+      Game.runScene.gameplay()
   )
 
   menu_button = Crafty.e('Button, menu_button')

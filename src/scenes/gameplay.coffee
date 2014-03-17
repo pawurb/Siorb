@@ -17,6 +17,7 @@ Crafty.scene 'Gameplay', ->
       Crafty.e('Platform').at(xPos, yPos)
   setDefaults = ->
     Game.victory = false
+    Game.mode = 'easy'
     Game.floatSpeed = Game.initialFloatSpeed
     Game.defaultFloatSpeed = Game.initialFloatSpeed
 

@@ -87,6 +87,8 @@ Crafty.c 'AudioManager',
         @bind('Runner:collectedMushroom', @playMushroomStartEffect)
         @bind('Mushroom:ended', @playMushroomEndEffect)
 
+        @mode = 'normal'
+
       # music playing logic goes here
       if data.oldScene == null and data.newScene == 'MainMenu'
         @startMenuMusic()
