@@ -13,19 +13,25 @@ Crafty.c 'RunnerFace',
     @bind('Face:crazy', @faceCrazy)
     @bind('Face:stopCrazy', @faceStopCrazy)
     @bind('Face:falling', @faceFalling)
+    @bind('Siorb:victory', @handleVictoryFace)
   faceNormal: ->
-    @sprite(0, 0) unless @mode == 'crazy'
+    @sprite(0, 0) unless @mode == 'crazy' || @mode == 'victory'
   faceFasterGuarana: ->
-    @sprite(0, 3) unless @mode == 'crazy'
+    @sprite(0, 3) unless @mode == 'crazy' || @mode == 'victory'
   faceFasterCoffee: ->
-    @sprite(0, 5) unless @mode == 'crazy'
+    @sprite(0, 5) unless @mode == 'crazy' || @mode == 'victory'
   faceSlowerCoffee: ->
-    @sprite(0, 4) unless @mode == 'crazy'
-  faceCrazy: ->
-    @mode = 'crazy'
-    @sprite(0, 1)
-  faceStopCrazy: ->
-    @mode = 'normal'
-    @sprite(0, 0)
+    @sprite(0, 4) unless @mode == 'crazy' || @mode == 'victory'
   faceFalling: ->
-    @sprite(0, 2) unless @mode == 'crazy'
+    @sprite(0, 2) unless @mode == 'crazy' || @mode == 'victory'
+  faceCrazy: ->
+    unless @mode == 'victory'
+      @mode = 'crazy'
+      @sprite(0, 1)
+  faceStopCrazy: ->
+    unless @mode == 'victory'
+      @mode = 'normal'
+      @sprite(0, 0)
+  handleVictoryFace: ->
+    @mode = 'victory'
+    @sprite(0, 3)

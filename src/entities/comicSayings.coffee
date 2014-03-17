@@ -1,7 +1,7 @@
 Crafty.c 'ComicSayings',
   isVisible: false
   delay: 2000
-  phrasesCount: 14
+  phrasesCount: 13
   init: ->
     @requires 'Base, spr_sayings'
     @attr

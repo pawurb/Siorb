@@ -9,6 +9,7 @@ Crafty.c 'GameObserver',
     @bind('Runner:collectedMushroom', @scorePoint)
     @bind('Runner:collectedMrsCoffee', @speedUpCoffee)
     @bind('Coffee:speedUpEnded', @slowDownPlatforms)
+    @bind('Siorb:victory', @handleVictory)
   speedUpGuarana: ->
     @speedUpPlatforms('guarana')
   speedUpCoffee: ->
@@ -43,6 +44,7 @@ Crafty.c 'GameObserver',
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
     Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0
+    Crafty.trigger('Siorb:victory') if Game.score > 5 && Game.victory == false
   losePoints: ->
     if Game.score >= 2 then Game.score -= 2 else Game.score = 0
     @setDifficulty()
@@ -54,3 +56,13 @@ Crafty.c 'GameObserver',
       Game.platformSizes.current = Game.platformSizes.medium
     else
       Game.platformSizes.current = Game.platformSizes.hard
+  handleVictory: ->
+    console.log 'dup dup'
+    Crafty.e('DiscoText')
+    Game.victory = true
+    Game.leafProbability = 0.60
+    Game.guaranaProbability = 0.70
+    Game.mushroomProbability = 1.01
+    Game.floatSpeed = 8
+    Game.defaultFloatSpeed = 8
+

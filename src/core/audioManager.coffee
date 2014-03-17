@@ -83,7 +83,6 @@ Crafty.c 'AudioManager',
         Crafty.audio.play('mushroomCollect')
       else
         @mode = 'mushroom'
-        Crafty.audio.play('mushroomCollect')
         Crafty.audio.pause('gameplay')
         Crafty.audio.stop('guaranaBeat')
         Crafty.audio.play('mushroomBeat', 1, Game.volume)

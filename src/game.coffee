@@ -19,6 +19,7 @@ window.Game =
   mrsCoffeeProbability: 0.91
   mrHotProbability: 0.97
   mushroomProbability: 1.01
+  victory: false
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
   volume: 0.5
   timeouts:

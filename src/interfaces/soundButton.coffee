@@ -1,7 +1,7 @@
 Crafty.c 'SoundButton',
   init: ->
     @requires('Button, sound_button')
-    @at(5, 5)
+    @at(Game.width - 45, 10)
     @chooseSprite()
 
     $(@_element).on('click', =>

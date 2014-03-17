@@ -14,6 +14,7 @@ Game.assets =
       "blush.png"
       "sayings.png"
       "cloud.png"
+      "discoText.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -114,6 +115,8 @@ Game.assets =
       spr_sayings: [0, 0]
     Crafty.sprite 323, 138, "#{@imagesPath}cloud.png",
       spr_cloud: [0, 0]
+    Crafty.sprite 386, 38, "#{@imagesPath}discoText.png",
+      spr_disco_text: [0, 0]
 
     # Game Over assets
     Crafty.sprite 224, 16, "#{@imagesPath}jeszczeRazT.png",
@@ -137,7 +140,7 @@ Game.assets =
       tworcy_button: [0, 0]
     Crafty.sprite 132, 18, "#{@imagesPath}rekordT.png",
       rekord_button: [0, 0]
-    Crafty.sprite 76, 64, "#{@imagesPath}sound.png",
+    Crafty.sprite 36, 30, "#{@imagesPath}sound.png",
       sound_button: [0, 0]
     Crafty.sprite 320, 75, "#{@imagesPath}mainMenuLeaves.png",
       leaves_image: [0, 0]

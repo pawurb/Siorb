@@ -2,7 +2,7 @@ Crafty.c 'FBLikeButton',
   init: ->
     @requires 'Base'
     @attr
-      x: 80
+      x: 10
       y: 10
       w: 50
       h: 50

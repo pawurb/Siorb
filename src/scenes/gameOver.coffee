@@ -12,23 +12,23 @@ Crafty.scene 'GameOver', ->
 
   # score panels
   offset = 24
-  Crafty.e('PixelScoreBoard').displayAt(offset + 180, Game.height - offset*3, 'current')
+  Crafty.e('PixelScoreBoard').displayAt(offset + 184, Game.height - offset*3, 'current')
   Crafty.e('Base, gOpunkty_button').at(offset, Game.height - offset*3)
 
   Crafty.e('Base, gOrekord_button').at(offset, Game.height - offset*2)
-  Crafty.e('PixelScoreBoard').displayAt(offset + 140, Game.height - offset*2, 'top')
+  Crafty.e('PixelScoreBoard').displayAt(offset + 144, Game.height - offset*2, 'top')
 
 
   buttonsOffset = 220
   replayButton = Crafty.e('Button, jeszcze_button')
-  replayButton.at(Game.width - offset - buttonsOffset, Game.height - offset*2)
+  replayButton.at(Game.width - offset - buttonsOffset, Game.height - offset * 3)
 
   $(replayButton._element).on('click', ->
     Game.runScene.gameplay()
   )
 
   menu_button = Crafty.e('Button, menu_button')
-  menu_button.at(Game.width - offset - buttonsOffset, Game.height - offset * 3)
+  menu_button.at(Game.width - offset - buttonsOffset, Game.height - offset*2)
 
   $(menu_button._element).on('click', ->
     window.location.reload()
