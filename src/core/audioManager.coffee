@@ -100,7 +100,10 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
         @unbind("Runner:jumpEffect", @playJumpEffect)
-        Crafty.audio.stop()
+        Crafty.audio.stop('gameplay')
+        Crafty.audio.stop('mushroomBeat')
+        Crafty.audio.stop('guaranaBeat')
+        Crafty.audio.stop('victoryBeat')
         Crafty.audio.play('gameOver', 1, 0.7)
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'

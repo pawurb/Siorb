@@ -5,7 +5,7 @@ window.Game =
   victoryFloatSpeed: 6
   mode: 'easy'
   mediumScore: 16
-  hardScore: 80
+  hardScore: 90
   victoryScore: 100
   scorePenalty: 8
   score: 0
@@ -17,7 +17,7 @@ window.Game =
   firstMainMenu: true
   speedUpDuration: 7300
   mushroomDuration: 13600
-  defaultLeafProbability: 0.77
+  defaultLeafProbability: 0.79
   defaultGuaranaProbability: 0.84
   defaultMrsCoffeeProbability: 0.91
   defaultMrHotProbability: 0.97
@@ -32,8 +32,8 @@ window.Game =
   platformSizes:
     current: null
     easy: [150, 150, 200, 200, 250]
-    medium: [100, 100, 150, 150, 200]
-    hard: [75, 100, 100, 150, 150]
+    medium: [100, 150, 150, 150, 200]
+    hard: [75, 100, 150, 150, 150]
   start: ->
     Crafty.init @width, @height, "game"
     @setBindings()

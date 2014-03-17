@@ -67,7 +67,7 @@ Crafty.c 'GameObserver',
     Crafty.e('DiscoText')
     Game.victory = true
     Game.leafProbability = 0.60
-    Game.guaranaProbability = 0.70
+    Game.guaranaProbability = 0.66
     Game.mushroomProbability = 1.01
 
     # will appear no more
