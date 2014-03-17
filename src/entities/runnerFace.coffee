@@ -15,23 +15,38 @@ Crafty.c 'RunnerFace',
     @bind('Face:falling', @faceFalling)
     @bind('Siorb:victory', @handleVictoryFace)
   faceNormal: ->
-    @sprite(0, 0) unless @mode == 'crazy' || @mode == 'victory'
+    @sprite(0, 0)
   faceFasterGuarana: ->
-    @sprite(0, 3) unless @mode == 'crazy' || @mode == 'victory'
+    @sprite(0, 3)
   faceFasterCoffee: ->
-    @sprite(0, 5) unless @mode == 'crazy' || @mode == 'victory'
+    @sprite(0, 5)
   faceSlowerCoffee: ->
-    @sprite(0, 4) unless @mode == 'crazy' || @mode == 'victory'
+    @sprite(0, 4)
   faceFalling: ->
-    @sprite(0, 2) unless @mode == 'crazy' || @mode == 'victory'
+    @sprite(0, 2)
   faceCrazy: ->
+    @unbind('Face:normal', @faceNormal)
+    @unbind('Face:fasterGuarana', @faceFasterGuarana)
+    @unbind('Face:fasterCoffee', @faceFasterCoffee)
+    @unbind('Face:slowerCoffee', @faceSlowerCoffee)
+
     unless @mode == 'victory'
       @mode = 'crazy'
       @sprite(0, 1)
   faceStopCrazy: ->
-    unless @mode == 'victory'
-      @mode = 'normal'
-      @sprite(0, 0)
+    @bind('Face:normal', @faceNormal)
+    @bind('Face:fasterGuarana', @faceFasterGuarana)
+    @bind('Face:fasterCoffee', @faceFasterCoffee)
+    @bind('Face:slowerCoffee', @faceSlowerCoffee)
+
+    @mode = 'normal'
+    @sprite(0, 0)
   handleVictoryFace: ->
+    @unbind('Face:normal', @faceNormal)
+    @unbind('Face:fasterGuarana', @faceFasterGuarana)
+    @unbind('Face:fasterCoffee', @faceFasterCoffee)
+    @unbind('Face:slowerCoffee', @faceSlowerCoffee)
+    @unbind('Face:crazy', @faceCrazy)
+    @unbind('Face:stopCrazy', @faceStopCrazy)
     @mode = 'victory'
     @sprite(0, 3)
