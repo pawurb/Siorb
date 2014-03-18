@@ -16,6 +16,7 @@ window.Game =
   assets: null
   firstMainMenu: true
   speedUpDuration: 7300
+  speedUpValue: 2
   mushroomDuration: 13600
   defaultLeafProbability: 0.79
   defaultGuaranaProbability: 0.84

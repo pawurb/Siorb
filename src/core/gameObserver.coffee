@@ -17,7 +17,7 @@ Crafty.c 'GameObserver',
   speedUpCoffee: ->
     @speedUpPlatforms('coffee')
   speedUpPlatforms: (drug) ->
-    Game.floatSpeed += 3 if Game.floatSpeed <= Game.defaultFloatSpeed
+    Game.floatSpeed += Game.speedUpValue if Game.floatSpeed <= Game.defaultFloatSpeed
 
     clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
     clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
@@ -70,7 +70,7 @@ Crafty.c 'GameObserver',
     Game.mushroomProbability = 1.01
     #they will appear no more
     Game.mrHotProbability = 0
-    Game.mushroomProbability = 0
+    Game.mrsCoffeeProbability = 0
 
     Game.floatSpeed = Game.victoryFloatSpeed if Game.floatSpeed < Game.victoryFloatSpeed
     Game.defaultFloatSpeed = Game.victoryFloatSpeed
