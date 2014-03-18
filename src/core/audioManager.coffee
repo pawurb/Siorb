@@ -77,10 +77,10 @@ Crafty.c 'AudioManager',
     @bind('SceneChange', (data) ->
 
       if data.newScene == 'Gameplay'
-        @unbind('Runner:collectedMushroom')
-        @unbind('Runner:collectedGuarana')
-        @unbind('Guarana:ended')
-        @unbind('Mushroom:ended')
+        @unbind('Runner:collectedMushroom', @playMushroomStartEffect)
+        @unbind('Runner:collectedGuarana', @playGuaranaStartEffect)
+        @unbind('Guarana:ended', @playGuaranaEndEffect)
+        @unbind('Mushroom:ended', @playMushroomEndEffect)
 
         @bind('Runner:collectedGuarana', @playGuaranaStartEffect)
         @bind('Guarana:ended', @playGuaranaEndEffect)
@@ -116,8 +116,9 @@ Crafty.c 'AudioManager',
       # @unbind('Runner:collectedMushroom')
       # @unbind('Runner:collectedGuarana')
       @mode = 'victory'
-      @unbind('Guarana:ended')
-      @unbind('Mushroom:ended')
+
+      @unbind('Guarana:ended', @playGuaranaEndEffect)
+      @unbind('Mushroom:ended', @playMushroomEndEffect)
       Crafty.audio.stop()
       Crafty.audio.play('victoryBeat', -1, Game.volume)
     )
