@@ -131,7 +131,7 @@ Game.assets =
       gOpunkty_button: [0, 0]
     Crafty.sprite 136, 18, "#{@imagesPath}gOrekordT.png",
       gOrekord_button: [0, 0]
-    Crafty.sprite 180, 16, "#{@imagesPath}menuT.png",
+    Crafty.sprite 180, 18, "#{@imagesPath}menuT.png",
       menu_button: [0, 0]
 
 
