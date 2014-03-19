@@ -3,7 +3,7 @@ Crafty.c 'BackgroundManager',
   yScrollFrame: 0
   backgroundX: 0
   xScrollingSpeed: 2
-  yScrollProportion: 4
+  yScrollProportion: 3
   init: ->
     Game.window.style.backgroundPosition = '0px -1000px'
     @bind('EnterFrame', @scrollBackgroundX)

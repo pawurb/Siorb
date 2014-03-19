@@ -12,6 +12,7 @@ Crafty.c 'PsychoVision',
     $(@_element).css('display', "none")
 
   showVision: ->
+    #manually adjusting css to prevent flickering
     unless @isAnimating
       $(@_element).css('opacity', '0.01').css('display', 'block').fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
@@ -19,6 +20,10 @@ Crafty.c 'PsychoVision',
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0.1)
       .fadeTo(@duration/12, 0.2).fadeTo(@duration/12, 0)
+      setTimeout =>
+        $(@_element).css('display', 'none')
+      , Game.mushroomDuration
+
 
 
       @isAnimating = true
