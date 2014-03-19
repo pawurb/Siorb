@@ -75,10 +75,12 @@ window.Game =
       type: 'POST'
 
   submitScore: (score)->
-    scoreParam = btoa(parseInt(score))
-    $.ajax
-      url: "/user?user[noturbusiness]=#{scoreParam}"
-      type: 'PUT'
+    #variable provided by the backend
+    if (typeof(gon) != 'undefined') and gon.userLoggedIn
+      scoreParam = btoa(parseInt(score))
+      $.ajax
+        url: "/user?user[noturbusiness]=#{scoreParam}"
+        type: 'PUT'
   gameplayStarted: null
 
 
