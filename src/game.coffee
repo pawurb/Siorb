@@ -71,7 +71,7 @@ window.Game =
       Crafty.pause() if e.keyCode == 80
   submitStatistic: (score, duration) ->
     $.ajax
-      url: "/user?statistic[score]=#{score}&statistic[duration]=#{duration}"
+      url: "/statistics?statistic[score]=#{score}&statistic[duration]=#{duration}"
       type: 'PUT'
 
   submitScore: (score)->
