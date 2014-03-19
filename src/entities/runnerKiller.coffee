@@ -14,6 +14,7 @@ Crafty.c 'RunnerKiller',
         Crafty("ScoreBoard").destroy()
         Crafty("ManaMeter").destroy()
         Crafty("PsychoVision").destroy()
+        Crafty("DiscoText").destroy()
 
         setTimeout ->
           Crafty("BackgroundManager").destroy()

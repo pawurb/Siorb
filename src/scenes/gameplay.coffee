@@ -30,6 +30,8 @@ Crafty.scene 'Gameplay', ->
 
   setDefaults()
   Crafty.trigger('Game:gameplayStarted')
+  Game.gameplayStarted = (new Date).getTime()
+
   Game.scene = 'Gameplay'
   Game.score = 0
   Crafty.background('')

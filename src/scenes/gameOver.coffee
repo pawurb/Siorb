@@ -8,6 +8,8 @@ Crafty.scene 'GameOver', ->
   if Game.score > parseInt(localStorage.getItem('highScore'))
     localStorage.setItem('highScore', Game.score)
 
+  playDuration = parseInt(((new Date).getTime() - Game.gameplayStarted) / 1000)
+  Game.submitStatistic(Game.score, playDuration)
   Game.submitScore(Game.score)
 
   # score panels

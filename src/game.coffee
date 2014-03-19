@@ -69,6 +69,11 @@ window.Game =
   setBindings: ->
     $(document).bind "keyup", (e) ->
       Crafty.pause() if e.keyCode == 80
+  submitStatistic: (score, duration) ->
+    $.ajax
+      url: "/user?statistic[score]=#{score}&statistic[duration]=#{duration}"
+      type: 'PUT'
+
   submitScore: (score)->
     scoreParam = btoa(parseInt(score))
     $.ajax
