@@ -18,7 +18,7 @@ Crafty.c 'AudioManager',
       @canPlayJump = true
     )
   playJumpEffect: ->
-    if Game.runner && Game.runner._multijumpsLeft >=0
+    if Game.runner && Game.runner._multijumpsLeft >= 0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   playLeafEffect: ->
     Crafty.audio.play('leafSound', 1, Game.volume*0.5)
@@ -71,7 +71,6 @@ Crafty.c 'AudioManager',
     @bind('Runner:collectedMrHot', @playBurnEffect)
     @bind('Runner:collectedMrsCoffee', @playCoffeeStartEffect)
     @bind('Coffee:speedUpEnded', @playCoffeeEndEffect)
-    @bind("Runner:jumpEffect", @playJumpEffect)
     @mode = 'normal'
 
     @bind('SceneChange', (data) ->
@@ -82,6 +81,7 @@ Crafty.c 'AudioManager',
         @unbind('Guarana:ended', @playGuaranaEndEffect)
         @unbind('Mushroom:ended', @playMushroomEndEffect)
 
+        @bind("Runner:jumpEffect", @playJumpEffect)
         @bind('Runner:collectedGuarana', @playGuaranaStartEffect)
         @bind('Guarana:ended', @playGuaranaEndEffect)
         @bind('Runner:collectedMushroom', @playMushroomStartEffect)

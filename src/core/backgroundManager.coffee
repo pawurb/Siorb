@@ -3,7 +3,7 @@ Crafty.c 'BackgroundManager',
   yScrollFrame: 0
   backgroundX: 0
   xScrollingSpeed: 2
-  proportion: 3
+  yScrollProportion: 4
   init: ->
     Game.window.style.backgroundPosition = '0px -1000px'
     @bind('EnterFrame', @scrollBackgroundX)
@@ -28,7 +28,7 @@ Crafty.c 'BackgroundManager',
     @yScrollFrame += 1
     @yScrollFrame = 0 if @yScrollFrame == 1000
 
-    if @yScrollFrame % 3 == 0
+    if @yScrollFrame % @yScrollProportion == 0
       @scrollBackgroundY(data)
   scrollBackgroundY: (data) ->
     arr = Game.window.style.backgroundPosition.split(' ')[1].split('')
@@ -37,7 +37,7 @@ Crafty.c 'BackgroundManager',
       data.gy - data.jumpSpeed
     else
       data.gy
-    backgroundY = (Number(arr.join('')) - treshold/@proportion).toString()
+    backgroundY = (Number(arr.join('')) - treshold/@yScrollProportion).toString()
     Game.window.style.backgroundPosition =  @backgroundX.toString() + "px " + backgroundY.toString() + "px"
 
 
