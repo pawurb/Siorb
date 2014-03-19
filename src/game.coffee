@@ -72,7 +72,7 @@ window.Game =
   submitStatistic: (score, duration) ->
     $.ajax
       url: "/statistics?statistic[score]=#{score}&statistic[duration]=#{duration}"
-      type: 'PUT'
+      type: 'POST'
 
   submitScore: (score)->
     scoreParam = btoa(parseInt(score))
