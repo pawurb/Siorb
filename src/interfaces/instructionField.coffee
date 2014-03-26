@@ -24,10 +24,14 @@ Crafty.c 'InstructionField',
         duration: 400
     )
 
-    $('.jcarousel-prev').jcarouselControl({
-      target: '-=1'
-    })
+    $(".jcarousel-prev").on("jcarouselcontrol:active", ->
+      $(@).removeClass "inactive"
+    ).on("jcarouselcontrol:inactive", ->
+      $(@).addClass "inactive"
+    ).jcarouselControl target: "-=1"
 
-    $('.jcarousel-next').jcarouselControl({
-      target: '+=1'
-    })
+    $(".jcarousel-next").on("jcarouselcontrol:active", ->
+      $(@).removeClass "inactive"
+    ).on("jcarouselcontrol:inactive", ->
+      $(@).addClass "inactive"
+    ).jcarouselControl target: "+=1"
