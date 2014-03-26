@@ -18,7 +18,7 @@ window.Game =
   speedUpDuration: 7300
   speedUpValue: 2
   mushroomDuration: 13600
-  defaultLeafProbability: 0.77
+  defaultLeafProbability: 0.78
   defaultGuaranaProbability: 0.85
   defaultMrsCoffeeProbability: 0.91
   defaultMrHotProbability: 0.97

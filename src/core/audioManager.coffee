@@ -97,9 +97,7 @@ Crafty.c 'AudioManager',
       else if data.oldScene == 'MainMenu' and data.newScene == 'Gameplay'
 
         Crafty.audio.stop('mainMenu')
-        setTimeout ->
-          Crafty.audio.play('gameplay', -1, Game.volume)
-        , 200
+        Crafty.audio.play('gameplay', -1, Game.volume)
 
       else if data.oldScene == 'Gameplay' and data.newScene == 'GameOver'
         @unbind("Runner:jumpEffect", @playJumpEffect)
@@ -111,7 +109,9 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
         Crafty.audio.play('gameplay', -1, Game.volume)
-        Crafty.audio.stop('gameOver')
+        setTimeout ->
+          Crafty.audio.stop('gameOver')
+        , 500
     )
 
     @bind('Siorb:victory', ->
