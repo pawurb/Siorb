@@ -112,8 +112,6 @@ Crafty.c 'AudioManager',
     )
 
     @bind('Siorb:victory', ->
-      # @unbind('Runner:collectedMushroom')
-      # @unbind('Runner:collectedGuarana')
       @mode = 'victory'
 
       @unbind('Guarana:ended', @playGuaranaEndEffect)

@@ -25,7 +25,5 @@ Crafty.scene 'Authors', ->
 
   Crafty.e('Base, aut_music_text').at(textX, topY + yOffset * 3)
 
-  Crafty.e('Base, aut_mailbox').at(textX, topY + yOffset * 4)
-
 , ->
   Crafty('Recyclable').destroy()
