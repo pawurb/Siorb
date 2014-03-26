@@ -171,10 +171,8 @@ Game.assets =
       aut_boss_text: [0, 0]
     Crafty.sprite 154, 22, "#{@imagesPath}autPabloText.png",
       aut_pablo_text: [0, 0]
-    Crafty.sprite 161, 18, "#{@imagesPath}autMusicText.png",
+    Crafty.sprite 161, 22, "#{@imagesPath}autMusicText.png",
       aut_music_text: [0, 0]
-    Crafty.sprite 357, 14, "#{@imagesPath}autSupportBox.png",
-      aut_mailbox: [0, 0]
   gameplayList: ->
     list = []
     _.each @gameplayImages, (file) =>

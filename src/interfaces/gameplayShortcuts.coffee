@@ -5,6 +5,7 @@ Crafty.c 'GameplayShortcuts',
     @bind('KeyDown', (keystroke) ->
       if keystroke.keyCode == @spaceCode
         @makeRunnerJump()
+      true
     )
 
     $('#game').on("click", (data) =>

@@ -36,6 +36,7 @@ Crafty.scene 'Gameplay', ->
   Game.score = 0
   Crafty.background('')
   Game.window = document.getElementById('game')
+  $('#game').focus()
   Game.window.style.backgroundPositionY = '0px'
   Game.runner = Crafty.e 'Runner'
   Game.view = Crafty.viewport
