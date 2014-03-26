@@ -9,8 +9,8 @@ Crafty.c 'GameplayShortcuts',
     )
 
     $('#game').on("click", (data) =>
-      @makeRunnerJump()
       Crafty.trigger('Runner:jumpEffect')
+      @makeRunnerJump()
     )
 
   makeRunnerJump: ->

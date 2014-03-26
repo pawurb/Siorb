@@ -13,12 +13,13 @@ Crafty.c 'AudioManager',
       if (e.keyCode == 38 || e.keyCode == 32) and @canPlayJump
         @playJumpEffect()
         @canPlayJump = false
+      true
     )
     $(document).bind('keyup', (e) =>
       @canPlayJump = true
     )
   playJumpEffect: ->
-    if Game.runner && Game.runner._multijumpsLeft >= 0
+    if Game.runner && Game.runner._multijumpsLeft > 0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   playLeafEffect: ->
     Crafty.audio.play('leafSound', 1, Game.volume*0.5)
