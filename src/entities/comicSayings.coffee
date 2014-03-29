@@ -1,4 +1,5 @@
 Crafty.c 'ComicSayings',
+  firstTime: true
   isVisible: false
   delay: 3000
   phrasesCount: 13
@@ -11,7 +12,12 @@ Crafty.c 'ComicSayings',
     $(@_element).hide()
     @bind('Runner:saysSomething', @showSaying)
   showSaying: ->
-    @sprite(0, Utils.rand(0, @phrasesCount))
+    spriteNum = if @firstTime
+      @firstTime = false
+      0
+    else
+      Utils.rand(0, @phrasesCount)
+    @sprite(0, spriteNum)
     unless @isVisible
       @isVisible = true
       $(@_element).stop().fadeIn('fast').delay(@delay).fadeOut('fast')

@@ -14,10 +14,10 @@ Crafty.c 'ManaMeter',
       @y = Game.runner.y + Game.view.y + data.y - 250)
 
   updateYerbaLevel: ->
-    manaLevel = if Game.score < 90
+    manaLevel = if Game.score < 100
       parseInt(Game.score / 10)
     else
-      9
+      10
     @sprite(0, manaLevel)
 
 
