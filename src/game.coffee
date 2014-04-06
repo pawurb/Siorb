@@ -4,7 +4,7 @@ window.Game =
   mediumFloatSpeed: 5
   victoryFloatSpeed: 6
   mode: 'easy'
-  mediumScore: 8
+  mediumScore: 5
   hardScore: 80
   victoryScore: 100
   scorePenalty: 5
