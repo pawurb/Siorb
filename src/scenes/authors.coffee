@@ -20,7 +20,7 @@ Crafty.scene 'Authors', ->
   .at(textX + 225, topY + 40)
 
   Crafty.e('Base, aut_cebula_text').at(textX, topY + yOffset * 2)
-  Crafty.e('ButtonWithLink').addLink('http://www.digart.pl/' , 'autCebulaLogo.png', 'DigArt')
+  Crafty.e('ButtonWithLink').addLink('http://cebulaa.daportfolio.com/' , 'autCebulaLogo.png', 'DigArt')
   .at(textX + 160, topY + 75)
 
   Crafty.e('Base, aut_music_text').at(textX, topY + yOffset * 3)
