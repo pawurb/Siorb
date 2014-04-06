@@ -53,9 +53,9 @@ Crafty.c 'Runner',
       Crafty.trigger('Runner:collectedGuarana')
       @gravityConst(@gravityValue - 0.2)
     else if data.name == 'leaf'
-      Crafty.trigger('Runner:collectedLeaf', {points: 2})
+      Crafty.trigger('Runner:collectedLeaf', {points: 1})
     else if data.name == 'mushroom'
-      Crafty.trigger('Runner:collectedMushroom', {points: 2})
+      Crafty.trigger('Runner:collectedMushroom', {points: 1})
       Crafty.trigger('Runner:psychoVision')
     else if data.name == 'mrsCoffee'
       Crafty.trigger('Runner:collectedMrsCoffee')
