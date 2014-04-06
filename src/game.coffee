@@ -33,8 +33,8 @@ window.Game =
   platformSizes:
     current: null
     easy: [150, 150, 200, 200, 250]
-    medium: [100, 150, 150, 150, 200]
-    hard: [75, 100, 150, 150, 150]
+    medium: [100, 100, 150, 150, 200]
+    hard: [75, 100, 100, 150, 150]
   start: ->
     Crafty.init @width, @height, "game"
     @setBindings()
