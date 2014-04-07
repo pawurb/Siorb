@@ -10,6 +10,7 @@ Crafty.c 'GameObserver',
     @bind('Runner:collectedMrsCoffee', @speedUpCoffee)
     @bind('Coffee:speedUpEnded', @slowDownPlatforms)
     @bind('Siorb:victory', @handleVictory)
+    @bind('Siorb:victoryEnd', @handleVictoryEnd)
   setSpeedTo: (speed) ->
     Game.floatSpeed = speed
   speedUpGuarana: ->
@@ -75,5 +76,11 @@ Crafty.c 'GameObserver',
     Game.floatSpeed = Game.victoryFloatSpeed if Game.floatSpeed < Game.victoryFloatSpeed
     Game.defaultFloatSpeed = Game.victoryFloatSpeed
     Crafty.e('DiscoText')
+  handleVictoryEnd: ->
+    Game.leafProbability = Game.defaultLeafProbability
+    Game.guaranaProbability = Game.defaultGuaranaProbability
+    Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
+    Game.mrHotProbability = Game.defaultMrHotProbability
+    Game.mushroomProbability = Game.defaultMushroomProbability
 
 

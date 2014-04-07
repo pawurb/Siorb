@@ -117,8 +117,21 @@ Crafty.c 'AudioManager',
     @bind('Siorb:victory', ->
       @mode = 'victory'
 
+      setTimeout ->
+        Crafty.trigger('Siorb:victoryEnd')
+      , 83000 # duration of victory beat
+
       @unbind('Guarana:ended', @playGuaranaEndEffect)
       @unbind('Mushroom:ended', @playMushroomEndEffect)
       Crafty.audio.stop()
-      Crafty.audio.play('victoryBeat', -1, Game.volume)
+      Crafty.audio.play('victoryBeat', 1, Game.volume)
+    )
+
+    @bind('Siorb:victoryEnd', ->
+      @mode = 'normal'
+
+      @bind('Guarana:ended', @playGuaranaEndEffect)
+      @bind('Mushroom:ended', @playMushroomEndEffect)
+      Crafty.audio.stop('victoryBeat')
+      Crafty.audio.play('gameplay', -1, Game.volume)
     )

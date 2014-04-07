@@ -12,3 +12,9 @@ Crafty.c 'DiscoText',
       @y = Game.runner.y + Game.view.y + data.y - 100)
     @animate('DiscoText:Blinks', -1)
 
+    setTimeout =>
+      @destroy()
+    , 10000
+
+
+

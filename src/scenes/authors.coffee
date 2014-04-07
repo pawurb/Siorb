@@ -24,7 +24,7 @@ Crafty.scene 'Authors', ->
   .at(textX + 150, topY + 75)
 
   Crafty.e('Base, aut_music_text').at(textX, topY + yOffset * 3)
-  Crafty.e('ButtonWithLink').addLink('https://soundcloud.com/' , 'autHarryLogo.png', 'SoundCloud')
+  Crafty.e('ButtonWithLink').addLink('http://soundcloud.com/' , 'autHarryLogo.png', 'SoundCloud')
   .at(textX + 200, topY + 160)
 
 , ->
