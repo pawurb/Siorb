@@ -17,13 +17,15 @@ Crafty.scene 'Authors', ->
 
   Crafty.e('Base, aut_pablo_text').at(textX, topY + yOffset)
   Crafty.e('ButtonWithLink').addLink('http://www.github.com/pawurb', 'autPabloLogo.png', 'GitHub')
-  .at(textX + 225, topY + 40)
+  .at(textX + 220, topY + 40)
 
   Crafty.e('Base, aut_cebula_text').at(textX, topY + yOffset * 2)
-  Crafty.e('ButtonWithLink').addLink('http://cebulaa.daportfolio.com/' , 'autCebulaLogo.png', 'DigArt')
-  .at(textX + 160, topY + 75)
+  Crafty.e('ButtonWithLink').addLink('http://cebulaa.daportfolio.com/' , 'autCebulaLogo.png', 'Portfolio')
+  .at(textX + 150, topY + 75)
 
   Crafty.e('Base, aut_music_text').at(textX, topY + yOffset * 3)
+  Crafty.e('ButtonWithLink').addLink('https://soundcloud.com/' , 'autHarryLogo.png', 'SoundCloud')
+  .at(textX + 200, topY + 160)
 
 , ->
   Crafty('Recyclable').destroy()
