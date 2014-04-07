@@ -17,7 +17,7 @@ Crafty.scene 'Authors', ->
 
   Crafty.e('Base, aut_pablo_text').at(textX, topY + yOffset)
   Crafty.e('ButtonWithLink').addLink('http://www.github.com/pawurb', 'autPabloLogo.png', 'GitHub')
-  .at(textX + 220, topY + 40)
+  .at(textX + 210, topY + 40)
 
   Crafty.e('Base, aut_cebula_text').at(textX, topY + yOffset * 2)
   Crafty.e('ButtonWithLink').addLink('http://cebulaa.daportfolio.com/' , 'autCebulaLogo.png', 'Portfolio')
