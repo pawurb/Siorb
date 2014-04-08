@@ -79,8 +79,6 @@ Game.assets =
     "victoryBeat.mp3"
     "guaranaCollect.ogg"
     "guaranaCollect.mp3"
-    "fallSound.mp3"
-    "fallSound.ogg"
   ]
 
   loadGameplay: -> # also include assets for gameOver scene
@@ -97,7 +95,6 @@ Game.assets =
       coffeeStartSound: ["#{@soundsPath}coffeeStartSound.ogg", "#{@soundsPath}coffeeStartSound.mp3"]
       coffeeEndSound: ["#{@soundsPath}coffeeEndSound.ogg", "#{@soundsPath}coffeeEndSound.mp3"]
       victoryBeat: ["#{@soundsPath}victoryBeat.ogg", "#{@soundsPath}victoryBeat.mp3"]
-      fallSound: ["#{@soundsPath}fallSound.mp3", "#{@soundsPath}fallSound.ogg"]
 
 
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",

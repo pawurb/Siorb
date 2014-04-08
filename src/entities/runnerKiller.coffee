@@ -10,7 +10,6 @@ Crafty.c 'RunnerKiller',
       w: Game.width
     @onHit('RunnerImage', ->
       unless @deathHappened
-        Crafty.audio.play('fallSound', 1, Game.volume) # not in audio manager to avoid delay
         @deathHappened = true
         Crafty("ScoreBoard").destroy()
         Crafty("ManaMeter").destroy()
