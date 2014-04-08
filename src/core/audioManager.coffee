@@ -109,9 +109,6 @@ Crafty.c 'AudioManager',
 
       else if data.oldScene == 'GameOver' and data.newScene == 'Gameplay'
         Crafty.audio.play('gameplay', -1, Game.volume)
-        setTimeout ->
-          Crafty.audio.stop('gameOver')
-        , 500
     )
 
     @bind('Siorb:victory', ->
