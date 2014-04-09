@@ -33,7 +33,7 @@ Crafty.scene 'GameOver', ->
   )
 
   menu_button = Crafty.e('Button, menu_button')
-  menu_button.at(Game.width - offset - buttonsOffset, Game.height - offset*2)
+  menu_button.at(Game.width - offset - buttonsOffset + 37, Game.height - offset*2)
 
   $(menu_button._element).on('click', ->
     window.location.reload()
