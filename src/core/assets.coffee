@@ -125,7 +125,7 @@ Game.assets =
       spr_disco_text: [0, 0]
 
     # Game Over assets
-    Crafty.sprite 224, 16, "#{@imagesPath}jeszczeRazT.png",
+    Crafty.sprite 237, 16, "#{@imagesPath}jeszczeRazT.png",
       jeszcze_button: [0, 0]
     Crafty.sprite 199, 18, "#{@imagesPath}gOpunktyT.png",
       gOpunkty_button: [0, 0]
