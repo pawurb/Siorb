@@ -21,7 +21,7 @@ Crafty.scene 'GameOver', ->
   Crafty.e('PixelScoreBoard').displayAt(offset + 144, Game.height - offset*2, 'top')
 
 
-  buttonsOffset = 235
+  buttonsOffset = 210
   replayButton = Crafty.e('Button, jeszcze_button')
   replayButton.at(Game.width - offset - buttonsOffset, Game.height - offset * 3)
 
