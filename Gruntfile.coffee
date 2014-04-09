@@ -42,7 +42,7 @@ module.exports = (grunt) ->
 
     uglify:
       options:
-        banner: '/* Copyright (c) 2014 Paweł Urbanek. All rights reserved. */'
+        banner: '/* Copyright (c) 2014 Paweł Urbanek. All rights reserved. Made with crafty.js (http://craftyjs.com/)*/'
       release:
         files:
           "dist/siorb-min.js": ["dist/siorb.js"]
