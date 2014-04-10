@@ -82,6 +82,8 @@ Crafty.c 'GameObserver',
     Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
     Game.mrHotProbability = Game.defaultMrHotProbability
     Game.mushroomProbability = Game.defaultMushroomProbability
-    Game.floatSpeed = Game.extremeFloatSpeed
+
+    Game.floatSpeed = Game.extremeFloatSpeed if Game.floatSpeed < Game.extremeFloatSpeed
+    Game.defaultFloatSpeed = Game.extremeFloatSpeed
 
 
