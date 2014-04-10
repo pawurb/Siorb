@@ -82,5 +82,6 @@ Crafty.c 'GameObserver',
     Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
     Game.mrHotProbability = Game.defaultMrHotProbability
     Game.mushroomProbability = Game.defaultMushroomProbability
+    Game.floatSpeed = Game.extremeFloatSpeed
 
 

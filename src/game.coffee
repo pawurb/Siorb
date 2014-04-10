@@ -3,6 +3,7 @@ window.Game =
   initialFloatSpeed: 4
   mediumFloatSpeed: 5
   victoryFloatSpeed: 6
+  extremeFloatSpeed: 7
   mode: 'easy'
   mediumScore: 5
   hardScore: 80
