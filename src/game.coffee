@@ -76,7 +76,7 @@ window.Game =
       type: 'POST'
 
   submitScore: (score)->
-    #variable provided by the backend
+    #variable 'gon' is provided by the backend
     if (typeof(gon) != 'undefined') and gon.userLoggedIn
       scoreParam = btoa(parseInt(score))
       $.ajax
