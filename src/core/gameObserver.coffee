@@ -11,8 +11,9 @@ Crafty.c 'GameObserver',
     @bind('Coffee:speedUpEnded', @slowDownPlatforms)
     @bind('Siorb:victory', @handleVictory)
     @bind('Siorb:victoryEnd', @handleVictoryEnd)
-  setSpeedTo: (speed) ->
-    Game.floatSpeed = speed
+  setDefaultSpeedTo: (newSpeed) ->
+    Game.floatSpeed = newSpeed if Game.floatSpeed < newSpeed
+    Game.defaultFloatSpeed = newSpeed
   speedUpGuarana: ->
     @speedUpPlatforms('guarana')
   speedUpCoffee: ->
@@ -57,8 +58,7 @@ Crafty.c 'GameObserver',
       Game.platformSizes.current = Game.platformSizes.easy
     else if Game.score < Game.hardScore && Game.mode == 'easy'
       Game.mode = 'medium'
-      Game.floatSpeed = Game.mediumFloatSpeed if Game.floatSpeed < Game.mediumFloatSpeed
-      Game.defaultFloatSpeed = Game.mediumFloatSpeed
+      @setDefaultSpeedTo(Game.mediumFloatSpeed)
 
       Game.platformSizes.current = Game.platformSizes.medium
     else if Game.mode == 'medium' && Game.score >= Game.hardScore
@@ -73,8 +73,7 @@ Crafty.c 'GameObserver',
     Game.mrHotProbability = 0
     Game.mrsCoffeeProbability = 0
 
-    Game.floatSpeed = Game.victoryFloatSpeed if Game.floatSpeed < Game.victoryFloatSpeed
-    Game.defaultFloatSpeed = Game.victoryFloatSpeed
+    @setDefaultSpeedTo(Game.victoryFloatSpeed)
     Crafty.e('DiscoText')
   handleVictoryEnd: ->
     Game.leafProbability = Game.defaultLeafProbability
@@ -83,7 +82,6 @@ Crafty.c 'GameObserver',
     Game.mrHotProbability = Game.defaultMrHotProbability
     Game.mushroomProbability = Game.defaultMushroomProbability
 
-    Game.floatSpeed = Game.extremeFloatSpeed if Game.floatSpeed < Game.extremeFloatSpeed
-    Game.defaultFloatSpeed = Game.extremeFloatSpeed
+    @setDefaultSpeedTo(Game.extremeFloatSpeed)
 
 
