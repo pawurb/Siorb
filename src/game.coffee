@@ -8,7 +8,9 @@ window.Game =
   mediumScore: 5
   hardScore: 80
   victoryScore: 100
-  scorePenalty: 5
+  probabilitiesScore: 25
+  hotPenalty: 5
+  coffeePenalty: 3
   score: 0
   width : 800
   height : 420
@@ -19,11 +21,25 @@ window.Game =
   speedUpDuration: 7300
   speedUpValue: 2
   mushroomDuration: 13600
-  defaultLeafProbability: 0.77
-  defaultGuaranaProbability: 0.84
-  defaultMrsCoffeeProbability: 0.92
-  defaultMrHotProbability: 0.97
-  defaultMushroomProbability: 1.01
+
+  easyLeafProbability: 0.81
+  easyGuaranaProbability: 0.88
+  easyMrsCoffeeProbability: 0.92
+  easyMrHotProbability: 0.96
+  easyMushroomProbability: 1.01
+
+  mediumLeafProbability: 0.77
+  mediumGuaranaProbability: 0.84
+  mediumMrsCoffeeProbability: 0.92
+  mediumMrHotProbability: 0.97
+  mediumMushroomProbability: 1.01
+
+  victoryLeafProbability: 0.60
+  victoryGuaranaProbability: 0.66
+  victoryMrsCoffeeProbability: 0
+  victoryMrHotProbability: 0
+  victoryMushroomProbability: 1.01
+
   victory: false
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
   volume: 0.5
@@ -33,7 +49,7 @@ window.Game =
     speedAnimation: null
   platformSizes:
     current: null
-    easy: [150, 150, 200, 200, 250]
+    easy: [150, 150, 200, 250, 250]
     medium: [100, 100, 150, 150, 200]
     hard: [75, 100, 100, 150, 150]
   start: ->

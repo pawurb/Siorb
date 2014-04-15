@@ -4,13 +4,16 @@ Crafty.c 'GameObserver',
     @requires 'Recyclable'
     @bind('Runner:collectedGuarana', @speedUpGuarana)
     @bind('Runner:collectedLeaf', @scorePoint)
-    @bind('Runner:collectedMrHot', @losePoints)
-    @bind('Runner:collectedMrsCoffee', @losePoints)
+    @bind('Runner:collectedMrHot', ->
+      @losePoints('hot'))
+    @bind('Runner:collectedMrsCoffee', ->
+      @losePoints('coffee'))
     @bind('Runner:collectedMushroom', @scorePoint)
     @bind('Runner:collectedMrsCoffee', @speedUpCoffee)
     @bind('Coffee:speedUpEnded', @slowDownPlatforms)
     @bind('Siorb:victory', @handleVictory)
     @bind('Siorb:victoryEnd', @handleVictoryEnd)
+    @bind('Siorb:MediumProbabilities', @switchProbabilities)
   setDefaultSpeedTo: (newSpeed) ->
     Game.floatSpeed = newSpeed if Game.floatSpeed < newSpeed
     Game.defaultFloatSpeed = newSpeed
@@ -49,8 +52,10 @@ Crafty.c 'GameObserver',
     Crafty.trigger('ScoreBoard:updatePoints')
     Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0
     Crafty.trigger('Siorb:victory') if Game.score >= Game.victoryScore && Game.victory == false
-  losePoints: ->
-    if Game.score >= Game.scorePenalty then Game.score -= Game.scorePenalty else Game.score = 0
+    Crafty.trigger('Siorb:MediumProbabilities') if Game.score == Game.probabilitiesScore
+  losePoints: (type) ->
+    penalty = if type == 'hot' then Game.hotPenalty else Game.coffeePenalty
+    if Game.score >= penalty then Game.score -= penalty else Game.score = 0
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
   setDifficulty: ->
@@ -66,22 +71,28 @@ Crafty.c 'GameObserver',
       Game.platformSizes.current = Game.platformSizes.hard
   handleVictory: ->
     Game.victory = true
-    Game.leafProbability = 0.60
-    Game.guaranaProbability = 0.66
-    Game.mushroomProbability = 1.01
+    Game.leafProbability = Game.victoryLeafProbability
+    Game.guaranaProbability = Game.victoryGuaranaProbability
+    Game.mushroomProbability = Game.victoryMushroomProbability
     #they will appear no more
-    Game.mrHotProbability = 0
-    Game.mrsCoffeeProbability = 0
+    Game.mrHotProbability = Game.victoryMrHotProbability
+    Game.mrsCoffeeProbability = Game.victoryMrsCoffeeProbability
 
     @setDefaultSpeedTo(Game.victoryFloatSpeed)
     Crafty.e('DiscoText')
   handleVictoryEnd: ->
-    Game.leafProbability = Game.defaultLeafProbability
-    Game.guaranaProbability = Game.defaultGuaranaProbability
-    Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
-    Game.mrHotProbability = Game.defaultMrHotProbability
-    Game.mushroomProbability = Game.defaultMushroomProbability
+    Game.leafProbability = Game.mediumLeafProbability
+    Game.guaranaProbability = Game.mediumGuaranaProbability
+    Game.mrsCoffeeProbability = Game.mediumMrsCoffeeProbability
+    Game.mrHotProbability = Game.mediumMrHotProbability
+    Game.mushroomProbability = Game.mediumMushroomProbability
 
     @setDefaultSpeedTo(Game.extremeFloatSpeed)
+  switchProbabilities: ->
+    Game.leafProbability = Game.mediumLeafProbability
+    Game.guaranaProbability = Game.mediumGuaranaProbability
+    Game.mrsCoffeeProbability = Game.mediumMrsCoffeeProbability
+    Game.mrHotProbability = Game.mediumMrHotProbability
+    Game.mushroomProbability = Game.mediumMushroomProbability
 
 

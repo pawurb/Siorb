@@ -21,11 +21,11 @@ Crafty.scene 'Gameplay', ->
     Game.floatSpeed = Game.initialFloatSpeed
     Game.defaultFloatSpeed = Game.initialFloatSpeed
 
-    Game.leafProbability = Game.defaultLeafProbability
-    Game.guaranaProbability = Game.defaultGuaranaProbability
-    Game.mrsCoffeeProbability = Game.defaultMrsCoffeeProbability
-    Game.mrHotProbability = Game.defaultMrHotProbability
-    Game.mushroomProbability = Game.defaultMushroomProbability
+    Game.leafProbability = Game.easyLeafProbability
+    Game.guaranaProbability = Game.easyGuaranaProbability
+    Game.mrsCoffeeProbability = Game.easyMrsCoffeeProbability
+    Game.mrHotProbability = Game.easyMrHotProbability
+    Game.mushroomProbability = Game.easyMushroomProbability
 
 
   setDefaults()
