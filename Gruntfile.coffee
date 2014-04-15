@@ -56,16 +56,16 @@ module.exports = (grunt) ->
           dest: "#{backendDir}/public/assets/"
         ,
           src: "dist/siorb-min.js"
-          dest: "#{backendDir}/public/libs/siorb-min.js"
+          dest: "#{backendDir}/app/assets/javascripts/siorb-min.js"
         ,
           src: "dist/styles.css"
           dest: "#{backendDir}/app/assets/stylesheets/siorb.css"
         ,
           src: "dist/crafty-min.js"
-          dest: "#{backendDir}/public/libs/crafty-min.js"
+          dest: "#{backendDir}/app/assets/javascripts/crafty-min.js"
         ,
           src: "bower_components/jcarousel/dist/jquery.jcarousel.min.js"
-          dest: "#{backendDir}/public/libs/jcarousel-min.js"
+          dest: "#{backendDir}/app/assets/javascripts/jcarousel-min.js"
         ]
 
 
