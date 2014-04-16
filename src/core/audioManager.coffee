@@ -25,7 +25,7 @@ Crafty.c 'AudioManager',
     Crafty.audio.play('leafSound', 1, Game.volume*0.5)
   playBurnEffect: ->
     Crafty.audio.stop('burnSound')
-    Crafty.audio.play('burnSound', 1, Game.volume)
+    Crafty.audio.play('burnSound', 1, Game.volume*0.5)
   playCoffeeStartEffect: ->
     Crafty.audio.play('coffeeStartSound', 1, Game.volume)
     unless @mode == 'mushroom'
