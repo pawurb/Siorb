@@ -27,7 +27,7 @@ Crafty.scene 'MainMenu', ->
 
     #ask only users with some points to share who did not share
     if localStorage.getItem('highScore') > 50 and !(localStorage.getItem('sharedOnFB') == 'true')
-      $('.share-image').delay(2000).fadeIn('slow')
+      $('.share-image').delay(1000).fadeIn('slow')
 
 
   # navigation

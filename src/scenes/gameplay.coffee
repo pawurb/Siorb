@@ -28,6 +28,7 @@ Crafty.scene 'Gameplay', ->
     Game.mushroomProbability = Game.easyMushroomProbability
 
     $('.share-image').fadeOut('slow')
+    $('.share-button').fadeOut('slow')
 
 
   setDefaults()
