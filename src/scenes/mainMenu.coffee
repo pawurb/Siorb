@@ -26,8 +26,8 @@ Crafty.scene 'MainMenu', ->
     Crafty.e('FBLikeButton')
 
     #ask only users with some points to share
-    if localStorage.getItem('highScore') > 50
-      $('.share-image').fadeIn('slow')
+    if localStorage.getItem('highScore') > 50 and Math.random < 0.4
+      $('.share-image').delay(2000).fadeIn('slow')
 
 
   # navigation
