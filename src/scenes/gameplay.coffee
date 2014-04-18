@@ -27,6 +27,8 @@ Crafty.scene 'Gameplay', ->
     Game.mrHotProbability = Game.easyMrHotProbability
     Game.mushroomProbability = Game.easyMushroomProbability
 
+    $('.share-image').fadeOut('slow')
+
 
   setDefaults()
   Crafty.trigger('Game:gameplayStarted')
