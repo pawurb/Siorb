@@ -1,3 +1,5 @@
+backendDir = '/Users/user/Programming/Siorbackend'
+
 gulp = require 'gulp'
 watch = require 'gulp-watch'
 coffee = require 'gulp-coffee'
@@ -17,7 +19,7 @@ gulp.task 'coffee', ->
   .pipe(coffeelint.reporter())
   .pipe(concat('siorb.coffee'))
   .pipe(gulp.dest('dist/'))
-  .pipe(coffee({bare: true, sourceMap: true})).on('error', gutil.log)
+  .pipe(coffee({bare: false, sourceMap: true})).on('error', gutil.log)
   .pipe(gulp.dest('dist/'))
   # .pipe(livereload(server));
 
@@ -29,5 +31,8 @@ gulp.task 'release', ->
   .pipe(uglify())
   .pipe(rename("siorb-min.js"))
   .pipe(gulp.dest('dist'))
+  .pipe(gulp.dest("#{backendDir}/app/assets/javascripts"))
+
+
 
 

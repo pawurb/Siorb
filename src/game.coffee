@@ -1,4 +1,4 @@
-window.Game =
+Game =
   host: "http://#{window.location.host}/assets"
   initialFloatSpeed: 4
   mediumFloatSpeed: 5
@@ -99,6 +99,10 @@ window.Game =
         url: "/user?user[noturbusiness]=#{scoreParam}"
         type: 'PUT'
   gameplayStarted: null
+
+window.GameInterface = {}
+startFunction = Game.start
+window.GameInterface.start = startFunction.bind(Game)
 
 
 
