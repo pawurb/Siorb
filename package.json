@@ -4,6 +4,7 @@
   "description": "Brew your mate",
   "main": "Gruntfile.coffee",
   "devDependencies": {
+    "coffee-script": "*",
     "grunt-coffeelint": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-coffee": "*",
@@ -11,6 +12,10 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
-    "gulp": "^3.6.1"
+    "gulp": "^3.6.1",
+    "gulp-coffee": "^1.4.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-uglify": "^0.2.1",
+    "gulp-watch": "^0.6.2"
   }
 }
