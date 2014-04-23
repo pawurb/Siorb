@@ -12,8 +12,8 @@ window.Game =
   hotPenalty: 5
   coffeePenalty: 3
   score: 0
-  width : 800
-  height : 420
+  width: 800
+  height: 420
   window: null
   scene: null
   assets: null
