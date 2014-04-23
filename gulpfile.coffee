@@ -44,6 +44,9 @@ gulp.task 'release', ->
   gulp.src(['dist/styles.css'])
   .pipe(gulp.dest("#{backendDir}/app/assets/stylesheets"))
 
+  gulp.src(['assets/images/*'])
+  .pipe(gulp.dest("#{backendDir}/public/assets/images"))
+
 
 
 
