@@ -5,18 +5,29 @@ coffeelint = require 'gulp-coffeelint'
 concat = require 'gulp-concat'
 uglify = require 'gulp-uglify'
 gutil = require 'gulp-util'
+rename = require 'gulp-rename'
 
 gulp.task 'default', ->
   gulp.watch(['src/*', 'src/*/**' ], ['coffee'])
 
+#compile coffee to js and enable source maps
 gulp.task 'coffee', ->
   gulp.src(['src/*.coffee', 'src/**/*.coffee'])
   .pipe(coffeelint('.cshintrc.json'))
   .pipe(coffeelint.reporter())
-  .pipe(coffee({bare: true})).on('error', gutil.log)
-  .pipe(uglify({outSourceMap: false}))
-  .pipe(concat('Siorbagulp.js'))
+  .pipe(concat('siorb.coffee'))
   .pipe(gulp.dest('dist/'))
+  .pipe(coffee({bare: true, sourceMap: true})).on('error', gutil.log)
+  .pipe(gulp.dest('dist/'))
+  # .pipe(livereload(server));
 
   gutil.log(gutil.colors.red('JavaScript Compiled'))
+
+#minify code and save as siorb-min.js
+gulp.task 'release', ->
+  gulp.src(['dist/siorb.js'])
+  .pipe(uglify())
+  .pipe(rename("siorb-min.js"))
+  .pipe(gulp.dest('dist'))
+
 
