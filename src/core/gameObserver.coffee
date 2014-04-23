@@ -27,11 +27,11 @@ Crafty.c 'GameObserver',
     clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
     clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
 
-    Game.timeouts.slowDown1 = setTimeout =>
+    Game.timeouts.slowDown1 = setTimeout ->
       Game.floatSpeed = Game.defaultFloatSpeed + 1
     , Game.speedUpDuration - 1000
 
-    Game.timeouts.slowDown2 = setTimeout =>
+    Game.timeouts.slowDown2 = setTimeout ->
       Game.floatSpeed = Game.defaultFloatSpeed
       if drug == 'guarana' then Crafty.trigger('Guarana:ended') else Crafty.trigger('Coffee:speedUpEnded')
     , Game.speedUpDuration
@@ -41,7 +41,7 @@ Crafty.c 'GameObserver',
     clearTimeout(Game.timeouts.slowDown1) if Game.timeouts.slowDown1
     clearTimeout(Game.timeouts.slowDown2) if Game.timeouts.slowDown2
 
-    Game.timeouts.slowDown2 = setTimeout =>
+    Game.timeouts.slowDown2 = setTimeout ->
       Game.floatSpeed = Game.defaultFloatSpeed
       Crafty.trigger('Coffee:slowDownEnded')
     , Game.speedUpDuration/2

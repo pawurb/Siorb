@@ -65,22 +65,22 @@ window.Game =
   runScene:
     mainMenu: ->
       Crafty.assets = []
-      Crafty.load Game.assets.mainMenuList(), =>
+      Crafty.load Game.assets.mainMenuList(), ->
         Game.assets.loadMainMenu()
         Crafty.scene("MainMenu")
     gameplay: ->
       Crafty.assets = []
-      Crafty.load Game.assets.gameplayList(), =>
+      Crafty.load Game.assets.gameplayList(), ->
         Game.assets.loadGameplay()
         Crafty.scene("Gameplay")
     gameOver: ->
       Crafty.scene('GameOver')
     instruction: ->
-      Crafty.load Game.assets.instructionList(), =>
+      Crafty.load Game.assets.instructionList(), ->
         Game.assets.loadInstruction()
         Crafty.scene("Instruction")
     authors: ->
-      Crafty.load Game.assets.authorsList(), =>
+      Crafty.load Game.assets.authorsList(), ->
         Game.assets.loadAuthors()
         Crafty.scene("Authors")
   setBindings: ->
