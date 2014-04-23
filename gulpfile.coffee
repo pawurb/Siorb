@@ -1,13 +1,15 @@
 backendDir = '/Users/user/Programming/Siorbackend'
 
 gulp = require 'gulp'
-watch = require 'gulp-watch'
-coffee = require 'gulp-coffee'
+watch      = require 'gulp-watch'
+coffee     = require 'gulp-coffee'
 coffeelint = require 'gulp-coffeelint'
-concat = require 'gulp-concat'
-uglify = require 'gulp-uglify'
-gutil = require 'gulp-util'
-rename = require 'gulp-rename'
+concat     = require 'gulp-concat'
+uglify     = require 'gulp-uglify'
+gutil      = require 'gulp-util'
+rename     = require 'gulp-rename'
+livereload = require 'gulp-livereload'
+
 
 gulp.task 'default', ->
   gulp.watch(['src/*', 'src/*/**' ], ['coffee'])
@@ -21,7 +23,7 @@ gulp.task 'coffee', ->
   .pipe(gulp.dest('dist/'))
   .pipe(coffee({bare: false, sourceMap: true})).on('error', gutil.log)
   .pipe(gulp.dest('dist/'))
-  # .pipe(livereload(server));
+  .pipe(livereload())
 
   gutil.log(gutil.colors.red('JavaScript Compiled'))
 
