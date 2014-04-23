@@ -27,11 +27,22 @@ gulp.task 'coffee', ->
 
 #minify code and save as siorb-min.js
 gulp.task 'release', ->
+  scriptsDir = "#{backendDir}/app/assets/javascripts"
+
   gulp.src(['dist/siorb.js'])
   .pipe(uglify())
   .pipe(rename("siorb-min.js"))
   .pipe(gulp.dest('dist'))
-  .pipe(gulp.dest("#{backendDir}/app/assets/javascripts"))
+  .pipe(gulp.dest(scriptsDir))
+
+  gulp.src(['dist/crafty-min.js'])
+  .pipe(gulp.dest(scriptsDir))
+
+  gulp.src(['dist/jquery.jcarousel.min.js'])
+  .pipe(gulp.dest(scriptsDir))
+
+  gulp.src(['dist/styles.css'])
+  .pipe(gulp.dest("#{backendDir}/app/assets/stylesheets"))
 
 
 
