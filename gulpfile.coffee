@@ -1,6 +1,6 @@
 backendDir = '/Users/user/Programming/Siorbackend'
 
-gulp = require 'gulp'
+gulp       = require 'gulp'
 watch      = require 'gulp-watch'
 coffee     = require 'gulp-coffee'
 coffeelint = require 'gulp-coffeelint'
