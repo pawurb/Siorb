@@ -5,13 +5,6 @@
   "main": "Gruntfile.coffee",
   "devDependencies": {
     "coffee-script": "*",
-    "grunt-coffeelint": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-watch": "*",
     "gulp": "^3.6.1",
     "gulp-coffee": "^1.4.2",
     "gulp-coffeelint": "^0.3.2",
