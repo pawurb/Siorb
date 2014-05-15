@@ -40,9 +40,6 @@ gulp.task 'release', ->
   gulp.src(['dist/crafty-min.js'])
   .pipe(gulp.dest(scriptsDir))
 
-  gulp.src(['dist/jquery.jcarousel.min.js'])
-  .pipe(gulp.dest(scriptsDir))
-
   gulp.src(['dist/styles.css'])
   .pipe(gulp.dest("#{backendDir}/app/assets/stylesheets"))
 
