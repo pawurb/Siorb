@@ -42,6 +42,7 @@ Game =
 
   victory: false
   muted: (if localStorage.getItem('muted') == 'true' then true else false)
+  sharedOnFb: (if localStorage.getItem('sharedOnFb') == 'true' then true else false)
   volume: 0.5
   timeouts:
     slowDown1: null

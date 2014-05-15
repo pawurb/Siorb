@@ -15,9 +15,10 @@ Crafty.c 'Runner',
     @attach(Crafty.e 'RunnerBlush' )
     @attach(Crafty.e 'RunnerImage')
     @attach(Crafty.e 'RunnerFace')
-    @attach(Crafty.e 'PsychoVision' )
-    @attach(Crafty.e 'ComicCloud' )
-    @attach(Crafty.e 'ComicSayings' )
+    @attach(Crafty.e 'PsychoVision')
+    @attach(Crafty.e 'ComicCloud')
+    @attach(Crafty.e 'ComicSayings')
+    @attach(Crafty.e 'RunnerGlasses') if Game.sharedOnFb
     @twoway(@speedValue, @jumpValue)
     @gravity('Solid')
     @gravityConst(@gravityValue)
