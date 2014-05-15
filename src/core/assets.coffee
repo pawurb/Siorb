@@ -38,6 +38,7 @@ Game.assets =
      "digits.png"
      "sound.png"
      "powrotButton.png"
+     "glasses.png"
     ]
   instructionImages:
     [
@@ -155,6 +156,8 @@ Game.assets =
       leaves_image: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}runner.png",
       spr_runner: [0, 0]
+    Crafty.sprite 75, 75, "#{@imagesPath}glasses.png",
+      spr_glasses: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}face.png",
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",

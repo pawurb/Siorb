@@ -14,6 +14,7 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('Base, leaves_image').at(429, 90)
   Crafty.e('RunnerImage').at(544, 90)
   Crafty.e('RunnerFace').at(544, 90)
+  Crafty.e('RunnerGlasses').at(544, 90) if Game.sharedOnFB
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
 
   Crafty.e('PixelScoreBoard').displayAt(740, 390, 'top')
@@ -24,11 +25,6 @@ Crafty.scene 'MainMenu', ->
   unless Game.firstMainMenu
     # works only on first run
     Crafty.e('FBLikeButton')
-
-    #ask only users with some points to share who did not share
-    if localStorage.getItem('highScore') > 50 and !(localStorage.getItem('sharedOnFB') == 'true')
-      $('.share-image').delay(1000).fadeIn('slow')
-
 
   # navigation
   jQuery ->
