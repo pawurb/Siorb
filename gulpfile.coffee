@@ -25,7 +25,7 @@ gulp.task 'coffee', ->
   .pipe(gulp.dest('dist/'))
   .pipe(livereload())
 
-  gutil.log(gutil.colors.red('JavaScript Compiled'))
+  gutil.log(gutil.colors.green('JavaScript Compiled'))
 
 #minify code and save as siorb-min.js
 gulp.task 'release', ->

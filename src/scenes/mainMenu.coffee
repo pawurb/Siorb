@@ -14,7 +14,9 @@ Crafty.scene 'MainMenu', ->
   Crafty.e('Base, leaves_image').at(429, 90)
   Crafty.e('RunnerImage').at(544, 90)
   Crafty.e('RunnerFace').at(544, 90)
-  Crafty.e('RunnerGlasses').at(544, 90) if Game.sharedOnFB
+  if Game.sharedOnFB
+    Crafty.e('RunnerGlasses').at(544, 90)
+    Crafty.e('RunnerBigGlasses').at(105, 220)
   Crafty.background "url('#{Game.host}/images/mainMenuBg.png')"
 
   Crafty.e('PixelScoreBoard').displayAt(740, 390, 'top')

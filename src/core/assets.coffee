@@ -39,6 +39,7 @@ Game.assets =
      "sound.png"
      "powrotButton.png"
      "glasses.png"
+     "glassesBig.png"
     ]
   instructionImages:
     [
@@ -158,6 +159,8 @@ Game.assets =
       spr_runner: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}glasses.png",
       spr_glasses: [0, 0]
+    Crafty.sprite 98, 33, "#{@imagesPath}glassesBig.png",
+      spr_big_glasses: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}face.png",
       spr_face: [0, 0]
     Crafty.sprite 12, 16, "#{@imagesPath}digits.png",
