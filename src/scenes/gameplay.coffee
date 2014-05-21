@@ -29,6 +29,7 @@ Crafty.scene 'Gameplay', ->
 
     $('.share-image').fadeOut('slow')
     $('.share-button').fadeOut('slow')
+    $('#sharingModal').remove()
 
 
   setDefaults()

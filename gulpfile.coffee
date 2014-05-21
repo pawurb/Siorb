@@ -1,4 +1,4 @@
-backendDir = '/Users/pablo/Programming/Ruby/railsy/Siorbackend'
+backendDir = '/Users/user/Programming/Siorbackend'
 
 gulp       = require 'gulp'
 watch      = require 'gulp-watch'
