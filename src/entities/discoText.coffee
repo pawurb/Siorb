@@ -10,6 +10,7 @@ Crafty.c 'DiscoText',
     @bind("Runner:jump", (data) ->
       #always display in the same screen place
       @y = Game.runner.y + Game.view.y + data.y - 100)
+    #change to attach ??
     @animate('DiscoText:Blinks', -1)
 
     setTimeout =>

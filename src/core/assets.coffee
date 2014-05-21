@@ -16,6 +16,7 @@ Game.assets =
       "cloud.png"
       "discoText.png"
       "glasses.png"
+      "controlsHint.png"
 
       # Game Over assets
       "tworcyT.png"
@@ -128,6 +129,8 @@ Game.assets =
       spr_disco_text: [0, 0]
     Crafty.sprite 75, 75, "#{@imagesPath}glasses.png",
       spr_glasses: [0, 0]
+    Crafty.sprite 303, 54, "#{@imagesPath}controlsHint.png",
+      spr_hints: [0, 0]
 
     # Game Over assets
     Crafty.sprite 220, 16, "#{@imagesPath}jeszczeRazT.png",
