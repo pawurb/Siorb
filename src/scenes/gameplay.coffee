@@ -27,13 +27,11 @@ Crafty.scene 'Gameplay', ->
     Game.mrHotProbability = Game.easyMrHotProbability
     Game.mushroomProbability = Game.easyMushroomProbability
 
-    $('.share-image').fadeOut('slow')
-    $('.share-button').fadeOut('slow')
-    $('#sharingModal').remove()
 
 
   setDefaults()
   Crafty.trigger('Game:gameplayStarted')
+  $(document).trigger('Siorb:Gameplay') #for backend
   Game.gameplayStarted = (new Date).getTime()
 
   Game.scene = 'Gameplay'
