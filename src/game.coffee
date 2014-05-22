@@ -90,7 +90,7 @@ Game =
       Crafty.pause() if e.keyCode == 80
   submitStatistic: (score, duration) ->
     $.ajax
-      url: "/statistics?statistic[score]=#{score}&statistic[duration]=#{duration}"
+      url: "/api/statistics?statistic[score]=#{score}&statistic[duration]=#{duration}"
       type: 'POST'
 
   submitScore: (score)->
@@ -98,7 +98,7 @@ Game =
     if (typeof(gon) != 'undefined') and gon.userLoggedIn
       scoreParam = btoa(parseInt(score))
       $.ajax
-        url: "/user?user[noturbusiness]=#{scoreParam}"
+        url: "/api/user?user[noturbusiness]=#{scoreParam}"
         type: 'PUT'
   gameplayStarted: null
 
