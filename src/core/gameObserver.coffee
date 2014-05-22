@@ -79,7 +79,7 @@ Crafty.c 'GameObserver',
     Game.mrsCoffeeProbability = Game.victoryMrsCoffeeProbability
 
     @setDefaultSpeedTo(Game.victoryFloatSpeed)
-    Crafty.e('DiscoText')
+    Game.runner.attach(Crafty.e('DiscoText'))
   handleVictoryEnd: ->
     Game.leafProbability = Game.mediumLeafProbability
     Game.guaranaProbability = Game.mediumGuaranaProbability

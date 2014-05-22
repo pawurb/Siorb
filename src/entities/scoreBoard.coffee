@@ -2,7 +2,7 @@ Crafty.c 'ScoreBoard',
   init: ->
     @requires '2D, DOM, Text'
     @attr
-      x: 737
+      x: 730
       y: 135
       w: 400
       z: 301
