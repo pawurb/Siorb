@@ -31,7 +31,7 @@ Crafty.scene 'Gameplay', ->
 
   setDefaults()
   Crafty.trigger('Game:gameplayStarted')
-  $(document).trigger('Siorb:Gameplay') #for backend
+  $('#sharingModal-btn').remove() #for backend
   Game.gameplayStarted = (new Date).getTime()
 
   Game.scene = 'Gameplay'
