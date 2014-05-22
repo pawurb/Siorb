@@ -5,7 +5,7 @@ Crafty.c 'ControlsHint',
     @attr
       alpha: 0.7
       z: 312
-    @move('e', 225)
+    @move('e', 250)
     @move('s', 400)
 
     setTimeout =>
