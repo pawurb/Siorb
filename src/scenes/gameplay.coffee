@@ -27,8 +27,6 @@ Crafty.scene 'Gameplay', ->
     Game.mrHotProbability = Game.easyMrHotProbability
     Game.mushroomProbability = Game.easyMushroomProbability
 
-
-
   setDefaults()
   Crafty.trigger('Game:gameplayStarted')
   $('#sharingModal-btn').remove() #for backend
