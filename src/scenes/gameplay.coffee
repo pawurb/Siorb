@@ -43,8 +43,8 @@ Crafty.scene 'Gameplay', ->
   generatePlatforms()
   Crafty.e 'BackgroundManager'
   shortcutManager = Crafty.e('GameplayShortcuts')
-  Crafty.e 'ScoreBoard'
-  Crafty.e 'ManaMeter'
+  Game.runner.attach(Crafty.e('ScoreBoard'))
+  Game.runner.attach(Crafty.e('ManaMeter'))
   Crafty.e 'GameObserver'
   Crafty.e 'RunnerKiller'
   Crafty.pause()
