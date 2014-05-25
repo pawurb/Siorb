@@ -26,6 +26,7 @@ Crafty.scene 'Authors', ->
   Crafty.e('Base, aut_music_text').at(textX, topY + yOffset * 3)
   Crafty.e('ButtonWithLink').addLink('http://soundcloud.com/' , 'autHarryLogo.png', 'SoundCloud')
   .at(textX + 200, topY + 160)
+  $('#sharingModal-btn').hide()
 
 , ->
   Crafty('Recyclable').destroy()

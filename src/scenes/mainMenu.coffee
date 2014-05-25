@@ -28,6 +28,8 @@ Crafty.scene 'MainMenu', ->
     # works only on first run
     Crafty.e('FBLikeButton')
 
+  $('#sharingModal-btn').show()
+
   # navigation
   jQuery ->
     startClicked = false

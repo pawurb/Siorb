@@ -6,6 +6,7 @@ Crafty.scene 'Instruction', ->
   Crafty.e('LogoButton')
 
   Crafty.e('ReturnButton')
+  $('#sharingModal-btn').hide()
 
 , ->
   Crafty('Recyclable').destroy()
