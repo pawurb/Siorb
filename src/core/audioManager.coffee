@@ -18,13 +18,17 @@ Crafty.c 'AudioManager',
     $(document).bind('keyup', (e) =>
       @canPlayJump = true
     )
+  playNiceEffect: ->
+    Crafty.audio.play('nice', 1, Game.volume)
+    Crafty.trigger('Face:fasterGuarana') #TODO should not be here!
+    setTimeout ->
+      Crafty.trigger('Face:normal')
+    , 3000
   playJumpEffect: ->
     if Game.runner && Game.runner._multijumpsLeft > 0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   playLeafEffect: ->
     Crafty.audio.play('leafSound', 1, Game.volume*0.5)
-    if Game.score % 20 == 0
-      Crafty.audio.play('nice', 1, Game.volume)
   playBurnEffect: ->
     Crafty.audio.stop('burnSound')
     Crafty.audio.play('burnSound', 1, Game.volume*0.5)
@@ -74,6 +78,7 @@ Crafty.c 'AudioManager',
     @bind('Runner:collectedMrHot', @playBurnEffect)
     @bind('Runner:collectedMrsCoffee', @playCoffeeStartEffect)
     @bind('Coffee:speedUpEnded', @playCoffeeEndEffect)
+    @bind('Runner:saysNice', @playNiceEffect)
     @mode = 'normal'
 
     @bind('SceneChange', (data) ->
