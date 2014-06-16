@@ -20,10 +20,6 @@ Crafty.c 'AudioManager',
     )
   playNiceEffect: ->
     Crafty.audio.play('nice', 1, Game.volume)
-    Crafty.trigger('Face:fasterGuarana') #TODO should not be here!
-    setTimeout ->
-      Crafty.trigger('Face:normal')
-    , 3000
   playJumpEffect: ->
     if Game.runner && Game.runner._multijumpsLeft > 0
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
