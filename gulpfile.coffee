@@ -46,6 +46,9 @@ gulp.task 'release', ->
   gulp.src(['assets/images/*'])
   .pipe(gulp.dest("#{backendDir}/public/assets/images"))
 
+  gulp.src(['assets/sounds/*'])
+  .pipe(gulp.dest("#{backendDir}/public/assets/sounds"))
+
 
 
 
