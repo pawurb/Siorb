@@ -23,6 +23,8 @@ Crafty.c 'AudioManager',
       Crafty.audio.play('jumpSound', 1, Game.volume*0.5)
   playLeafEffect: ->
     Crafty.audio.play('leafSound', 1, Game.volume*0.5)
+    if Game.score % 20 == 0
+      Crafty.audio.play('nice', 1, Game.volume)
   playBurnEffect: ->
     Crafty.audio.stop('burnSound')
     Crafty.audio.play('burnSound', 1, Game.volume*0.5)

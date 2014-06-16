@@ -99,6 +99,7 @@ Game.assets =
       coffeeStartSound: ["#{@soundsPath}coffeeStartSound.ogg", "#{@soundsPath}coffeeStartSound.mp3"]
       coffeeEndSound: ["#{@soundsPath}coffeeEndSound.ogg", "#{@soundsPath}coffeeEndSound.mp3"]
       victoryBeat: ["#{@soundsPath}victoryBeat.ogg", "#{@soundsPath}victoryBeat.mp3"]
+      nice: ["#{@soundsPath}nice.ogg", "#{@soundsPath}nice.mp3"]
 
 
     Crafty.sprite 800, 420, "#{@imagesPath}psychoVisionBg.jpg",
