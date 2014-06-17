@@ -7,7 +7,7 @@ Game =
   colorLevel: 1
   mode: 'easy'
   mediumScore: 5
-  niceScore: 50
+  colorChangeScore: 50
   hardScore: 80
   victoryScore: 100
   probabilitiesScore: 25
