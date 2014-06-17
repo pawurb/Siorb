@@ -50,8 +50,8 @@ Crafty.c 'GameObserver',
     @absoluteScore += data.points
     @setDifficulty()
     Crafty.trigger('ScoreBoard:updatePoints')
-    Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 11) == 0
-    Crafty.trigger('Runner:saysNice') if (Game.score % 20) == 0 #TODO move to config!
+    Crafty.trigger('Runner:saysSomething') if (@absoluteScore % 10) == 0 and (Game.score % 25) != 0
+    Crafty.trigger('Runner:saysNice') if (Game.score % 25) == 0
     Crafty.trigger('Siorb:victory') if Game.score >= Game.victoryScore && Game.victory == false
     Crafty.trigger('Siorb:MediumProbabilities') if Game.score == Game.probabilitiesScore
   losePoints: (type) ->

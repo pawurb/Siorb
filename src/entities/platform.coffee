@@ -8,6 +8,7 @@ Crafty.c 'Platform',
       w: Game.platformSizes.current[Utils.rand(0, @sizesSize)]
       z: 200
     @bind('EnterFrame', @resetPosition)
+    @_element.addClass('level1')
     # @color('red')
   resetPosition: ->
     if @x < -250
