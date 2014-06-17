@@ -38,7 +38,6 @@ gulp.task 'sass', ->
 gulp.task 'release', ->
   scriptsDir = "#{backendDir}/app/assets/javascripts"
 
-
   gulp.src(['dist/siorb.js'])
   .pipe(uglify())
   .pipe(rename("siorb-min.js"))

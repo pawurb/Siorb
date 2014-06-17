@@ -16,7 +16,7 @@ Crafty.c 'ComicSayings',
       @firstTime = false
       0
     else
-      Utils.rand(0, @phrasesCount)
+      Utils.rand(1, @phrasesCount)
     @sprite(0, spriteNum)
     unless @isVisible
       @isVisible = true
