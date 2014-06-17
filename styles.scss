@@ -1,5 +1,7 @@
 /* Crafty styling */
 
+$host: "http://localhost:8000/assets/images/";
+
 #game {
   background-image: url('http://siorb.dobreziele.pl/assets/images/gameplayBg.jpg');
 }
@@ -9,19 +11,19 @@
 }
 
 .level1 {
-  background-image: url('http://localhost:8000/assets/images/platform1.png');
+  background-image: url("#{$host}platform1.png");
 }
 
 .level2 {
-  background-image: url('http://localhost:8000/assets/images/platform2.png');
+  background-image: url("#{$host}platform2.png");
 }
 
 .level3 {
-  background-image: url('http://localhost:8000/assets/images/platform3.png');
+  background-image: url("#{$host}platform3.png");
 }
 
 .level4 {
-  background-image: url('http://localhost:8000/assets/images/platform4.png');
+  background-image: url("#{$host}platform4.png");
 }
 
 .fb-share-button {

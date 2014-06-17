@@ -8,8 +8,11 @@ Crafty.c 'Platform',
       w: Game.platformSizes.current[Utils.rand(0, @sizesSize)]
       z: 200
     @bind('EnterFrame', @resetPosition)
-  setup: ->
-    $(@_element).addClass('level4')
+  setLevel: (num) ->
+    previousLevel = "level#{num-1}"
+    currentLevel = "level#{num}"
+    $(@_element).removeClass(previousLevel)
+    $(@_element).addClass(currentLevel)
   resetPosition: ->
     if @x < -250
       # logic responsible for platforms arrangement
