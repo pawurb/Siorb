@@ -14,7 +14,7 @@ Crafty.scene 'Gameplay', ->
       level = randomArrangement[i]
       yPos = 200 + (Game.height - Game.height/5 * level - 20)
       xPos = Game.width/5 * i
-      Crafty.e('Platform').at(xPos, yPos).setLevel(1)
+      Crafty.e('Platform').at(xPos, yPos).setLevel(Game.colorLevel)
   setDefaults = ->
     Game.victory = false
     Game.mode = 'easy'

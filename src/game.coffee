@@ -4,8 +4,10 @@ Game =
   mediumFloatSpeed: 5
   victoryFloatSpeed: 6
   extremeFloatSpeed: 7
+  colorLevel: 1
   mode: 'easy'
   mediumScore: 5
+  niceScore: 25
   hardScore: 80
   victoryScore: 100
   probabilitiesScore: 25

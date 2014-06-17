@@ -15,6 +15,7 @@ Crafty.c 'Platform',
     $(@_element).addClass(currentLevel)
   resetPosition: ->
     if @x < -250
+      @setLevel(Game.colorLevel)
       # logic responsible for platforms arrangement
       higher = [-168, -84]
       lower = [84, 168]
