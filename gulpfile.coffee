@@ -9,6 +9,7 @@ uglify     = require 'gulp-uglify'
 gutil      = require 'gulp-util'
 rename     = require 'gulp-rename'
 livereload = require 'gulp-livereload'
+sass       = require 'gulp-sass'
 
 
 gulp.task 'default', ->
@@ -27,9 +28,16 @@ gulp.task 'coffee', ->
 
   gutil.log(gutil.colors.green('JavaScript Compiled'))
 
+#sass to css and copy to dist
+gulp.task 'sass', ->
+  gulp.src('styles.scss')
+  .pipe(sass())
+  .pipe(gulp.dest('dist/'))
+
 #minify code and save as siorb-min.js
 gulp.task 'release', ->
   scriptsDir = "#{backendDir}/app/assets/javascripts"
+
 
   gulp.src(['dist/siorb.js'])
   .pipe(uglify())
@@ -48,6 +56,7 @@ gulp.task 'release', ->
 
   gulp.src(['assets/sounds/*'])
   .pipe(gulp.dest("#{backendDir}/public/assets/sounds"))
+
 
 
 
