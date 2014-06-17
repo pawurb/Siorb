@@ -25,6 +25,16 @@ Game.assets =
       "gameOverBg.png"
       "gOrekordT.png"
       "gOpunktyT.png"
+
+      # Preload platform images
+      "platform1.png"
+      "platform2.png"
+      "platform3.png"
+      "platform4.png"
+      "platform5.png"
+      "platform6.png"
+      "platform7.png"
+      "platform8.png"
     ]
   mainMenuImages:
     [

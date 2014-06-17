@@ -1,9 +1,12 @@
 /* Crafty styling */
 
-$host: "http://localhost:8000/assets/images/";
+$host: "http://siorb-staging.shellyapp.com/assets/images/";
+// $host: "http://siorb.dobreziele.pl/assets/images/";
+// $host: "http://localhost:3000/assets/images/";
+// $host: "http://localhost:8000/assets/images/";
 
 #game {
-  background-image: url('http://siorb.dobreziele.pl/assets/images/gameplayBg.jpg');
+  background-image: url("#{$host}gameplayBg.jpg");
 }
 
 .Platform {
@@ -23,6 +26,22 @@ $host: "http://localhost:8000/assets/images/";
 }
 
 .level4 {
+  background-image: url("#{$host}platform4.png");
+}
+
+.level5 {
+  background-image: url("#{$host}platform4.png");
+}
+
+.level6 {
+  background-image: url("#{$host}platform4.png");
+}
+
+.level7 {
+  background-image: url("#{$host}platform4.png");
+}
+
+.level8 {
   background-image: url("#{$host}platform4.png");
 }
 
