@@ -9,9 +9,9 @@ Crafty.c 'Platform',
       z: 200
     @bind('EnterFrame', @resetPosition)
   setLevel: (num) ->
-    previousLevel = "level#{num-1}"
+    $(@_element).removeClass (index, css) ->
+      (css.match (/level/g) || []).join(' ')
     currentLevel = "level#{num}"
-    $(@_element).removeClass(previousLevel)
     $(@_element).addClass(currentLevel)
   resetPosition: ->
     if @x < -250
