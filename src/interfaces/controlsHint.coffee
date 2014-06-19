@@ -1,5 +1,5 @@
 Crafty.c 'ControlsHint',
-  displayTime: 4
+  displayTime: 5
   init: ->
     @requires 'Base, spr_hints'
     @attr

@@ -7,11 +7,15 @@ Crafty.c 'GameOverShortcuts',
     @bind('KeyDown', (keystroke)->
       if keystroke.keyCode == @enterCode || keystroke.keyCode == @shiftCode
         if Game.victory
-          window.location.reload()
+          @backToMenu()
         else
           Game.runScene.gameplay()
       else if keystroke.keyCode == @escCode
-        window.location.reload()
+        @backToMenu()
     )
+  backToMenu: ->
+    setTimeout ->
+      window.location.reload()
+    , 20 #to make it work on Firefox
 
 
