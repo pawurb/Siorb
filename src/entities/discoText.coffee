@@ -1,5 +1,5 @@
 Crafty.c 'DiscoText',
-  delay: 2000
+  lifetime: 10000
   init: ->
     @requires 'Base, SpriteAnimation, spr_disco_text'
     @attr
@@ -10,7 +10,7 @@ Crafty.c 'DiscoText',
     @animate('DiscoText:Blinks', -1)
     setTimeout =>
       @destroy()
-    , 10000
+    , @lifetime
 
 
 

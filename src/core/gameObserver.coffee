@@ -64,6 +64,10 @@ Crafty.c 'GameObserver',
     if Game.colorLevel < colorLevel
       Game.colorLevel = colorLevel
       Crafty.trigger('Runner:saysNice')
+      #do not show when 'DiscoText' is here
+      if Game.score < Game.victoryScore || Game.score >= Game.victoryScore + Game.colorChangeScore
+        Game.runner.attach(Crafty.e('NiceText'))
+
 
     if Game.score < Game.mediumScore
       Game.platformSizes.current = Game.platformSizes.easy

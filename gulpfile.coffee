@@ -15,6 +15,7 @@ sass       = require 'gulp-sass'
 gulp.task 'default', ->
   gulp.watch(['src/*', 'src/*/**' ], ['coffee'])
 
+#TODO add sass watch task
 #compile coffee to js and enable source maps
 gulp.task 'coffee', ->
   gulp.src(['src/*.coffee', 'src/**/*.coffee'])
