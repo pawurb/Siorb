@@ -11,9 +11,9 @@ rename     = require 'gulp-rename'
 livereload = require 'gulp-livereload'
 sass       = require 'gulp-sass'
 
-
 gulp.task 'default', ->
   gulp.watch(['src/*', 'src/*/**' ], ['coffee'])
+  gulp.watch(['styles.scss' ], ['sass'])
 
 #TODO add sass watch task
 #compile coffee to js and enable source maps
