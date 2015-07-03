@@ -1,9 +1,9 @@
 #Siorb
 
-###Coming soon!
+www.siorb.dobreziele.pl
 
 Development:
 
-- run `grunt` to turn on code autoreloading
+- run `gulp` to turn on code autoreloading
 - run `python -m SimpleHTTPServer`
-- access Siorb through `http://localhost:8000`
+- access Siorb through `http://localhost:8000/devel_index.html`
