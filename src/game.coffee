@@ -1,5 +1,5 @@
 Game =
-  host: "http://#{window.location.host}/assets"
+  host: "https://#{window.location.host}/assets"
   initialFloatSpeed: 4
   mediumFloatSpeed: 5
   victoryFloatSpeed: 6
